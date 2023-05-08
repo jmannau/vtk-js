@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.05% </span>
+                <span class="strong">11.94% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>27/224</span>
+                <span class='fraction'>27/226</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">4.65% </span>
+                <span class="strong">4.54% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>4/86</span>
+                <span class='fraction'>4/88</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.9% </span>
+                <span class="strong">12.69% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/62</span>
+                <span class='fraction'>8/63</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.67% </span>
+                <span class="strong">12.55% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>27/213</span>
+                <span class='fraction'>27/215</span>
             </div>
         
             
@@ -785,7 +785,17 @@
 <a name='L720'></a><a href='#L720'>720</a>
 <a name='L721'></a><a href='#L721'>721</a>
 <a name='L722'></a><a href='#L722'>722</a>
-<a name='L723'></a><a href='#L723'>723</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L723'></a><a href='#L723'>723</a>
+<a name='L724'></a><a href='#L724'>724</a>
+<a name='L725'></a><a href='#L725'>725</a>
+<a name='L726'></a><a href='#L726'>726</a>
+<a name='L727'></a><a href='#L727'>727</a>
+<a name='L728'></a><a href='#L728'>728</a>
+<a name='L729'></a><a href='#L729'>729</a>
+<a name='L730'></a><a href='#L730'>730</a>
+<a name='L731'></a><a href='#L731'>731</a>
+<a name='L732'></a><a href='#L732'>732</a>
+<a name='L733'></a><a href='#L733'>733</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1252,6 +1262,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1975,6 +1995,16 @@ function <span class="fstat-no" title="function not covered" >removeUnavailableA
 <span class="cstat-no" title="statement not covered" >    fields.removeArray(namesToDelete[i]);</span>
   }
 }
+/**
+ * Get a unique string suitable for use as state.arrays key.
+ * @param {object} arrayMeta
+ * @returns {string} array key
+ */
+function <span class="fstat-no" title="function not covered" >getArrayKey(</span>arrayMeta) {
+  // Two arrays can have exactly the same hash so try to distinquish with name.
+  const namePart = <span class="cstat-no" title="statement not covered" >arrayMeta.name ? `_${arrayMeta.name}` : '';</span>
+<span class="cstat-no" title="statement not covered" >  return `${arrayMeta.hash}_${arrayMeta.dataType}${namePart}`;</span>
+}
 &nbsp;
 function createDataSetUpdate(piecesToFetch = <span class="branch-0 cbranch-no" title="branch not covered" >[])</span> {
   return <span class="fstat-no" title="function not covered" >(i</span>nstance, state, context) =&gt; {
@@ -1993,7 +2023,7 @@ function createDataSetUpdate(piecesToFetch = <span class="branch-0 cbranch-no" t
 <span class="cstat-no" title="statement not covered" >      if (state.properties[key]) {</span>
         const arrayMeta = <span class="cstat-no" title="statement not covered" >state.properties[key];</span>
 <span class="cstat-no" title="statement not covered" >        arrayMeta.registration = `set${macro.capitalize(key)}`;</span>
-        const arrayKey = <span class="cstat-no" title="statement not covered" >`${arrayMeta.hash}_${arrayMeta.dataType}`;</span>
+        const arrayKey = <span class="cstat-no" title="statement not covered" >getArrayKey(arrayMeta);</span>
 <span class="cstat-no" title="statement not covered" >        state.arrays[arrayKey] = arrayMeta;</span>
 <span class="cstat-no" title="statement not covered" >        delete localProperties[key];</span>
       }
@@ -2003,7 +2033,7 @@ function createDataSetUpdate(piecesToFetch = <span class="branch-0 cbranch-no" t
     const fieldsArrays = <span class="cstat-no" title="statement not covered" >state.properties.fields || [];</span>
 <span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; fieldsArrays.length; i++) {</span>
       const arrayMeta = <span class="cstat-no" title="statement not covered" >fieldsArrays[i];</span>
-      const arrayKey = <span class="cstat-no" title="statement not covered" >`${arrayMeta.hash}_${arrayMeta.dataType}`;</span>
+      const arrayKey = <span class="cstat-no" title="statement not covered" >getArrayKey(arrayMeta);</span>
 <span class="cstat-no" title="statement not covered" >      state.arrays[arrayKey] = arrayMeta;</span>
     }
 <span class="cstat-no" title="statement not covered" >    delete localProperties.fields;</span>
@@ -2236,7 +2266,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon May 08 2023 19:03:38 GMT+0000 (Coordinated Universal Time)
+                at Mon May 08 2023 19:34:53 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../../prettify.js"></script>
         <script>
