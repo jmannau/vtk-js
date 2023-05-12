@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.72% </span>
+                <span class="strong">71.03% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>101/137</span>
+                <span class='fraction'>103/145</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74% </span>
+                <span class="strong">71.15% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>37/50</span>
+                <span class='fraction'>37/52</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">75% </span>
+                <span class="strong">66.66% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>6/8</span>
+                <span class='fraction'>6/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74.43% </span>
+                <span class="strong">71.63% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>99/133</span>
+                <span class='fraction'>101/141</span>
             </div>
         
             
@@ -317,7 +317,23 @@
 <a name='L252'></a><a href='#L252'>252</a>
 <a name='L253'></a><a href='#L253'>253</a>
 <a name='L254'></a><a href='#L254'>254</a>
-<a name='L255'></a><a href='#L255'>255</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -547,6 +563,16 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -556,6 +582,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -575,6 +605,7 @@
 import Constants from 'vtk.js/Sources/Common/DataModel/Line/Constants';
 import vtkCell from 'vtk.js/Sources/Common/DataModel/Cell';
 import * as vtkMath from 'vtk.js/Sources/Common/Core/Math';
+import { quat } from 'gl-matrix';
 &nbsp;
 const { IntersectionState } = Constants;
 &nbsp;
@@ -800,13 +831,25 @@ function vtkLine(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >    weights[0] = 1.0 - pcoords[0];</span>
 <span class="cstat-no" title="statement not covered" >    weights[1] = pcoords[0];</span>
   };
+&nbsp;
+  publicAPI.evaluateOrientation = <span class="fstat-no" title="function not covered" >(p</span>coords, q, weights) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (model.orientations) {</span>
+<span class="cstat-no" title="statement not covered" >      quat.slerp(q, model.orientations[0], model.orientations[1], pcoords[0]);</span>
+<span class="cstat-no" title="statement not covered" >      weights[0] = 1.0 - pcoords[0];</span>
+<span class="cstat-no" title="statement not covered" >      weights[1] = pcoords[0];</span>
+<span class="cstat-no" title="statement not covered" >      return true;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    return false;</span>
+  };
 }
 &nbsp;
 // ----------------------------------------------------------------------------
 // Object factory
 // ----------------------------------------------------------------------------
 &nbsp;
-const DEFAULT_VALUES = {};
+const DEFAULT_VALUES = {
+  orientations: null, // an array of two quat or null
+};
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
@@ -814,6 +857,8 @@ export function extend(publicAPI, model, initialValues = <span class="branch-0 c
   Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   vtkCell.extend(publicAPI, model, initialValues);
+&nbsp;
+  macro.setGet(publicAPI, model, ['orientations']);
 &nbsp;
   vtkLine(publicAPI, model);
 }
@@ -832,7 +877,7 @@ export default { newInstance, extend, ...STATIC, ...Constants };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu May 11 2023 16:56:55 GMT+0000 (Coordinated Universal Time)
+                at Fri May 12 2023 14:35:37 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
