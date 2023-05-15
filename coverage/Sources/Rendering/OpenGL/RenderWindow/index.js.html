@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.48% </span>
+                <span class="strong">52.8% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>238/445</span>
+                <span class='fraction'>235/445</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.68% </span>
+                <span class="strong">43.16% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>127/278</span>
+                <span class='fraction'>120/278</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.53% </span>
+                <span class="strong">52.84% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>235/439</span>
+                <span class='fraction'>232/439</span>
             </div>
         
             
@@ -1748,7 +1748,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">489x</span>
-<span class="cline-any cline-yes">489x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">489x</span>
@@ -2064,9 +2064,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2077,9 +2077,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">30x</span>
+<span class="cline-any cline-yes">35x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">34x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3011,7 +3011,7 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
   // Cache the value here as calling it on each frame is expensive
   const isImmersiveVrSupported =
     navigator.xr !== undefined &amp;&amp;
-    navigator.xr.isSessionSupported('immersive-vr');
+<span class="branch-1 cbranch-no" title="branch not covered" >    navigator.xr.isSessionSupported('immersive-vr');</span>
 &nbsp;
   // Auto update style
   const previousSize = [0, 0];
@@ -3165,8 +3165,8 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
     let result = null;
 &nbsp;
     // Do we have webxr support
-    if (isImmersiveVrSupported) {
-      publicAPI.invokeHaveVRDisplay();
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (isImmersiveVrSupported) {
+<span class="cstat-no" title="statement not covered" >      publicAPI.invokeHaveVRDisplay();</span>
     }
 &nbsp;
     const webgl2Supported = typeof WebGL2RenderingContext !== 'undefined';
@@ -3468,7 +3468,7 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
             default:
               return model.context.RGBA8;
           }
-<span class="branch-1 cbranch-no" title="branch not covered" >        case oglNorm16Ext &amp;&amp; !useHalfFloat &amp;&amp; VtkDataTypes.UNSIGNED_SHORT:</span>
+<span class="branch-1 cbranch-no" title="branch not covered" >        case oglNorm16Ext &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.UNSIGNED_SHORT:</span></span>
 <span class="cstat-no" title="statement not covered" >          switch (numComps) {</span>
             case 1:
 <span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.R16_EXT;</span>
@@ -3481,16 +3481,16 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.RGBA16_EXT;</span>
           }
         // prioritize norm16 over float
-        case oglNorm16Ext &amp;&amp; !useHalfFloat &amp;&amp; VtkDataTypes.SHORT:
-          switch (numComps) {
+<span class="branch-2 cbranch-no" title="branch not covered" >        case oglNorm16Ext &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.SHORT:</span></span>
+<span class="cstat-no" title="statement not covered" >          switch (numComps) {</span>
             case 1:
-              return oglNorm16Ext.R16_SNORM_EXT;
-<span class="branch-1 cbranch-no" title="branch not covered" >            case 2:</span>
+<span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.R16_SNORM_EXT;</span>
+            case 2:
 <span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.RG16_SNORM_EXT;</span>
-<span class="branch-2 cbranch-no" title="branch not covered" >            case 3:</span>
+            case 3:
 <span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.RGB16_SNORM_EXT;</span>
-<span class="branch-3 cbranch-no" title="branch not covered" >            case 4:</span>
-<span class="branch-4 cbranch-no" title="branch not covered" >            default:</span>
+            case 4:
+            default:
 <span class="cstat-no" title="statement not covered" >              return oglNorm16Ext.RGBA16_SNORM_EXT;</span>
           }
         case VtkDataTypes.FLOAT:
@@ -3712,7 +3712,7 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
     const glDrawBuffers = gl.getExtension('WEBGL_draw_buffers');
     const glAnisotropic =
       gl.getExtension('EXT_texture_filter_anisotropic') ||
-<span class="branch-1 cbranch-no" title="branch not covered" >      gl.getExtension('WEBKIT_EXT_texture_filter_anisotropic');</span>
+      gl.getExtension('WEBKIT_EXT_texture_filter_anisotropic');
 &nbsp;
     const params = [
       [
@@ -3764,7 +3764,7 @@ function vtkOpenGLRenderWindow(publicAPI, model) {
         'Max Texture Anisotropy',
         'MAX_TEXTURE_MAX_ANISOTROPY_EXT',
         glAnisotropic &amp;&amp;
-          gl.getParameter(glAnisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT),
+<span class="branch-1 cbranch-no" title="branch not covered" >          gl.getParameter(glAnisotropic.MAX_TEXTURE_MAX_ANISOTROPY_EXT),</span>
       ],
       [
         'Point Size Range',
@@ -4324,7 +4324,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri May 12 2023 14:35:37 GMT+0000 (Coordinated Universal Time)
+                at Mon May 15 2023 21:09:01 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
