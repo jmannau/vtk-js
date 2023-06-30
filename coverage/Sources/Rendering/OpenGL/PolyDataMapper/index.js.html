@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.4% </span>
+                <span class="strong">89.34% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>616/689</span>
+                <span class='fraction'>612/685</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">89.16% </span>
+                <span class="strong">89.1% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>601/674</span>
+                <span class='fraction'>597/670</span>
             </div>
         
             
@@ -2092,8 +2092,7 @@
 <a name='L2027'></a><a href='#L2027'>2027</a>
 <a name='L2028'></a><a href='#L2028'>2028</a>
 <a name='L2029'></a><a href='#L2029'>2029</a>
-<a name='L2030'></a><a href='#L2030'>2030</a>
-<a name='L2031'></a><a href='#L2031'>2031</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L2030'></a><a href='#L2030'>2030</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2436,6 +2435,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2478,6 +2480,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3464,13 +3470,6 @@
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3528,12 +3527,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">7484x</span>
-<span class="cline-any cline-yes">7484x</span>
-<span class="cline-any cline-yes">19696x</span>
-<span class="cline-any cline-yes">7484x</span>
+<span class="cline-any cline-yes">7485x</span>
+<span class="cline-any cline-yes">7485x</span>
+<span class="cline-any cline-yes">19699x</span>
+<span class="cline-any cline-yes">7485x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">12212x</span>
+<span class="cline-any cline-yes">12214x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3578,7 +3577,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4025x</span>
-<span class="cline-any cline-yes">713x</span>
+<span class="cline-any cline-yes">714x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -4069,7 +4068,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">825x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -4461,8 +4459,11 @@ function vtkOpenGLPolyDataMapper(publicAPI, model) {
             `  diffuseL += ((df${shadowFactor}) * lightColor${lc});`,
             `  if (dot(normalVCVSOutput, lightDirectionVC${lc}) &lt; 0.0)`,
             '    {',
-            `    float sf = pow( max(0.0, dot(lightHalfAngleVC${lc},normalVCVSOutput)), specularPower);`,
-            `    specularL += ((sf${shadowFactor}) * lightColor${lc});`,
+            `    float sf = sign(df)*pow(max(1e-5,
+                                              dot(reflect(lightDirectionVC${lc},normalVCVSOutput),
+                                                  normalize(-vertexVC.xyz))),
+                                         specularPower);`,
+            `    specularL += (sf${shadowFactor} * lightColor${lc});`,
             '    }',
           ]);
         }
@@ -4541,7 +4542,11 @@ function vtkOpenGLPolyDataMapper(publicAPI, model) {
             `    diffuseL += ((df${shadowFactor}) * lightColor${lc});`,
             '    if (dot(normalVCVSOutput, vertLightDirectionVC) &lt; 0.0)',
             '      {',
-            `      float sf = attenuation*pow( max(0.0, dot(lightHalfAngleVC${lc},normalVCVSOutput)), specularPower);`,
+            `      float sf = sign(df)*attenuation*pow(max(1e-5,
+                                                           dot(reflect(lightDirectionVC${lc},
+                                                                       normalVCVSOutput),
+                                                               normalize(-vertexVC.xyz))),
+                                                       specularPower);`,
             `    specularL += ((sf${shadowFactor}) * lightColor${lc});`,
             '    }',
           ]);
@@ -5492,9 +5497,6 @@ function vtkOpenGLPolyDataMapper(publicAPI, model) {
         model.lightDirection[0] = newLightDirection[0];
         model.lightDirection[1] = newLightDirection[1];
         model.lightDirection[2] = newLightDirection[2];
-        model.lightHalfAngle[0] = -model.lightDirection[0];
-        model.lightHalfAngle[1] = -model.lightDirection[1];
-        model.lightHalfAngle[2] = -model.lightDirection[2] + 1.0;
         vtkMath.normalize(model.lightDirection);
         program.setUniform3fArray(
           `lightColor${numberOfLights}`,
@@ -5503,10 +5505,6 @@ function vtkOpenGLPolyDataMapper(publicAPI, model) {
         program.setUniform3fArray(
           `lightDirectionVC${numberOfLights}`,
           model.lightDirection
-        );
-        program.setUniform3fArray(
-          `lightHalfAngleVC${numberOfLights}`,
-          model.lightHalfAngle
         );
         numberOfLights++;
       }
@@ -6087,7 +6085,6 @@ const DEFAULT_VALUES = {
   diffuseColor: [], // used internally
   specularColor: [], // used internally
   lightColor: [], // used internally
-  lightHalfAngle: [], // used internally
   lightDirection: [], // used internally
   lastHaveSeenDepthRequest: false,
   haveSeenDepthRequest: false,
@@ -6160,7 +6157,7 @@ registerOverride('vtkMapper', newInstance);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jun 29 2023 12:28:54 GMT+0000 (Coordinated Universal Time)
+                at Fri Jun 30 2023 22:42:25 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
