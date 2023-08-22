@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">21.79% </span>
+                <span class="strong">21.51% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>17/78</span>
+                <span class='fraction'>17/79</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/29</span>
+                <span class='fraction'>0/31</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">22.97% </span>
+                <span class="strong">22.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>17/74</span>
+                <span class='fraction'>17/75</span>
             </div>
         
             
@@ -229,7 +229,9 @@
 <a name='L164'></a><a href='#L164'>164</a>
 <a name='L165'></a><a href='#L165'>165</a>
 <a name='L166'></a><a href='#L166'>166</a>
-<a name='L167'></a><a href='#L167'>167</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -312,6 +314,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -370,6 +373,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -478,7 +482,8 @@ function vtkPolyLine(publicAPI, model) {
   };
 &nbsp;
   publicAPI.getDistancesToFirstPoint = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
-<span class="cstat-no" title="statement not covered" >    if (model.distancesTime.getMTime() &lt; model.points.getMTime()) {</span>
+    const dTime = <span class="cstat-no" title="statement not covered" >model.distancesTime.getMTime();</span>
+<span class="cstat-no" title="statement not covered" >    if (dTime &lt; model.points.getMTime() || dTime &lt; publicAPI.getMTime()) {</span>
       const numPoints = <span class="cstat-no" title="statement not covered" >publicAPI.getNumberOfPoints();</span>
 <span class="cstat-no" title="statement not covered" >      if (!model.distances) {</span>
 <span class="cstat-no" title="statement not covered" >        model.distances = new Array(numPoints);</span>
@@ -493,7 +498,7 @@ function vtkPolyLine(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >        model.points.getPoint(0, previousPoint);</span>
 <span class="cstat-no" title="statement not covered" >        for (let i = <span class="cstat-no" title="statement not covered" >1;</span> i &lt; numPoints; ++i) {</span>
 <span class="cstat-no" title="statement not covered" >          model.points.getPoint(i, currentPoint);</span>
-<span class="cstat-no" title="statement not covered" >          totalDistance += vec3.dist(previousPoint, currentPoint);</span>
+<span class="cstat-no" title="statement not covered" >          totalDistance += model.distanceFunction(previousPoint, currentPoint);</span>
 <span class="cstat-no" title="statement not covered" >          model.distances[i] = totalDistance;</span>
 <span class="cstat-no" title="statement not covered" >          vec3.copy(previousPoint, currentPoint);</span>
         }
@@ -537,6 +542,7 @@ function vtkPolyLine(publicAPI, model) {
 &nbsp;
 const DEFAULT_VALUES = {
   orientations: null, // an array of quat or null
+  distanceFunction: vec3.dist,
 };
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -546,7 +552,7 @@ export function extend(publicAPI, model, initialValues = <span class="branch-0 c
 &nbsp;
   vtkCell.extend(publicAPI, model, initialValues);
 &nbsp;
-  macro.setGet(publicAPI, model, ['orientations']);
+  macro.setGet(publicAPI, model, ['orientations', 'distanceFunction']);
 &nbsp;
   model.distancesTime = {};
   macro.obj(model.distancesTime, { mtime: 0 });
@@ -568,7 +574,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Aug 15 2023 15:27:41 GMT+0000 (Coordinated Universal Time)
+                at Tue Aug 22 2023 19:23:12 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
