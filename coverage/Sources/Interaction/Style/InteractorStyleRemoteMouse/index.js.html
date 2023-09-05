@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.7% </span>
+                <span class="strong">28.92% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>35/114</span>
+                <span class='fraction'>35/121</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/21</span>
+                <span class='fraction'>0/27</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">30.7% </span>
+                <span class="strong">28.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>35/114</span>
+                <span class='fraction'>35/121</span>
             </div>
         
             
@@ -381,7 +381,21 @@
 <a name='L316'></a><a href='#L316'>316</a>
 <a name='L317'></a><a href='#L317'>317</a>
 <a name='L318'></a><a href='#L318'>318</a>
-<a name='L319'></a><a href='#L319'>319</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L319'></a><a href='#L319'>319</a>
+<a name='L320'></a><a href='#L320'>320</a>
+<a name='L321'></a><a href='#L321'>321</a>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a>
+<a name='L329'></a><a href='#L329'>329</a>
+<a name='L330'></a><a href='#L330'>330</a>
+<a name='L331'></a><a href='#L331'>331</a>
+<a name='L332'></a><a href='#L332'>332</a>
+<a name='L333'></a><a href='#L333'>333</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -504,11 +518,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -672,11 +697,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -821,12 +849,23 @@ function vtkInteractorStyleRemoteMouse(publicAPI, model) {
 &nbsp;
   //-------------------------------------------------------------------------
   publicAPI.handleMouseWheel = <span class="fstat-no" title="function not covered" >(c</span>allData) =&gt; {
-<span class="cstat-no" title="statement not covered" >    publicAPI.invokeRemoteWheelEvent({</span>
-      type: 'MouseWheel',
-      ...createRemoteEvent(callData),
-      spinY: callData.spinY,
-    });
-<span class="cstat-no" title="statement not covered" >    publicAPI.invokeInteractionEvent(INTERACTION_EVENT);</span>
+    let needToSend = <span class="cstat-no" title="statement not covered" >true;</span>
+<span class="cstat-no" title="statement not covered" >    if (model.wheelThrottleDelay) {</span>
+      const ts = <span class="cstat-no" title="statement not covered" >Date.now();</span>
+<span class="cstat-no" title="statement not covered" >      needToSend = model.wheelThrottleDelay &lt; ts - model.wheelLastThrottleTime;</span>
+<span class="cstat-no" title="statement not covered" >      if (needToSend) {</span>
+<span class="cstat-no" title="statement not covered" >        model.wheelLastThrottleTime = ts;</span>
+      }
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (needToSend) {</span>
+<span class="cstat-no" title="statement not covered" >      publicAPI.invokeRemoteWheelEvent({</span>
+        type: 'MouseWheel',
+        ...createRemoteEvent(callData),
+        spinY: callData.spinY,
+      });
+<span class="cstat-no" title="statement not covered" >      publicAPI.invokeInteractionEvent(INTERACTION_EVENT);</span>
+    }
   };
 &nbsp;
   //-------------------------------------------------------------------------
@@ -984,6 +1023,8 @@ const DEFAULT_VALUES = {
   sendMouseMove: false,
   throttleDelay: 33.3, // 33.3 millisecond &lt;=&gt; 30 events/second
   lastThrottleTime: 0,
+  wheelThrottleDelay: 0,
+  wheelLastThrottleTime: 0,
   // remoteEventAddOn: null,
 };
 &nbsp;
@@ -998,6 +1039,7 @@ export function extend(publicAPI, model, initialValues = <span class="branch-0 c
     'sendMouseMove',
     'remoteEventAddOn',
     'throttleDelay',
+    'wheelThrottleDelay',
   ]);
   macro.event(publicAPI, model, 'RemoteMouseEvent');
   macro.event(publicAPI, model, 'RemoteWheelEvent');
@@ -1024,7 +1066,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Sep 01 2023 15:49:05 GMT+0000 (Coordinated Universal Time)
+                at Tue Sep 05 2023 14:18:32 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
