@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.75% </span>
+                <span class="strong">2.74% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/254</span>
+                <span class='fraction'>7/255</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/57</span>
+                <span class='fraction'>0/59</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.84% </span>
+                <span class="strong">2.83% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/246</span>
+                <span class='fraction'>7/247</span>
             </div>
         
             
@@ -806,15 +806,7 @@
 <a name='L741'></a><a href='#L741'>741</a>
 <a name='L742'></a><a href='#L742'>742</a>
 <a name='L743'></a><a href='#L743'>743</a>
-<a name='L744'></a><a href='#L744'>744</a>
-<a name='L745'></a><a href='#L745'>745</a>
-<a name='L746'></a><a href='#L746'>746</a>
-<a name='L747'></a><a href='#L747'>747</a>
-<a name='L748'></a><a href='#L748'>748</a>
-<a name='L749'></a><a href='#L749'>749</a>
-<a name='L750'></a><a href='#L750'>750</a>
-<a name='L751'></a><a href='#L751'>751</a>
-<a name='L752'></a><a href='#L752'>752</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L744'></a><a href='#L744'>744</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1079,17 +1071,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1122,13 +1110,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1137,6 +1118,10 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1539,7 +1524,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1629,7 +1613,7 @@ const DepthBoundsFS = `
 &nbsp;
 //VTK::IOStructs::Dec
 &nbsp;
-@stage(fragment)
+@fragment
 fn main(
 //VTK::IOStructs::Input
 )
@@ -1663,7 +1647,7 @@ const volumeCopyFragTemplate = `
 &nbsp;
 //VTK::IOStructs::Dec
 &nbsp;
-@stage(fragment)
+@fragment
 fn main(
 //VTK::IOStructs::Input
 )
@@ -1714,7 +1698,7 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
       ]);
     }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    if (!model._volumeCopyQuadQuad) {</span>
+<span class="cstat-no" title="statement not covered" >    if (!model._volumeCopyQuad) {</span>
 <span class="cstat-no" title="statement not covered" >      model._volumeCopyQuad = vtkWebGPUFullScreenQuad.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >      model._volumeCopyQuad.setPipelineHash('volpassfsq');</span>
 <span class="cstat-no" title="statement not covered" >      model._volumeCopyQuad.setDevice(viewNode.getDevice());</span>
@@ -1734,7 +1718,7 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
     }
 &nbsp;
     // we just render our delegates in order
-<span class="cstat-no" title="statement not covered" >    model.currentParent = viewNode;</span>
+<span class="cstat-no" title="statement not covered" >    model._currentParent = viewNode;</span>
 &nbsp;
     // create stuff we need
 <span class="cstat-no" title="statement not covered" >    publicAPI.initialize(viewNode);</span>
@@ -1829,18 +1813,14 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
   }, publicAPI.delete);
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  publicAPI.computeTiming = <span class="fstat-no" title="function not covered" >(v</span>iewNode) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    model._useSmallViewport = false;</span>
     const rwi = <span class="cstat-no" title="statement not covered" >viewNode.getRenderable().getInteractor();</span>
 &nbsp;
+<span class="cstat-no" title="statement not covered" >    if (model._lastScale == null) {</span>
+      const firstMapper = <span class="cstat-no" title="statement not covered" >model.volumes[0].getRenderable().getMapper();</span>
+<span class="cstat-no" title="statement not covered" >      model._lastScale = firstMapper.getInitialInteractionScale() || 1.0;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    model._useSmallViewport = false;</span>
 <span class="cstat-no" title="statement not covered" >    if (rwi.isAnimating() &amp;&amp; model._lastScale &gt; 1.5) {</span>
-<span class="cstat-no" title="statement not covered" >      if (!model._smallViewportHeight) {</span>
-<span class="cstat-no" title="statement not covered" >        model._smallViewportWidth = Math.ceil(</span>
-          viewNode.getCanvas().width / Math.sqrt(model._lastScale)
-        );
-<span class="cstat-no" title="statement not covered" >        model._smallViewportHeight = Math.ceil(</span>
-          viewNode.getCanvas().height / Math.sqrt(model._lastScale)
-        );
-      }
 <span class="cstat-no" title="statement not covered" >      model._useSmallViewport = true;</span>
     }
 &nbsp;
@@ -1872,13 +1852,6 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
         }
 <span class="cstat-no" title="statement not covered" >        if (model._lastScale &lt; 1.5) {</span>
 <span class="cstat-no" title="statement not covered" >          model._lastScale = 1.5;</span>
-        } else {
-<span class="cstat-no" title="statement not covered" >          model._smallViewportWidth = Math.ceil(</span>
-            viewNode.getCanvas().width / Math.sqrt(model._lastScale)
-          );
-<span class="cstat-no" title="statement not covered" >          model._smallViewportHeight = Math.ceil(</span>
-            viewNode.getCanvas().height / Math.sqrt(model._lastScale)
-          );
         }
       });
     }
@@ -1893,6 +1866,10 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
     let width = <span class="cstat-no" title="statement not covered" >model._colorTextureView.getTexture().getWidth();</span>
     let height = <span class="cstat-no" title="statement not covered" >model._colorTextureView.getTexture().getHeight();</span>
 <span class="cstat-no" title="statement not covered" >    if (model._useSmallViewport) {</span>
+      const canvas = <span class="cstat-no" title="statement not covered" >viewNode.getCanvas();</span>
+      const scaleFactor = <span class="cstat-no" title="statement not covered" >1 / Math.sqrt(model._lastScale);</span>
+<span class="cstat-no" title="statement not covered" >      model._smallViewportWidth = Math.ceil(scaleFactor * canvas.width);</span>
+<span class="cstat-no" title="statement not covered" >      model._smallViewportHeight = Math.ceil(scaleFactor * canvas.height);</span>
 <span class="cstat-no" title="statement not covered" >      width = model._smallViewportWidth;</span>
 <span class="cstat-no" title="statement not covered" >      height = model._smallViewportHeight;</span>
     }
@@ -2196,7 +2173,7 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUVolumePas
       fragment: {
         targets: [
           {
-            format: 'bgra8unorm',
+            format: 'rgba16float',
             blend: {
               color: {
                 srcFactor: 'one',
@@ -2290,7 +2267,6 @@ export function <span class="fstat-no" title="function not covered" >extend(</sp
   // Build VTK API
 <span class="cstat-no" title="statement not covered" >  vtkRenderPass.extend(publicAPI, model, initialValues);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model._lastScale = 2.0;</span>
 <span class="cstat-no" title="statement not covered" >  model._mapper = vtkWebGPUSimpleMapper.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >  model._mapper.setFragmentShaderTemplate(DepthBoundsFS);</span>
 <span class="cstat-no" title="statement not covered" >  model._mapper</span>
@@ -2323,7 +2299,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Sun May 08 2022 18:38:03 GMT-0600 (Mountain Daylight Time)
+                at Wed Sep 13 2023 16:55:39 GMT-0600 (Mountain Daylight Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
