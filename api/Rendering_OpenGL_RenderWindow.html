@@ -41,15 +41,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/vtk-js/atom.xml" title="vtk.js" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="SourceConstants.d.tsexport declare enum XrSessionTypes &amp;#123;	HmdVR &#x3D; 0,	MobileAR &#x3D; 1,  LookingGlassVR &#x3D; 2&amp;#125;declare const _default: &amp;#123;	XrSessionTypes: typeof XrSessionTypes;&amp;#125;;export defau">
+  <meta name="description" content="IntroductionWebGL rendering window vtkOpenGLRenderWindow is designed to view&#x2F;render a vtkRenderWindow. MethodsactivateTexture   Argument Type Required Description    texture vtkTexture Yes    buildPas">
 <meta property="og:type" content="website">
 <meta property="og:title" content="RenderWindow">
 <meta property="og:url" content="https://kitware.github.io/vtk-js/api/Rendering_OpenGL_RenderWindow.html">
 <meta property="og:site_name" content="vtk.js">
-<meta property="og:description" content="SourceConstants.d.tsexport declare enum XrSessionTypes &amp;#123;	HmdVR &#x3D; 0,	MobileAR &#x3D; 1,  LookingGlassVR &#x3D; 2&amp;#125;declare const _default: &amp;#123;	XrSessionTypes: typeof XrSessionTypes;&amp;#125;;export defau">
+<meta property="og:description" content="IntroductionWebGL rendering window vtkOpenGLRenderWindow is designed to view&#x2F;render a vtkRenderWindow. MethodsactivateTexture   Argument Type Required Description    texture vtkTexture Yes    buildPas">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-13T22:46:13.592Z">
-<meta property="article:modified_time" content="2023-09-13T22:46:13.592Z">
+<meta property="article:published_time" content="2023-09-14T14:47:39.445Z">
+<meta property="article:modified_time" content="2023-09-14T14:47:39.445Z">
 <meta property="article:author" content="Kitware Inc.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -113,7 +113,816 @@
                 <h1 class="article-title" itemprop="name">RenderWindow</h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>Constants.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> declare enum <span class="title class_">XrSessionTypes</span> &#123;</span><br><span class="line">	<span class="title class_">HmdVR</span> = <span class="number">0</span>,</span><br><span class="line">	<span class="title class_">MobileAR</span> = <span class="number">1</span>,</span><br><span class="line">  <span class="title class_">LookingGlassVR</span> = <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">declare <span class="keyword">const</span> <span class="attr">_default</span>: &#123;</span><br><span class="line">	<span class="title class_">XrSessionTypes</span>: <span class="keyword">typeof</span> <span class="title class_">XrSessionTypes</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> _default;</span><br></pre></td></tr></table></figure>
+                <h2 id="Introduction" class="article-heading"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction<a class="article-anchor" href="#Introduction" aria-hidden="true"></a></h2><p>WebGL rendering window</p>
+<p>vtkOpenGLRenderWindow is designed to view/render a vtkRenderWindow.</p>
+<h2 id="Methods" class="article-heading"><a href="#Methods" class="headerlink" title="Methods"></a>Methods<a class="article-anchor" href="#Methods" aria-hidden="true"></a></h2><h3 id="activateTexture" class="article-heading"><a href="#activateTexture" class="headerlink" title="activateTexture"></a>activateTexture<a class="article-anchor" href="#activateTexture" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>texture</code></td>
+<td>vtkTexture</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="buildPass" class="article-heading"><a href="#buildPass" class="headerlink" title="buildPass"></a>buildPass<a class="article-anchor" href="#buildPass" aria-hidden="true"></a></h3><p>Builds myself.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>prepass</code></td>
+<td>Boolean</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="captureNextImage" class="article-heading"><a href="#captureNextImage" class="headerlink" title="captureNextImage"></a>captureNextImage<a class="article-anchor" href="#captureNextImage" aria-hidden="true"></a></h3><p>Capture a screenshot of the contents of this renderwindow.  The options<br>object can include a <code>size</code> array (<code>[w, h]</code>) or a <code>scale</code> floating point<br>value, as well as a <code>resetCamera</code> boolean.  If <code>size</code> is provided, the<br>captured screenshot will be of the given size (and <code>resetCamera</code> could be<br>useful in this case if the aspect ratio of <code>size</code> does not match the<br>current renderwindow size).  Otherwise, if <code>scale</code> is provided, it will<br>be multiplied by the current renderwindow size to compute the screenshot<br>size.  If no <code>size</code> or <code>scale</code> are provided, the current renderwindow<br>size is assumed.  The default format is “image/png”. Returns a promise<br>that resolves to the captured screenshot.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>format</code></td>
+<td>String</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>options</code></td>
+<td>ICaptureOptions</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="deactivateTexture" class="article-heading"><a href="#deactivateTexture" class="headerlink" title="deactivateTexture"></a>deactivateTexture<a class="article-anchor" href="#deactivateTexture" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>texture</code></td>
+<td>vtkTexture</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="disableCullFace" class="article-heading"><a href="#disableCullFace" class="headerlink" title="disableCullFace"></a>disableCullFace<a class="article-anchor" href="#disableCullFace" aria-hidden="true"></a></h3><h3 id="displayToLocalDisplay" class="article-heading"><a href="#displayToLocalDisplay" class="headerlink" title="displayToLocalDisplay"></a>displayToLocalDisplay<a class="article-anchor" href="#displayToLocalDisplay" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="displayToNormalizedDisplay" class="article-heading"><a href="#displayToNormalizedDisplay" class="headerlink" title="displayToNormalizedDisplay"></a>displayToNormalizedDisplay<a class="article-anchor" href="#displayToNormalizedDisplay" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="displayToWorld" class="article-heading"><a href="#displayToWorld" class="headerlink" title="displayToWorld"></a>displayToWorld<a class="article-anchor" href="#displayToWorld" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="enableCullFace" class="article-heading"><a href="#enableCullFace" class="headerlink" title="enableCullFace"></a>enableCullFace<a class="article-anchor" href="#enableCullFace" aria-hidden="true"></a></h3><h3 id="enterXR" class="article-heading"><a href="#enterXR" class="headerlink" title="enterXR"></a>enterXR<a class="article-anchor" href="#enterXR" aria-hidden="true"></a></h3><p>When an XR session is available, set up the XRWebGLLayer<br>and request the first animation frame for the device</p>
+<h3 id="extend" class="article-heading"><a href="#extend" class="headerlink" title="extend"></a>extend<a class="article-anchor" href="#extend" aria-hidden="true"></a></h3><p>Method used to decorate a given object (publicAPI+model) with vtkOpenGLRenderWindow characteristics.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>publicAPI</code></td>
+<td></td>
+<td>Yes</td>
+<td>object on which methods will be bounds (public)</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td></td>
+<td>Yes</td>
+<td>object on which data structure will be bounds (protected)</td>
+</tr>
+<tr>
+<td><code>initialValues</code></td>
+<td>IOpenGLRenderWindowInitialValues</td>
+<td>No</td>
+<td>(default: {})</td>
+</tr>
+</tbody></table>
+<h3 id="get3DContext" class="article-heading"><a href="#get3DContext" class="headerlink" title="get3DContext"></a>get3DContext<a class="article-anchor" href="#get3DContext" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>options</code></td>
+<td>I3DContextOptions</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="getCanvas" class="article-heading"><a href="#getCanvas" class="headerlink" title="getCanvas"></a>getCanvas<a class="article-anchor" href="#getCanvas" aria-hidden="true"></a></h3><p>Get the webgl canvas.</p>
+<h3 id="getComputedDevicePixelRatio" class="article-heading"><a href="#getComputedDevicePixelRatio" class="headerlink" title="getComputedDevicePixelRatio"></a>getComputedDevicePixelRatio<a class="article-anchor" href="#getComputedDevicePixelRatio" aria-hidden="true"></a></h3><p>Scales the size of a browser CSS pixel to a rendered canvas pixel.<br><code>const renderedPixelWidth = cssPixelWidth * apiRenderWindow.getComputedDevicePixelRatio()</code><br>Use to scale rendered objects to a consistent perceived size or DOM pixel position.</p>
+<p>Rather than using window.devicePixelRatio directly, the device pixel ratio is inferred<br>from the container CSS pixel size and rendered image pixel size. The user directly sets the rendered pixel size.</p>
+<h3 id="getContainer" class="article-heading"><a href="#getContainer" class="headerlink" title="getContainer"></a>getContainer<a class="article-anchor" href="#getContainer" aria-hidden="true"></a></h3><p>Get the container element.</p>
+<h3 id="getContainerSize" class="article-heading"><a href="#getContainerSize" class="headerlink" title="getContainerSize"></a>getContainerSize<a class="article-anchor" href="#getContainerSize" aria-hidden="true"></a></h3><p>Get the container size.</p>
+<h3 id="getDefaultTextureInternalFormat" class="article-heading"><a href="#getDefaultTextureInternalFormat" class="headerlink" title="getDefaultTextureInternalFormat"></a>getDefaultTextureInternalFormat<a class="article-anchor" href="#getDefaultTextureInternalFormat" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>vtktype</code></td>
+<td>VtkDataTypes</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>numComps</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>useFloat</code></td>
+<td>Boolean</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>oglNorm16Ext</code></td>
+<td></td>
+<td>Yes</td>
+<td>The WebGL EXT_texture_norm16 extension context</td>
+</tr>
+<tr>
+<td><code>useHalfFloat</code></td>
+<td>Boolean</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="getFramebufferSize" class="article-heading"><a href="#getFramebufferSize" class="headerlink" title="getFramebufferSize"></a>getFramebufferSize<a class="article-anchor" href="#getFramebufferSize" aria-hidden="true"></a></h3><p>Get the frame buffer size.</p>
+<h3 id="getGLInformations" class="article-heading"><a href="#getGLInformations" class="headerlink" title="getGLInformations"></a>getGLInformations<a class="article-anchor" href="#getGLInformations" aria-hidden="true"></a></h3><h3 id="getPixelData" class="article-heading"><a href="#getPixelData" class="headerlink" title="getPixelData"></a>getPixelData<a class="article-anchor" href="#getPixelData" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x1</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y1</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>x2</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y2</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="getSize" class="article-heading"><a href="#getSize" class="headerlink" title="getSize"></a>getSize<a class="article-anchor" href="#getSize" aria-hidden="true"></a></h3><h3 id="getTextureUnitForTexture" class="article-heading"><a href="#getTextureUnitForTexture" class="headerlink" title="getTextureUnitForTexture"></a>getTextureUnitForTexture<a class="article-anchor" href="#getTextureUnitForTexture" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>texture</code></td>
+<td>vtkTexture</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="getViewportCenter" class="article-heading"><a href="#getViewportCenter" class="headerlink" title="getViewportCenter"></a>getViewportCenter<a class="article-anchor" href="#getViewportCenter" aria-hidden="true"></a></h3><p>Get the center of the viewport.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>viewport</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The viewport vtk element.</td>
+</tr>
+</tbody></table>
+<h3 id="getViewportSize" class="article-heading"><a href="#getViewportSize" class="headerlink" title="getViewportSize"></a>getViewportSize<a class="article-anchor" href="#getViewportSize" aria-hidden="true"></a></h3><p>Get the viewport size.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>viewport</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The viewport vtk element.</td>
+</tr>
+</tbody></table>
+<h3 id="initialize" class="article-heading"><a href="#initialize" class="headerlink" title="initialize"></a>initialize<a class="article-anchor" href="#initialize" aria-hidden="true"></a></h3><p>Initialize the rendering window. This will setup all system-specific<br>resources. This method and Finalize() must be symmetric and it should be<br>possible to call them multiple times, even changing WindowId in-between.<br>This is what WindowRemap does.</p>
+<h3 id="isInViewport" class="article-heading"><a href="#isInViewport" class="headerlink" title="isInViewport"></a>isInViewport<a class="article-anchor" href="#isInViewport" aria-hidden="true"></a></h3><p>Check if a point is in the viewport.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate.</td>
+</tr>
+<tr>
+<td><code>viewport</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The viewport vtk element.</td>
+</tr>
+</tbody></table>
+<h3 id="makeCurrent" class="article-heading"><a href="#makeCurrent" class="headerlink" title="makeCurrent"></a>makeCurrent<a class="article-anchor" href="#makeCurrent" aria-hidden="true"></a></h3><h3 id="newInstance" class="article-heading"><a href="#newInstance" class="headerlink" title="newInstance"></a>newInstance<a class="article-anchor" href="#newInstance" aria-hidden="true"></a></h3><p>Method used to create a new instance of vtkOpenGLRenderWindow.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>initialValues</code></td>
+<td>IOpenGLRenderWindowInitialValues</td>
+<td>No</td>
+<td>for pre-setting some of its content</td>
+</tr>
+</tbody></table>
+<h3 id="normalizedDisplayToDisplay" class="article-heading"><a href="#normalizedDisplayToDisplay" class="headerlink" title="normalizedDisplayToDisplay"></a>normalizedDisplayToDisplay<a class="article-anchor" href="#normalizedDisplayToDisplay" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="normalizedDisplayToViewport" class="article-heading"><a href="#normalizedDisplayToViewport" class="headerlink" title="normalizedDisplayToViewport"></a>normalizedDisplayToViewport<a class="article-anchor" href="#normalizedDisplayToViewport" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="normalizedViewportToViewport" class="article-heading"><a href="#normalizedViewportToViewport" class="headerlink" title="normalizedViewportToViewport"></a>normalizedViewportToViewport<a class="article-anchor" href="#normalizedViewportToViewport" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="popMonitorGLContextCount" class="article-heading"><a href="#popMonitorGLContextCount" class="headerlink" title="popMonitorGLContextCount"></a>popMonitorGLContextCount<a class="article-anchor" href="#popMonitorGLContextCount" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cb</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="pushMonitorGLContextCount" class="article-heading"><a href="#pushMonitorGLContextCount" class="headerlink" title="pushMonitorGLContextCount"></a>pushMonitorGLContextCount<a class="article-anchor" href="#pushMonitorGLContextCount" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>cb</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="resetXRScene" class="article-heading"><a href="#resetXRScene" class="headerlink" title="resetXRScene"></a>resetXRScene<a class="article-anchor" href="#resetXRScene" aria-hidden="true"></a></h3><p>Adjust world-to-physical parameters for different viewing modalities</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>inputRescaleFactor</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>inputTranslateZ</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="restoreContext" class="article-heading"><a href="#restoreContext" class="headerlink" title="restoreContext"></a>restoreContext<a class="article-anchor" href="#restoreContext" aria-hidden="true"></a></h3><h3 id="setBackgroundImage" class="article-heading"><a href="#setBackgroundImage" class="headerlink" title="setBackgroundImage"></a>setBackgroundImage<a class="article-anchor" href="#setBackgroundImage" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>img</code></td>
+<td>HTMLImageElement</td>
+<td>Yes</td>
+<td>The background image.</td>
+</tr>
+</tbody></table>
+<h3 id="setContainer" class="article-heading"><a href="#setContainer" class="headerlink" title="setContainer"></a>setContainer<a class="article-anchor" href="#setContainer" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>el</code></td>
+<td>HTMLElement</td>
+<td>Yes</td>
+<td>The container element.</td>
+</tr>
+</tbody></table>
+<h3 id="setSize" class="article-heading"><a href="#setSize" class="headerlink" title="setSize"></a>setSize<a class="article-anchor" href="#setSize" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setSize-1" class="article-heading"><a href="#setSize-1" class="headerlink" title="setSize"></a>setSize<a class="article-anchor" href="#setSize-1" aria-hidden="true"></a></h3><p>Sets the pixel width and height of the rendered image.  </p>
+<p>WebGL and WebGPU render windows apply these values to<br>the width and height attribute of the canvas element.</p>
+<p>To match the device resolution in browser environments,<br>multiply the container size by <code>window.devicePixelRatio</code><br>`apiSpecificRenderWindow.setSize(Math.floor(containerWidth * devicePixelRatio), Math.floor(containerHeight * devicePixelRatio));<br>See the VTK.js FullscreenRenderWindow class for an example.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>size</code></td>
+<td>Vector2</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setUseBackgroundImage" class="article-heading"><a href="#setUseBackgroundImage" class="headerlink" title="setUseBackgroundImage"></a>setUseBackgroundImage<a class="article-anchor" href="#setUseBackgroundImage" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>value</code></td>
+<td>Boolean</td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setViewStream" class="article-heading"><a href="#setViewStream" class="headerlink" title="setViewStream"></a>setViewStream<a class="article-anchor" href="#setViewStream" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>stream</code></td>
+<td>vtkViewStream</td>
+<td>Yes</td>
+<td>The vtkViewStream instance.</td>
+</tr>
+</tbody></table>
+<h3 id="startXR" class="article-heading"><a href="#startXR" class="headerlink" title="startXR"></a>startXR<a class="article-anchor" href="#startXR" aria-hidden="true"></a></h3><p>Request an XR session on the user device with WebXR,<br>typically in response to a user request such as a button press.</p>
+<h3 id="stopXR" class="article-heading"><a href="#stopXR" class="headerlink" title="stopXR"></a>stopXR<a class="article-anchor" href="#stopXR" aria-hidden="true"></a></h3><p>Request to stop the current XR session</p>
+<h3 id="traverseAllPasses" class="article-heading"><a href="#traverseAllPasses" class="headerlink" title="traverseAllPasses"></a>traverseAllPasses<a class="article-anchor" href="#traverseAllPasses" aria-hidden="true"></a></h3><h3 id="viewToWorld" class="article-heading"><a href="#viewToWorld" class="headerlink" title="viewToWorld"></a>viewToWorld<a class="article-anchor" href="#viewToWorld" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="viewportToNormalizedDisplay" class="article-heading"><a href="#viewportToNormalizedDisplay" class="headerlink" title="viewportToNormalizedDisplay"></a>viewportToNormalizedDisplay<a class="article-anchor" href="#viewportToNormalizedDisplay" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="viewportToNormalizedViewport" class="article-heading"><a href="#viewportToNormalizedViewport" class="headerlink" title="viewportToNormalizedViewport"></a>viewportToNormalizedViewport<a class="article-anchor" href="#viewportToNormalizedViewport" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="worldToDisplay" class="article-heading"><a href="#worldToDisplay" class="headerlink" title="worldToDisplay"></a>worldToDisplay<a class="article-anchor" href="#worldToDisplay" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="worldToView" class="article-heading"><a href="#worldToView" class="headerlink" title="worldToView"></a>worldToView<a class="article-anchor" href="#worldToView" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td>vtkRenderer</td>
+<td>Yes</td>
+<td>The vtkRenderer instance.</td>
+</tr>
+</tbody></table>
+<h3 id="xrRender" class="article-heading"><a href="#xrRender" class="headerlink" title="xrRender"></a>xrRender<a class="article-anchor" href="#xrRender" aria-hidden="true"></a></h3><h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>Constants.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> declare enum <span class="title class_">XrSessionTypes</span> &#123;</span><br><span class="line">	<span class="title class_">HmdVR</span> = <span class="number">0</span>,</span><br><span class="line">	<span class="title class_">MobileAR</span> = <span class="number">1</span>,</span><br><span class="line">  <span class="title class_">LookingGlassVR</span> = <span class="number">2</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">declare <span class="keyword">const</span> <span class="attr">_default</span>: &#123;</span><br><span class="line">	<span class="title class_">XrSessionTypes</span>: <span class="keyword">typeof</span> <span class="title class_">XrSessionTypes</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> _default;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><figcaption><span>Constants.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="title class_">XrSessionTypes</span> = &#123;</span><br><span class="line">  <span class="title class_">HmdVR</span>: <span class="number">0</span>, <span class="comment">// Head-mounted display (HMD), two-camera virtual reality session</span></span><br><span class="line">  <span class="title class_">MobileAR</span>: <span class="number">1</span>, <span class="comment">// Mobile device, single-camera augmented reality session</span></span><br><span class="line">  <span class="title class_">LookingGlassVR</span>: <span class="number">2</span>, <span class="comment">// Looking Glass hologram display, N-camera virtual reality session</span></span><br><span class="line">  <span class="title class_">HmdAR</span>: <span class="number">3</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  <span class="title class_">XrSessionTypes</span>,</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><figcaption><span>ContextProxy.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment">// This is used to access the underlying 3D context</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="variable constant_">GET_UNDERLYING_CONTEXT</span> = <span class="string">&#x27;__getUnderlyingContext&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">createContextProxyHandler</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> cache = <span class="keyword">new</span> <span class="title class_">Map</span>();</span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> getParameterHandler = &#123;</span><br><span class="line">    <span class="title function_">apply</span>(<span class="params">target, gl, args</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (cache.<span class="title function_">has</span>(args[<span class="number">0</span>])) &#123;</span><br><span class="line">        <span class="keyword">return</span> cache.<span class="title function_">get</span>(args[<span class="number">0</span>]);</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> target.<span class="title function_">apply</span>(gl, args);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// only supports single-value setters</span></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">cachedSetterHandler</span>(<span class="params">key</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      <span class="title function_">apply</span>(<span class="params">target, gl, args</span>) &#123;</span><br><span class="line">        cache.<span class="title function_">set</span>(key, args[<span class="number">0</span>]);</span><br><span class="line">        <span class="keyword">return</span> target.<span class="title function_">apply</span>(gl, args);</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// When a property is accessed on the webgl context proxy,</span></span><br><span class="line">  <span class="comment">// it&#x27;s accessed is intercepted. If the property name matches</span></span><br><span class="line">  <span class="comment">// any of the keys of `propHandlers`, then that handler is called</span></span><br><span class="line">  <span class="comment">// with the following arguments: (gl, prop, receiver, propValue)</span></span><br><span class="line">  <span class="comment">// - gl (WebGL2RenderingContext): the underlying webgl context</span></span><br><span class="line">  <span class="comment">// - propName (string): the property name</span></span><br><span class="line">  <span class="comment">// - receiver (Proxy): the webgl context proxy</span></span><br><span class="line">  <span class="comment">// - propValue (unknown): the value of `gl[propName]`</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">const</span> propHandlers = <span class="title class_">Object</span>.<span class="title function_">create</span>(<span class="literal">null</span>);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Sets getParameter(property) as a cached getter proxy.</span></span><br><span class="line">  <span class="comment">// propValue.bind(gl) is to avoid Illegal Invocation errors.</span></span><br><span class="line">  propHandlers.<span class="property">getParameter</span> = <span class="function">(<span class="params">gl, prop, receiver, propValue</span>) =&gt;</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Proxy</span>(propValue.<span class="title function_">bind</span>(gl), getParameterHandler);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Sets depthMask(flag) as a cached setter proxy.</span></span><br><span class="line">  propHandlers.<span class="property">depthMask</span> = <span class="function">(<span class="params">gl, prop, receiver, propValue</span>) =&gt;</span></span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">Proxy</span>(propValue.<span class="title function_">bind</span>(gl), <span class="title function_">cachedSetterHandler</span>(gl.<span class="property">DEPTH_WRITEMASK</span>));</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="title function_">get</span>(<span class="params">gl, prop, receiver</span>) &#123;</span><br><span class="line">      <span class="keyword">if</span> (prop === <span class="variable constant_">GET_UNDERLYING_CONTEXT</span>) <span class="keyword">return</span> <span class="function">() =&gt;</span> gl;</span><br><span class="line">      <span class="keyword">let</span> value = <span class="title class_">Reflect</span>.<span class="title function_">get</span>(gl, prop, gl);</span><br><span class="line">      <span class="keyword">if</span> (value <span class="keyword">instanceof</span> <span class="title class_">Function</span>) &#123;</span><br><span class="line">        <span class="comment">// prevents Illegal Invocation errors</span></span><br><span class="line">        value = value.<span class="title function_">bind</span>(gl);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">const</span> propHandler = propHandlers[prop];</span><br><span class="line">      <span class="keyword">if</span> (propHandler) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="title function_">propHandler</span>(gl, prop, receiver, value);</span><br><span class="line">      &#125;</span><br><span class="line"></span><br><span class="line">      <span class="keyword">return</span> value;</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; createContextProxyHandler &#125;;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><figcaption><span>index.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; vtkAlgorithm, vtkObject &#125; <span class="keyword">from</span> <span class="string">&#x27;../../../interfaces&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Nullable</span>, <span class="title class_">Size</span>, <span class="title class_">Vector2</span>, <span class="title class_">Vector3</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;../../../types&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">VtkDataTypes</span> &#125; <span class="keyword">from</span> <span class="string">&#x27;../../../Common/Core/DataArray&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vtkRenderer <span class="keyword">from</span> <span class="string">&#x27;../../Core/Renderer&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vtkTexture <span class="keyword">from</span> <span class="string">&#x27;../../Core/Texture&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vtkViewStream <span class="keyword">from</span> <span class="string">&#x27;../../../IO/Core/ImageStream/ViewStream&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">IOpenGLRenderWindowInitialValues</span> &#123;</span><br><span class="line">	cullFaceEnabled?: boolean;</span><br><span class="line">	shaderCache?: <span class="literal">null</span>;</span><br><span class="line">	initialized?: boolean;</span><br><span class="line">	context?: <span class="title class_">WebGLRenderingContext</span> | <span class="title class_">WebGL2RenderingContext</span>;</span><br><span class="line">	canvas?: <span class="title class_">HTMLCanvasElement</span>;</span><br><span class="line">	cursorVisibility?: boolean;</span><br><span class="line">	cursor?: string;</span><br><span class="line">	textureUnitManager?: <span class="literal">null</span>;</span><br><span class="line">	textureResourceIds?: <span class="literal">null</span>;</span><br><span class="line">	containerSize?: <span class="title class_">Size</span>;</span><br><span class="line">	renderPasses?: any[];</span><br><span class="line">	notifyStartCaptureImage?: boolean;</span><br><span class="line">	webgl2?: boolean;</span><br><span class="line">	defaultToWebgl2?: boolean;</span><br><span class="line">	activeFramebuffer?: any;</span><br><span class="line">	xrSession?: any;</span><br><span class="line">	xrSessionIsAR?: boolean;</span><br><span class="line">	xrReferenceSpace?: any;</span><br><span class="line">	xrSupported?: boolean;</span><br><span class="line">	imageFormat?: <span class="string">&#x27;image/png&#x27;</span>;</span><br><span class="line">	useOffScreen?: boolean;</span><br><span class="line">	useBackgroundImage?: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">ICaptureOptions</span> &#123;</span><br><span class="line">	resetCamera?: boolean;</span><br><span class="line">	size?: <span class="title class_">Size</span>;</span><br><span class="line">	scale?: number</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface I3DContextOptions &#123;</span><br><span class="line">    preserveDrawingBuffer?: boolean;</span><br><span class="line">    depth?: boolean;</span><br><span class="line">    alpha?: boolean;</span><br><span class="line">    powerPreference?: string;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">type vtkOpenGLRenderWindowBase = vtkObject &amp; <span class="title class_">Omit</span>&lt;vtkAlgorithm,</span><br><span class="line">	| <span class="string">&#x27;getInputData&#x27;</span></span><br><span class="line">	| <span class="string">&#x27;setInputData&#x27;</span></span><br><span class="line">	| <span class="string">&#x27;setInputConnection&#x27;</span></span><br><span class="line">	| <span class="string">&#x27;getInputConnection&#x27;</span></span><br><span class="line">	| <span class="string">&#x27;addInputConnection&#x27;</span></span><br><span class="line">	| <span class="string">&#x27;addInputData&#x27;</span>&gt;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface vtkOpenGLRenderWindow <span class="keyword">extends</span> vtkOpenGLRenderWindowBase &#123;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Builds myself.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Boolean</span>&#125; <span class="variable">prepass</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">buildPass</span>(<span class="attr">prepass</span>: boolean): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Initialize the rendering window. This will setup all system-specific</span></span><br><span class="line"><span class="comment">	 * resources. This method and Finalize() must be symmetric and it should be</span></span><br><span class="line"><span class="comment">	 * possible to call them multiple times, even changing WindowId in-between.</span></span><br><span class="line"><span class="comment">	 * This is what WindowRemap does.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">initialize</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">makeCurrent</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">HTMLElement</span>&#125; el The container element.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setContainer</span>(<span class="attr">el</span>: <span class="title class_">HTMLElement</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the container element.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getContainer</span>(): <span class="title class_">Nullable</span>&lt;<span class="title class_">HTMLElement</span>&gt;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the container size.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getContainerSize</span>(): <span class="title class_">Vector2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the frame buffer size.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getFramebufferSize</span>(): <span class="title class_">Vector2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the webgl canvas.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getCanvas</span>(): <span class="title class_">Nullable</span>&lt;<span class="title class_">HTMLCanvasElement</span>&gt;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Check if a point is in the viewport.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; viewport The viewport vtk element.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">isInViewport</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">viewport</span>: vtkRenderer): boolean;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the viewport size.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; viewport The viewport vtk element.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getViewportSize</span>(<span class="attr">viewport</span>: vtkRenderer): <span class="title class_">Vector2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Get the center of the viewport.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; viewport The viewport vtk element.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getViewportCenter</span>(<span class="attr">viewport</span>: vtkRenderer): <span class="title class_">Vector2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">displayToNormalizedDisplay</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">normalizedDisplayToDisplay</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">worldToView</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">viewToWorld</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">worldToDisplay</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">displayToWorld</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">normalizedDisplayToViewport</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">viewportToNormalizedViewport</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">normalizedViewportToViewport</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">displayToLocalDisplay</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">z</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkRenderer</span>&#125; renderer The vtkRenderer instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">viewportToNormalizedDisplay</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number, <span class="attr">renderer</span>: vtkRenderer): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x1</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y1</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">x2</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">y2</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getPixelData</span>(<span class="attr">x1</span>: number, <span class="attr">y1</span>: number, <span class="attr">x2</span>: number, <span class="attr">y2</span>: number): <span class="title class_">Uint8Array</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">I3DContextOptions</span>&#125; <span class="variable">options</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">get3DContext</span>(<span class="attr">options</span>: I3DContextOptions): <span class="title class_">Nullable</span>&lt;<span class="title class_">WebGLRenderingContext</span>&gt;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Request an XR session on the user device with WebXR,</span></span><br><span class="line"><span class="comment">   * typically in response to a user request such as a button press.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">startXR</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * When an XR session is available, set up the XRWebGLLayer</span></span><br><span class="line"><span class="comment">   * and request the first animation frame for the device</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">   <span class="title function_">enterXR</span>(): <span class="keyword">void</span>,</span><br><span class="line"></span><br><span class="line">   <span class="comment">/**</span></span><br><span class="line"><span class="comment">    * Adjust world-to-physical parameters for different viewing modalities</span></span><br><span class="line"><span class="comment">    *</span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">inputRescaleFactor</span></span></span><br><span class="line"><span class="comment">    * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">inputTranslateZ</span></span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">   <span class="title function_">resetXRScene</span>(<span class="attr">inputRescaleFactor</span>: number, <span class="attr">inputTranslateZ</span>: number): <span class="keyword">void</span>,</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Request to stop the current XR session</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">stopXR</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">xrRender</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">restoreContext</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkTexture</span>&#125; <span class="variable">texture</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">activateTexture</span>(<span class="attr">texture</span>: vtkTexture): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkTexture</span>&#125; <span class="variable">texture</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">deactivateTexture</span>(<span class="attr">texture</span>: vtkTexture): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkTexture</span>&#125; <span class="variable">texture</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getTextureUnitForTexture</span>(<span class="attr">texture</span>: vtkTexture): number;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">VtkDataTypes</span>&#125; vtktype </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; numComps </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Boolean</span>&#125; useFloat </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">unknown</span>&#125; oglNorm16Ext The WebGL EXT_texture_norm16 extension context</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Boolean</span>&#125; <span class="variable">useHalfFloat</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getDefaultTextureInternalFormat</span>(<span class="attr">vtktype</span>: <span class="title class_">VtkDataTypes</span>, <span class="attr">numComps</span>: number, oglNorm16Ext?: unknown, useHalfFloat?: boolean): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">HTMLImageElement</span>&#125; img The background image.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setBackgroundImage</span>(<span class="attr">img</span>: <span class="title class_">HTMLImageElement</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Boolean</span>&#125; <span class="variable">value</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setUseBackgroundImage</span>(<span class="attr">value</span>: boolean): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Capture a screenshot of the contents of this renderwindow.  The options</span></span><br><span class="line"><span class="comment">	 * object can include a `size` array (`[w, h]`) or a `scale` floating point</span></span><br><span class="line"><span class="comment">	 * value, as well as a `resetCamera` boolean.  If `size` is provided, the</span></span><br><span class="line"><span class="comment">	 * captured screenshot will be of the given size (and `resetCamera` could be</span></span><br><span class="line"><span class="comment">	 * useful in this case if the aspect ratio of `size` does not match the</span></span><br><span class="line"><span class="comment">	 * current renderwindow size).  Otherwise, if `scale` is provided, it will</span></span><br><span class="line"><span class="comment">	 * be multiplied by the current renderwindow size to compute the screenshot</span></span><br><span class="line"><span class="comment">	 * size.  If no `size` or `scale` are provided, the current renderwindow</span></span><br><span class="line"><span class="comment">	 * size is assumed.  The default format is &quot;image/png&quot;. Returns a promise</span></span><br><span class="line"><span class="comment">	 * that resolves to the captured screenshot.</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">String</span>&#125; <span class="variable">format</span></span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">ICaptureOptions</span>&#125; <span class="variable">options</span></span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">captureNextImage</span>(<span class="attr">format</span>: string, options?: <span class="title class_">ICaptureOptions</span>): <span class="title class_">Nullable</span>&lt;<span class="title class_">Promise</span>&lt;string&gt;&gt;;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getGLInformations</span>(): object;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">traverseAllPasses</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">disableCullFace</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">enableCullFace</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">vtkViewStream</span>&#125; stream The vtkViewStream instance.</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setViewStream</span>(<span class="attr">stream</span>: vtkViewStream): boolean;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Sets the pixel width and height of the rendered image.  </span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * WebGL and WebGPU render windows apply these values to </span></span><br><span class="line"><span class="comment">	 * the width and height attribute of the canvas element.</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * To match the device resolution in browser environments, </span></span><br><span class="line"><span class="comment">	 * multiply the container size by `window.devicePixelRatio`</span></span><br><span class="line"><span class="comment">	 * `apiSpecificRenderWindow.setSize(Math.floor(containerWidth * devicePixelRatio), Math.floor(containerHeight * devicePixelRatio));</span></span><br><span class="line"><span class="comment">	 * See the VTK.js FullscreenRenderWindow class for an example.</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> getComputedDevicePixelRatio()</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Vector2</span>&#125; size </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setSize</span>(<span class="attr">size</span>: <span class="title class_">Vector2</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y </span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">setSize</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 *</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getSize</span>(): <span class="title class_">Vector2</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">/**</span></span><br><span class="line"><span class="comment">	 * Scales the size of a browser CSS pixel to a rendered canvas pixel.  </span></span><br><span class="line"><span class="comment">	 * `const renderedPixelWidth = cssPixelWidth * apiRenderWindow.getComputedDevicePixelRatio()`</span></span><br><span class="line"><span class="comment">	 * Use to scale rendered objects to a consistent perceived size or DOM pixel position.</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * Rather than using window.devicePixelRatio directly, the device pixel ratio is inferred</span></span><br><span class="line"><span class="comment">	 * from the container CSS pixel size and rendered image pixel size. The user directly sets the rendered pixel size.</span></span><br><span class="line"><span class="comment">	 * </span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> setSize()</span></span><br><span class="line"><span class="comment">	 * <span class="doctag">@see</span> getContainerSize()</span></span><br><span class="line"><span class="comment">	 */</span></span><br><span class="line">	<span class="title function_">getComputedDevicePixelRatio</span>(): number;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method used to decorate a given object (publicAPI+model) with vtkOpenGLRenderWindow characteristics.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> publicAPI object on which methods will be bounds (public)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> model object on which data structure will be bounds (protected)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">IOpenGLRenderWindowInitialValues</span>&#125; [initialValues] (default: &#123;&#125;)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">publicAPI: object, model: object, initialValues?: IOpenGLRenderWindowInitialValues</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method used to create a new instance of vtkOpenGLRenderWindow.</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">IOpenGLRenderWindowInitialValues</span>&#125; [initialValues] for pre-setting some of its content</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">newInstance</span>(<span class="params">initialValues?: IOpenGLRenderWindowInitialValues</span>): vtkOpenGLRenderWindow;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> <span class="variable">cb</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">pushMonitorGLContextCount</span>(<span class="params">cb: any</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> <span class="variable">cb</span></span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">popMonitorGLContextCount</span>(<span class="params">cb: any</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * WebGL rendering window</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * vtkOpenGLRenderWindow is designed to view/render a vtkRenderWindow.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> declare <span class="keyword">const</span> <span class="attr">vtkOpenGLRenderWindow</span>: &#123;</span><br><span class="line">	<span class="attr">newInstance</span>: <span class="keyword">typeof</span> newInstance,</span><br><span class="line">	<span class="attr">extend</span>: <span class="keyword">typeof</span> extend,</span><br><span class="line">	<span class="attr">pushMonitorGLContextCount</span>: <span class="keyword">typeof</span> pushMonitorGLContextCount,</span><br><span class="line">	<span class="attr">popMonitorGLContextCount</span>: <span class="keyword">typeof</span> popMonitorGLContextCount,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> vtkOpenGLRenderWindow;</span><br></pre></td></tr></table></figure>
@@ -121,7 +930,7 @@
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-09-13T22:46:13.592Z" itemprop="dateModified">Last updated: 2023-09-13</time>
+                <time class="article-footer-updated" datetime="2023-09-14T14:47:39.445Z" itemprop="dateModified">Last updated: 2023-09-14</time>
                 <a href="Rendering_OpenGL_RadialDistortionPass.html" class="article-footer-prev" title="RadialDistortionPass"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="Rendering_OpenGL_Renderer.html" class="article-footer-next" title="Renderer"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -130,7 +939,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#activateTexture"><span class="toc-text">activateTexture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#buildPass"><span class="toc-text">buildPass</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#captureNextImage"><span class="toc-text">captureNextImage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#deactivateTexture"><span class="toc-text">deactivateTexture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#disableCullFace"><span class="toc-text">disableCullFace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#displayToLocalDisplay"><span class="toc-text">displayToLocalDisplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#displayToNormalizedDisplay"><span class="toc-text">displayToNormalizedDisplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#displayToWorld"><span class="toc-text">displayToWorld</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enableCullFace"><span class="toc-text">enableCullFace</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#enterXR"><span class="toc-text">enterXR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#extend"><span class="toc-text">extend</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#get3DContext"><span class="toc-text">get3DContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getCanvas"><span class="toc-text">getCanvas</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getComputedDevicePixelRatio"><span class="toc-text">getComputedDevicePixelRatio</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getContainer"><span class="toc-text">getContainer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getContainerSize"><span class="toc-text">getContainerSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getDefaultTextureInternalFormat"><span class="toc-text">getDefaultTextureInternalFormat</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getFramebufferSize"><span class="toc-text">getFramebufferSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getGLInformations"><span class="toc-text">getGLInformations</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getPixelData"><span class="toc-text">getPixelData</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getSize"><span class="toc-text">getSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getTextureUnitForTexture"><span class="toc-text">getTextureUnitForTexture</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getViewportCenter"><span class="toc-text">getViewportCenter</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getViewportSize"><span class="toc-text">getViewportSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#initialize"><span class="toc-text">initialize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#isInViewport"><span class="toc-text">isInViewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#makeCurrent"><span class="toc-text">makeCurrent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#newInstance"><span class="toc-text">newInstance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizedDisplayToDisplay"><span class="toc-text">normalizedDisplayToDisplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizedDisplayToViewport"><span class="toc-text">normalizedDisplayToViewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#normalizedViewportToViewport"><span class="toc-text">normalizedViewportToViewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#popMonitorGLContextCount"><span class="toc-text">popMonitorGLContextCount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#pushMonitorGLContextCount"><span class="toc-text">pushMonitorGLContextCount</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#resetXRScene"><span class="toc-text">resetXRScene</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#restoreContext"><span class="toc-text">restoreContext</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setBackgroundImage"><span class="toc-text">setBackgroundImage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setContainer"><span class="toc-text">setContainer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setSize"><span class="toc-text">setSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setSize-1"><span class="toc-text">setSize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUseBackgroundImage"><span class="toc-text">setUseBackgroundImage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setViewStream"><span class="toc-text">setViewStream</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#startXR"><span class="toc-text">startXR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#stopXR"><span class="toc-text">stopXR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#traverseAllPasses"><span class="toc-text">traverseAllPasses</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#viewToWorld"><span class="toc-text">viewToWorld</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#viewportToNormalizedDisplay"><span class="toc-text">viewportToNormalizedDisplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#viewportToNormalizedViewport"><span class="toc-text">viewportToNormalizedViewport</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#worldToDisplay"><span class="toc-text">worldToDisplay</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#worldToView"><span class="toc-text">worldToView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#xrRender"><span class="toc-text">xrRender</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

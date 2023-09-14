@@ -41,15 +41,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/vtk-js/atom.xml" title="vtk.js" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Sourceindex.d.tsimport vtkRenderer from &amp;#x27;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;Core&#x2F;Renderer&amp;#x27;;import vtkRenderWindowInteractor from &amp;#x27;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;Core&#x2F;RenderWindowInteractor&amp;#x27;;export interface v">
+  <meta name="description" content="MethodsendInteractionEnds an interaction event. getAltGets flag if alt key is required. getButtonGets the associated button. getControlGets flag if control key is required. getShiftGets flag if shift">
 <meta property="og:type" content="website">
 <meta property="og:title" content="CompositeMouseManipulator">
 <meta property="og:url" content="https://kitware.github.io/vtk-js/api/Interaction_Manipulators_CompositeMouseManipulator.html">
 <meta property="og:site_name" content="vtk.js">
-<meta property="og:description" content="Sourceindex.d.tsimport vtkRenderer from &amp;#x27;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;Core&#x2F;Renderer&amp;#x27;;import vtkRenderWindowInteractor from &amp;#x27;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;Core&#x2F;RenderWindowInteractor&amp;#x27;;export interface v">
+<meta property="og:description" content="MethodsendInteractionEnds an interaction event. getAltGets flag if alt key is required. getButtonGets the associated button. getControlGets flag if control key is required. getShiftGets flag if shift">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-13T22:46:09.347Z">
-<meta property="article:modified_time" content="2023-09-13T22:46:09.347Z">
+<meta property="article:published_time" content="2023-09-14T14:47:39.193Z">
+<meta property="article:modified_time" content="2023-09-14T14:47:39.193Z">
 <meta property="article:author" content="Kitware Inc.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -113,12 +113,243 @@
                 <h1 class="article-title" itemprop="name">CompositeMouseManipulator</h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>index.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> vtkRenderer <span class="keyword">from</span> <span class="string">&#x27;../../../Rendering/Core/Renderer&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vtkRenderWindowInteractor <span class="keyword">from</span> <span class="string">&#x27;../../../Rendering/Core/RenderWindowInteractor&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface vtkCompositeMouseManipulator &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Starts an interaction event.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">startInteraction</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Ends an interaction event.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">endInteraction</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a button down event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> position the display position</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onButtonDown</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">position</span>: &#123; <span class="attr">x</span>: number; <span class="attr">y</span>: number &#125;</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a button up event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onButtonUp</span>(<span class="attr">interactor</span>: vtkRenderWindowInteractor): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a mouse move event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> position the display position</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onMouseMove</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">position</span>: &#123; <span class="attr">x</span>: number; <span class="attr">y</span>: number &#125;</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a start scroll event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> delta the scroll delta</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onStartScroll</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">delta</span>: number</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a scroll event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onEndScroll</span>(<span class="attr">interactor</span>: vtkRenderWindowInteractor): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Is drag enabled.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">isDragEnabled</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if drag is enabled.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">enabled</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setDragEnabled</span>(<span class="attr">enabled</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Is scroll enabled.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">isScrollEnabled</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if scroll is enabled.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">enabled</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setScrollEnabled</span>(<span class="attr">enabled</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets the associated button.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">btn</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setButton</span>(<span class="attr">btn</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets the associated button.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getButton</span>(): number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the shift key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">shift</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setShift</span>(<span class="attr">shift</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if shift key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getShift</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the control key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">ctrl</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setControl</span>(<span class="attr">ctrl</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if control key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getControl</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the alt key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">alt</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setAlt</span>(<span class="attr">alt</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if alt key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getAlt</span>(): boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">ICompositeMouseManipulatorInitialValues</span> &#123;</span><br><span class="line">  button?: number;</span><br><span class="line">  shift?: boolean;</span><br><span class="line">  control?: boolean;</span><br><span class="line">  alt?: boolean;</span><br><span class="line">  dragEnabled?: boolean;</span><br><span class="line">  scrollEnabled?: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params"></span></span><br><span class="line"><span class="params">  publicAPI: object,</span></span><br><span class="line"><span class="params">  model: object,</span></span><br><span class="line"><span class="params">  initialValues?: ICompositeMouseManipulatorInitialValues</span></span><br><span class="line"><span class="params"></span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">vtkCompositeMouseManipulator</span>: &#123;</span><br><span class="line">  <span class="attr">extend</span>: <span class="keyword">typeof</span> extend;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> vtkCompositeMouseManipulator;</span><br></pre></td></tr></table></figure>
+                <h2 id="Methods" class="article-heading"><a href="#Methods" class="headerlink" title="Methods"></a>Methods<a class="article-anchor" href="#Methods" aria-hidden="true"></a></h2><h3 id="endInteraction" class="article-heading"><a href="#endInteraction" class="headerlink" title="endInteraction"></a>endInteraction<a class="article-anchor" href="#endInteraction" aria-hidden="true"></a></h3><p>Ends an interaction event.</p>
+<h3 id="getAlt" class="article-heading"><a href="#getAlt" class="headerlink" title="getAlt"></a>getAlt<a class="article-anchor" href="#getAlt" aria-hidden="true"></a></h3><p>Gets flag if alt key is required.</p>
+<h3 id="getButton" class="article-heading"><a href="#getButton" class="headerlink" title="getButton"></a>getButton<a class="article-anchor" href="#getButton" aria-hidden="true"></a></h3><p>Gets the associated button.</p>
+<h3 id="getControl" class="article-heading"><a href="#getControl" class="headerlink" title="getControl"></a>getControl<a class="article-anchor" href="#getControl" aria-hidden="true"></a></h3><p>Gets flag if control key is required.</p>
+<h3 id="getShift" class="article-heading"><a href="#getShift" class="headerlink" title="getShift"></a>getShift<a class="article-anchor" href="#getShift" aria-hidden="true"></a></h3><p>Gets flag if shift key is required.</p>
+<h3 id="isDragEnabled" class="article-heading"><a href="#isDragEnabled" class="headerlink" title="isDragEnabled"></a>isDragEnabled<a class="article-anchor" href="#isDragEnabled" aria-hidden="true"></a></h3><p>Is drag enabled.</p>
+<h3 id="isScrollEnabled" class="article-heading"><a href="#isScrollEnabled" class="headerlink" title="isScrollEnabled"></a>isScrollEnabled<a class="article-anchor" href="#isScrollEnabled" aria-hidden="true"></a></h3><p>Is scroll enabled.</p>
+<h3 id="onButtonDown" class="article-heading"><a href="#onButtonDown" class="headerlink" title="onButtonDown"></a>onButtonDown<a class="article-anchor" href="#onButtonDown" aria-hidden="true"></a></h3><p>Handles a button down event.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>interactor</code></td>
+<td></td>
+<td>Yes</td>
+<td>the interactor</td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td></td>
+<td>Yes</td>
+<td>the renderer</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td></td>
+<td>Yes</td>
+<td>the display position</td>
+</tr>
+</tbody></table>
+<h3 id="onButtonUp" class="article-heading"><a href="#onButtonUp" class="headerlink" title="onButtonUp"></a>onButtonUp<a class="article-anchor" href="#onButtonUp" aria-hidden="true"></a></h3><p>Handles a button up event.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>interactor</code></td>
+<td></td>
+<td>Yes</td>
+<td>the interactor</td>
+</tr>
+</tbody></table>
+<h3 id="onEndScroll" class="article-heading"><a href="#onEndScroll" class="headerlink" title="onEndScroll"></a>onEndScroll<a class="article-anchor" href="#onEndScroll" aria-hidden="true"></a></h3><p>Handles a scroll event.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>interactor</code></td>
+<td></td>
+<td>Yes</td>
+<td>the interactor</td>
+</tr>
+</tbody></table>
+<h3 id="onMouseMove" class="article-heading"><a href="#onMouseMove" class="headerlink" title="onMouseMove"></a>onMouseMove<a class="article-anchor" href="#onMouseMove" aria-hidden="true"></a></h3><p>Handles a mouse move event.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>interactor</code></td>
+<td></td>
+<td>Yes</td>
+<td>the interactor</td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td></td>
+<td>Yes</td>
+<td>the renderer</td>
+</tr>
+<tr>
+<td><code>position</code></td>
+<td></td>
+<td>Yes</td>
+<td>the display position</td>
+</tr>
+</tbody></table>
+<h3 id="onStartScroll" class="article-heading"><a href="#onStartScroll" class="headerlink" title="onStartScroll"></a>onStartScroll<a class="article-anchor" href="#onStartScroll" aria-hidden="true"></a></h3><p>Handles a start scroll event.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>interactor</code></td>
+<td></td>
+<td>Yes</td>
+<td>the interactor</td>
+</tr>
+<tr>
+<td><code>renderer</code></td>
+<td></td>
+<td>Yes</td>
+<td>the renderer</td>
+</tr>
+<tr>
+<td><code>delta</code></td>
+<td></td>
+<td>Yes</td>
+<td>the scroll delta</td>
+</tr>
+</tbody></table>
+<h3 id="setAlt" class="article-heading"><a href="#setAlt" class="headerlink" title="setAlt"></a>setAlt<a class="article-anchor" href="#setAlt" aria-hidden="true"></a></h3><p>Sets if the alt key is required.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>alt</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setButton" class="article-heading"><a href="#setButton" class="headerlink" title="setButton"></a>setButton<a class="article-anchor" href="#setButton" aria-hidden="true"></a></h3><p>Sets the associated button.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>btn</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setControl" class="article-heading"><a href="#setControl" class="headerlink" title="setControl"></a>setControl<a class="article-anchor" href="#setControl" aria-hidden="true"></a></h3><p>Sets if the control key is required.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>ctrl</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setDragEnabled" class="article-heading"><a href="#setDragEnabled" class="headerlink" title="setDragEnabled"></a>setDragEnabled<a class="article-anchor" href="#setDragEnabled" aria-hidden="true"></a></h3><p>Sets if drag is enabled.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>enabled</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setScrollEnabled" class="article-heading"><a href="#setScrollEnabled" class="headerlink" title="setScrollEnabled"></a>setScrollEnabled<a class="article-anchor" href="#setScrollEnabled" aria-hidden="true"></a></h3><p>Sets if scroll is enabled.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>enabled</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="setShift" class="article-heading"><a href="#setShift" class="headerlink" title="setShift"></a>setShift<a class="article-anchor" href="#setShift" aria-hidden="true"></a></h3><p>Sets if the shift key is required.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>shift</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="startInteraction" class="article-heading"><a href="#startInteraction" class="headerlink" title="startInteraction"></a>startInteraction<a class="article-anchor" href="#startInteraction" aria-hidden="true"></a></h3><p>Starts an interaction event.</p>
+<h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>index.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> vtkRenderer <span class="keyword">from</span> <span class="string">&#x27;../../../Rendering/Core/Renderer&#x27;</span>;</span><br><span class="line"><span class="keyword">import</span> vtkRenderWindowInteractor <span class="keyword">from</span> <span class="string">&#x27;../../../Rendering/Core/RenderWindowInteractor&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface vtkCompositeMouseManipulator &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Starts an interaction event.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">startInteraction</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Ends an interaction event.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">endInteraction</span>(): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a button down event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> position the display position</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onButtonDown</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">position</span>: &#123; <span class="attr">x</span>: number; <span class="attr">y</span>: number &#125;</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a button up event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onButtonUp</span>(<span class="attr">interactor</span>: vtkRenderWindowInteractor): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a mouse move event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> position the display position</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onMouseMove</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">position</span>: &#123; <span class="attr">x</span>: number; <span class="attr">y</span>: number &#125;</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a start scroll event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> renderer the renderer</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> delta the scroll delta</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onStartScroll</span>(</span><br><span class="line">    <span class="attr">interactor</span>: vtkRenderWindowInteractor,</span><br><span class="line">    <span class="attr">renderer</span>: vtkRenderer,</span><br><span class="line">    <span class="attr">delta</span>: number</span><br><span class="line">  ): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Handles a scroll event.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> interactor the interactor</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">onEndScroll</span>(<span class="attr">interactor</span>: vtkRenderWindowInteractor): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Is drag enabled.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">isDragEnabled</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if drag is enabled.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">enabled</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setDragEnabled</span>(<span class="attr">enabled</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Is scroll enabled.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">isScrollEnabled</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if scroll is enabled.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">enabled</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setScrollEnabled</span>(<span class="attr">enabled</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets the associated button.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">btn</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setButton</span>(<span class="attr">btn</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets the associated button.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getButton</span>(): number;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the shift key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">shift</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setShift</span>(<span class="attr">shift</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if shift key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getShift</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the control key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">ctrl</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setControl</span>(<span class="attr">ctrl</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if control key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getControl</span>(): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Sets if the alt key is required.</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> <span class="variable">alt</span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">setAlt</span>(<span class="attr">alt</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * Gets flag if alt key is required.</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="title function_">getAlt</span>(): boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">ICompositeMouseManipulatorInitialValues</span> &#123;</span><br><span class="line">  button?: number;</span><br><span class="line">  shift?: boolean;</span><br><span class="line">  control?: boolean;</span><br><span class="line">  alt?: boolean;</span><br><span class="line">  dragEnabled?: boolean;</span><br><span class="line">  scrollEnabled?: boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params"></span></span><br><span class="line"><span class="params">  publicAPI: object,</span></span><br><span class="line"><span class="params">  model: object,</span></span><br><span class="line"><span class="params">  initialValues?: ICompositeMouseManipulatorInitialValues</span></span><br><span class="line"><span class="params"></span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> <span class="attr">vtkCompositeMouseManipulator</span>: &#123;</span><br><span class="line">  <span class="attr">extend</span>: <span class="keyword">typeof</span> extend;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> vtkCompositeMouseManipulator;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><figcaption><span>index.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> macro <span class="keyword">from</span> <span class="string">&#x27;vtk.js/Sources/macros&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">// vtkCompositeMouseManipulator methods</span></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">vtkCompositeMouseManipulator</span>(<span class="params">publicAPI, model</span>) &#123;</span><br><span class="line">  <span class="comment">// Set our className</span></span><br><span class="line">  model.<span class="property">classHierarchy</span>.<span class="title function_">push</span>(<span class="string">&#x27;vtkCompositeMouseManipulator&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  publicAPI.<span class="property">startInteraction</span> = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">endInteraction</span> = <span class="function">() =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onButtonDown</span> = <span class="function">(<span class="params">interactor, renderer, position</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onButtonUp</span> = <span class="function">(<span class="params">interactor</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onMouseMove</span> = <span class="function">(<span class="params">interactor, renderer, position</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onStartScroll</span> = <span class="function">(<span class="params">interactor, renderer, delta</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onScroll</span> = <span class="function">(<span class="params">interactor, renderer, delta</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line">  publicAPI.<span class="property">onEndScroll</span> = <span class="function">(<span class="params">interactor</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line"></span><br><span class="line">  publicAPI.<span class="property">isDragEnabled</span> = <span class="function">() =&gt;</span> model.<span class="property">dragEnabled</span>;</span><br><span class="line">  publicAPI.<span class="property">isScrollEnabled</span> = <span class="function">() =&gt;</span> model.<span class="property">scrollEnabled</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">// Object factory</span></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">DEFAULT_VALUES</span> = &#123;</span><br><span class="line">  <span class="attr">button</span>: <span class="number">1</span>,</span><br><span class="line">  <span class="attr">shift</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">control</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">alt</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">dragEnabled</span>: <span class="literal">true</span>,</span><br><span class="line">  <span class="attr">scrollEnabled</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">publicAPI, model, initialValues = &#123;&#125;</span>) &#123;</span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">assign</span>(model, <span class="variable constant_">DEFAULT_VALUES</span>, initialValues);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Create get-set macros</span></span><br><span class="line">  macro.<span class="title function_">setGet</span>(publicAPI, model, [<span class="string">&#x27;button&#x27;</span>, <span class="string">&#x27;shift&#x27;</span>, <span class="string">&#x27;control&#x27;</span>, <span class="string">&#x27;alt&#x27;</span>]);</span><br><span class="line">  macro.<span class="title function_">set</span>(publicAPI, model, [<span class="string">&#x27;dragEnabled&#x27;</span>, <span class="string">&#x27;scrollEnabled&#x27;</span>]);</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Object specific methods</span></span><br><span class="line">  <span class="title function_">vtkCompositeMouseManipulator</span>(publicAPI, model);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; extend &#125;;</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-09-13T22:46:09.347Z" itemprop="dateModified">Last updated: 2023-09-13</time>
+                <time class="article-footer-updated" datetime="2023-09-14T14:47:39.193Z" itemprop="dateModified">Last updated: 2023-09-14</time>
                 <a href="Interaction_Manipulators_CompositeKeyboardManipulator.html" class="article-footer-prev" title="CompositeKeyboardManipulator"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="Interaction_Manipulators_CompositeVRManipulator.html" class="article-footer-next" title="CompositeVRManipulator"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -127,7 +358,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#endInteraction"><span class="toc-text">endInteraction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getAlt"><span class="toc-text">getAlt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getButton"><span class="toc-text">getButton</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getControl"><span class="toc-text">getControl</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getShift"><span class="toc-text">getShift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#isDragEnabled"><span class="toc-text">isDragEnabled</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#isScrollEnabled"><span class="toc-text">isScrollEnabled</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onButtonDown"><span class="toc-text">onButtonDown</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onButtonUp"><span class="toc-text">onButtonUp</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onEndScroll"><span class="toc-text">onEndScroll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onMouseMove"><span class="toc-text">onMouseMove</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#onStartScroll"><span class="toc-text">onStartScroll</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setAlt"><span class="toc-text">setAlt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setButton"><span class="toc-text">setButton</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setControl"><span class="toc-text">setControl</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setDragEnabled"><span class="toc-text">setDragEnabled</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setScrollEnabled"><span class="toc-text">setScrollEnabled</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setShift"><span class="toc-text">setShift</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#startInteraction"><span class="toc-text">startInteraction</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>

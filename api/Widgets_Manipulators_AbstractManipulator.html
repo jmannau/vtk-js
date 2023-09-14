@@ -41,15 +41,15 @@
   <!-- RSS -->
   <link rel="alternate" href="/vtk-js/atom.xml" title="vtk.js" type="application/atom+xml">
   <!-- Open Graph -->
-  <meta name="description" content="Sourceindex.d.tsimport &amp;#123; vtkObject &amp;#125; from &quot;..&#x2F;..&#x2F;..&#x2F;interfaces&quot;;import &amp;#123; vtkOpenGLRenderWindow &amp;#125; from &quot;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;OpenGL&#x2F;RenderWindow&quot;import &amp;#123; Matr">
+  <meta name="description" content="IntroductionvtkAbstractManipulator. MethodsextendMethod use to decorate a given object (publicAPI+model) with vtkAbstractManipulator characteristics.    Argument Type Required Description    publicAPI">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AbstractManipulator">
 <meta property="og:url" content="https://kitware.github.io/vtk-js/api/Widgets_Manipulators_AbstractManipulator.html">
 <meta property="og:site_name" content="vtk.js">
-<meta property="og:description" content="Sourceindex.d.tsimport &amp;#123; vtkObject &amp;#125; from &quot;..&#x2F;..&#x2F;..&#x2F;interfaces&quot;;import &amp;#123; vtkOpenGLRenderWindow &amp;#125; from &quot;..&#x2F;..&#x2F;..&#x2F;Rendering&#x2F;OpenGL&#x2F;RenderWindow&quot;import &amp;#123; Matr">
+<meta property="og:description" content="IntroductionvtkAbstractManipulator. MethodsextendMethod use to decorate a given object (publicAPI+model) with vtkAbstractManipulator characteristics.    Argument Type Required Description    publicAPI">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2023-09-13T22:46:14.813Z">
-<meta property="article:modified_time" content="2023-09-13T22:46:14.813Z">
+<meta property="article:published_time" content="2023-09-14T14:47:39.525Z">
+<meta property="article:modified_time" content="2023-09-14T14:47:39.525Z">
 <meta property="article:author" content="Kitware Inc.">
 <meta name="twitter:card" content="summary">
   <!-- Google Analytics -->
@@ -113,12 +113,481 @@
                 <h1 class="article-title" itemprop="name">AbstractManipulator</h1>
               </header>
               <div class="article-content" itemprop="articleBody">
-                <h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>index.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; vtkObject &#125; <span class="keyword">from</span> <span class="string">&quot;../../../interfaces&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; vtkOpenGLRenderWindow &#125; <span class="keyword">from</span> <span class="string">&quot;../../../Rendering/OpenGL/RenderWindow&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Matrix3</span>x3, <span class="title class_">Nullable</span>, <span class="title class_">Vector3</span> &#125; <span class="keyword">from</span> <span class="string">&quot;../../../types&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">IAbstractManipulatorInitialValues</span> &#123;</span><br><span class="line">    userOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    handleOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    widgetOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    userNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">    handleNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">    widgetNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface vtkAbstractManipulator <span class="keyword">extends</span> vtkObject &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the normal of the line</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getNormal</span>(<span class="attr">callData</span>: any): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the origin of the line</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getOrigin</span>(<span class="attr">callData</span>: any): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the value of useCameraFocalPoint</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getUseCameraFocalPoint</span>(): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the value of useCameraFocalPoint</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> useCameraFocalPoint if true, the focal point of the camera will be used if userOrigin is not set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUseCameraFocalPoint</span>(<span class="attr">useCameraFocalPoint</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the value of useCameraNormal</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getUseCameraNormal</span>(): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the value of useCameraNormal</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> useCameraNormal if true, the normal of the camera will be used if userNormal is not set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUseCameraNormal</span>(<span class="attr">useCameraNormal</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> callData </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> glRenderWindow </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">handleEvent</span>(<span class="attr">callData</span>: any, <span class="attr">glRenderWindow</span>: vtkOpenGLRenderWindow): &#123; <span class="attr">worldCoords</span>: <span class="title class_">Nullable</span>&lt;<span class="title class_">Vector3</span>&gt;, worldDirection?: <span class="title class_">Matrix3</span>x3 &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal.</span></span><br><span class="line"><span class="comment">     * This normal take precedence on the handleNormal and the widgetNormal.</span></span><br><span class="line"><span class="comment">     * This normal should not be set within the widget internal code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal (see setUserNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal (see setUserNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin.</span></span><br><span class="line"><span class="comment">     * This origin take precedence on the handleOrigin and the widgetOrigin.</span></span><br><span class="line"><span class="comment">     * This origin should not be set within the widget internal code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin (see setUserOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin (see setUserOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal. </span></span><br><span class="line"><span class="comment">     * This normal is used after the userNormal and before the widgetNormal.</span></span><br><span class="line"><span class="comment">     * This normal is automatically set by any state having a manipulatorMixin,</span></span><br><span class="line"><span class="comment">     * and can be overridden in the widget code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal (see setHandleNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal (see setHandleNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin.</span></span><br><span class="line"><span class="comment">     * This origin is used after the userOrigin and before the widgetOrigin.</span></span><br><span class="line"><span class="comment">     * This origin is automatically set by any state having a manipulatorMixin,</span></span><br><span class="line"><span class="comment">     * and can be overridden in the widget code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin (see setHandleOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin (see setHandleOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal. </span></span><br><span class="line"><span class="comment">     * This normal is used if no other normals are set. </span></span><br><span class="line"><span class="comment">     * It can be used to define a normal global to the whole widget.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal (see setWidgetNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal (see setWidgetNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin.</span></span><br><span class="line"><span class="comment">     * This origin is used if no other origins are set.</span></span><br><span class="line"><span class="comment">     * It can be used to define an origin global to the whole widget.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin (see setWidgetOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin (see setWidgetOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method use to decorate a given object (publicAPI+model) with vtkAbstractManipulator characteristics.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> publicAPI object on which methods will be bounds (public)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> model object on which data structure will be bounds (protected)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">IAbstractManipulatorInitialValues</span>&#125; [initialValues] (default: &#123;&#125;)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">publicAPI: object, model: object, initialValues?: IAbstractManipulatorInitialValues</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method use to create a new instance of vtkAbstractManipulator</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">newInstance</span>(<span class="params">initialValues?: IAbstractManipulatorInitialValues</span>): vtkAbstractManipulator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * vtkAbstractManipulator.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> declare <span class="keyword">const</span> <span class="attr">vtkAbstractManipulator</span>: &#123;</span><br><span class="line">	<span class="attr">newInstance</span>: <span class="keyword">typeof</span> newInstance,</span><br><span class="line">	<span class="attr">extend</span>: <span class="keyword">typeof</span> extend,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> vtkAbstractManipulator;</span><br></pre></td></tr></table></figure>
+                <h2 id="Introduction" class="article-heading"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction<a class="article-anchor" href="#Introduction" aria-hidden="true"></a></h2><p>vtkAbstractManipulator.</p>
+<h2 id="Methods" class="article-heading"><a href="#Methods" class="headerlink" title="Methods"></a>Methods<a class="article-anchor" href="#Methods" aria-hidden="true"></a></h2><h3 id="extend" class="article-heading"><a href="#extend" class="headerlink" title="extend"></a>extend<a class="article-anchor" href="#extend" aria-hidden="true"></a></h3><p>Method use to decorate a given object (publicAPI+model) with vtkAbstractManipulator characteristics.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>publicAPI</code></td>
+<td></td>
+<td>Yes</td>
+<td>object on which methods will be bounds (public)</td>
+</tr>
+<tr>
+<td><code>model</code></td>
+<td></td>
+<td>Yes</td>
+<td>object on which data structure will be bounds (protected)</td>
+</tr>
+<tr>
+<td><code>initialValues</code></td>
+<td>IAbstractManipulatorInitialValues</td>
+<td>No</td>
+<td>(default: {})</td>
+</tr>
+</tbody></table>
+<h3 id="getNormal" class="article-heading"><a href="#getNormal" class="headerlink" title="getNormal"></a>getNormal<a class="article-anchor" href="#getNormal" aria-hidden="true"></a></h3><p>Get the normal of the line</p>
+<h3 id="getOrigin" class="article-heading"><a href="#getOrigin" class="headerlink" title="getOrigin"></a>getOrigin<a class="article-anchor" href="#getOrigin" aria-hidden="true"></a></h3><p>Get the origin of the line</p>
+<h3 id="getUseCameraFocalPoint" class="article-heading"><a href="#getUseCameraFocalPoint" class="headerlink" title="getUseCameraFocalPoint"></a>getUseCameraFocalPoint<a class="article-anchor" href="#getUseCameraFocalPoint" aria-hidden="true"></a></h3><p>Get the value of useCameraFocalPoint</p>
+<h3 id="getUseCameraNormal" class="article-heading"><a href="#getUseCameraNormal" class="headerlink" title="getUseCameraNormal"></a>getUseCameraNormal<a class="article-anchor" href="#getUseCameraNormal" aria-hidden="true"></a></h3><p>Get the value of useCameraNormal</p>
+<h3 id="handleEvent" class="article-heading"><a href="#handleEvent" class="headerlink" title="handleEvent"></a>handleEvent<a class="article-anchor" href="#handleEvent" aria-hidden="true"></a></h3><table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>callData</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+<tr>
+<td><code>glRenderWindow</code></td>
+<td></td>
+<td>Yes</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="newInstance" class="article-heading"><a href="#newInstance" class="headerlink" title="newInstance"></a>newInstance<a class="article-anchor" href="#newInstance" aria-hidden="true"></a></h3><p>Method use to create a new instance of vtkAbstractManipulator</p>
+<h3 id="setHandleNormal" class="article-heading"><a href="#setHandleNormal" class="headerlink" title="setHandleNormal"></a>setHandleNormal<a class="article-anchor" href="#setHandleNormal" aria-hidden="true"></a></h3><p>Set the handle normal (see setHandleNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setHandleNormal-1" class="article-heading"><a href="#setHandleNormal-1" class="headerlink" title="setHandleNormal"></a>setHandleNormal<a class="article-anchor" href="#setHandleNormal-1" aria-hidden="true"></a></h3><p>Set the handle normal.<br>This normal is used after the userNormal and before the widgetNormal.<br>This normal is automatically set by any state having a manipulatorMixin,<br>and can be overridden in the widget code.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setHandleNormalFrom" class="article-heading"><a href="#setHandleNormalFrom" class="headerlink" title="setHandleNormalFrom"></a>setHandleNormalFrom<a class="article-anchor" href="#setHandleNormalFrom" aria-hidden="true"></a></h3><p>Set the handle normal (see setHandleNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setHandleOrigin" class="article-heading"><a href="#setHandleOrigin" class="headerlink" title="setHandleOrigin"></a>setHandleOrigin<a class="article-anchor" href="#setHandleOrigin" aria-hidden="true"></a></h3><p>Set the handle origin (see setHandleOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setHandleOrigin-1" class="article-heading"><a href="#setHandleOrigin-1" class="headerlink" title="setHandleOrigin"></a>setHandleOrigin<a class="article-anchor" href="#setHandleOrigin-1" aria-hidden="true"></a></h3><p>Set the handle origin.<br>This origin is used after the userOrigin and before the widgetOrigin.<br>This origin is automatically set by any state having a manipulatorMixin,<br>and can be overridden in the widget code.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setHandleOriginFrom" class="article-heading"><a href="#setHandleOriginFrom" class="headerlink" title="setHandleOriginFrom"></a>setHandleOriginFrom<a class="article-anchor" href="#setHandleOriginFrom" aria-hidden="true"></a></h3><p>Set the handle origin (see setHandleOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setUseCameraFocalPoint" class="article-heading"><a href="#setUseCameraFocalPoint" class="headerlink" title="setUseCameraFocalPoint"></a>setUseCameraFocalPoint<a class="article-anchor" href="#setUseCameraFocalPoint" aria-hidden="true"></a></h3><p>Set the value of useCameraFocalPoint</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>useCameraFocalPoint</code></td>
+<td></td>
+<td>Yes</td>
+<td>if true, the focal point of the camera will be used if userOrigin is not set.</td>
+</tr>
+</tbody></table>
+<h3 id="setUseCameraNormal" class="article-heading"><a href="#setUseCameraNormal" class="headerlink" title="setUseCameraNormal"></a>setUseCameraNormal<a class="article-anchor" href="#setUseCameraNormal" aria-hidden="true"></a></h3><p>Set the value of useCameraNormal</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>useCameraNormal</code></td>
+<td></td>
+<td>Yes</td>
+<td>if true, the normal of the camera will be used if userNormal is not set.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserNormal" class="article-heading"><a href="#setUserNormal" class="headerlink" title="setUserNormal"></a>setUserNormal<a class="article-anchor" href="#setUserNormal" aria-hidden="true"></a></h3><p>Set the user normal (see setUserNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserNormal-1" class="article-heading"><a href="#setUserNormal-1" class="headerlink" title="setUserNormal"></a>setUserNormal<a class="article-anchor" href="#setUserNormal-1" aria-hidden="true"></a></h3><p>Set the user normal.<br>This normal take precedence on the handleNormal and the widgetNormal.<br>This normal should not be set within the widget internal code.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserNormalFrom" class="article-heading"><a href="#setUserNormalFrom" class="headerlink" title="setUserNormalFrom"></a>setUserNormalFrom<a class="article-anchor" href="#setUserNormalFrom" aria-hidden="true"></a></h3><p>Set the user normal (see setUserNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserOrigin" class="article-heading"><a href="#setUserOrigin" class="headerlink" title="setUserOrigin"></a>setUserOrigin<a class="article-anchor" href="#setUserOrigin" aria-hidden="true"></a></h3><p>Set the user origin (see setUserOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserOrigin-1" class="article-heading"><a href="#setUserOrigin-1" class="headerlink" title="setUserOrigin"></a>setUserOrigin<a class="article-anchor" href="#setUserOrigin-1" aria-hidden="true"></a></h3><p>Set the user origin.<br>This origin take precedence on the handleOrigin and the widgetOrigin.<br>This origin should not be set within the widget internal code.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setUserOriginFrom" class="article-heading"><a href="#setUserOriginFrom" class="headerlink" title="setUserOriginFrom"></a>setUserOriginFrom<a class="article-anchor" href="#setUserOriginFrom" aria-hidden="true"></a></h3><p>Set the user origin (see setUserOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetNormal" class="article-heading"><a href="#setWidgetNormal" class="headerlink" title="setWidgetNormal"></a>setWidgetNormal<a class="article-anchor" href="#setWidgetNormal" aria-hidden="true"></a></h3><p>Set the widget normal (see setWidgetNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetNormal-1" class="article-heading"><a href="#setWidgetNormal-1" class="headerlink" title="setWidgetNormal"></a>setWidgetNormal<a class="article-anchor" href="#setWidgetNormal-1" aria-hidden="true"></a></h3><p>Set the widget normal.<br>This normal is used if no other normals are set.<br>It can be used to define a normal global to the whole widget.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetNormalFrom" class="article-heading"><a href="#setWidgetNormalFrom" class="headerlink" title="setWidgetNormalFrom"></a>setWidgetNormalFrom<a class="article-anchor" href="#setWidgetNormalFrom" aria-hidden="true"></a></h3><p>Set the widget normal (see setWidgetNormal).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>normal</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The normal coordinate.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetOrigin" class="article-heading"><a href="#setWidgetOrigin" class="headerlink" title="setWidgetOrigin"></a>setWidgetOrigin<a class="article-anchor" href="#setWidgetOrigin" aria-hidden="true"></a></h3><p>Set the widget origin (see setWidgetOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>x</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The x coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>y</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The y coordinate of the origin point.</td>
+</tr>
+<tr>
+<td><code>z</code></td>
+<td>Number</td>
+<td>Yes</td>
+<td>The z coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetOrigin-1" class="article-heading"><a href="#setWidgetOrigin-1" class="headerlink" title="setWidgetOrigin"></a>setWidgetOrigin<a class="article-anchor" href="#setWidgetOrigin-1" aria-hidden="true"></a></h3><p>Set the widget origin.<br>This origin is used if no other origins are set.<br>It can be used to define an origin global to the whole widget.</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h3 id="setWidgetOriginFrom" class="article-heading"><a href="#setWidgetOriginFrom" class="headerlink" title="setWidgetOriginFrom"></a>setWidgetOriginFrom<a class="article-anchor" href="#setWidgetOriginFrom" aria-hidden="true"></a></h3><p>Set the widget origin (see setWidgetOrigin).</p>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>origin</code></td>
+<td>Vector3</td>
+<td>Yes</td>
+<td>The coordinate of the origin point.</td>
+</tr>
+</tbody></table>
+<h1 id="Source" class="article-heading"><a href="#Source" class="headerlink" title="Source"></a>Source<a class="article-anchor" href="#Source" aria-hidden="true"></a></h1><figure class="highlight js"><figcaption><span>index.d.ts</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; vtkObject &#125; <span class="keyword">from</span> <span class="string">&quot;../../../interfaces&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; vtkOpenGLRenderWindow &#125; <span class="keyword">from</span> <span class="string">&quot;../../../Rendering/OpenGL/RenderWindow&quot;</span></span><br><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">Matrix3</span>x3, <span class="title class_">Nullable</span>, <span class="title class_">Vector3</span> &#125; <span class="keyword">from</span> <span class="string">&quot;../../../types&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> interface <span class="title class_">IAbstractManipulatorInitialValues</span> &#123;</span><br><span class="line">    userOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    handleOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    widgetOrigin?: <span class="title class_">Vector3</span>;</span><br><span class="line">    userNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">    handleNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">    widgetNormal?: <span class="title class_">Vector3</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> interface vtkAbstractManipulator <span class="keyword">extends</span> vtkObject &#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the normal of the line</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getNormal</span>(<span class="attr">callData</span>: any): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the origin of the line</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getOrigin</span>(<span class="attr">callData</span>: any): <span class="title class_">Vector3</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the value of useCameraFocalPoint</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getUseCameraFocalPoint</span>(): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the value of useCameraFocalPoint</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> useCameraFocalPoint if true, the focal point of the camera will be used if userOrigin is not set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUseCameraFocalPoint</span>(<span class="attr">useCameraFocalPoint</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Get the value of useCameraNormal</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">getUseCameraNormal</span>(): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the value of useCameraNormal</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> useCameraNormal if true, the normal of the camera will be used if userNormal is not set.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUseCameraNormal</span>(<span class="attr">useCameraNormal</span>: boolean): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> callData </span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> glRenderWindow </span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">handleEvent</span>(<span class="attr">callData</span>: any, <span class="attr">glRenderWindow</span>: vtkOpenGLRenderWindow): &#123; <span class="attr">worldCoords</span>: <span class="title class_">Nullable</span>&lt;<span class="title class_">Vector3</span>&gt;, worldDirection?: <span class="title class_">Matrix3</span>x3 &#125;;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal.</span></span><br><span class="line"><span class="comment">     * This normal take precedence on the handleNormal and the widgetNormal.</span></span><br><span class="line"><span class="comment">     * This normal should not be set within the widget internal code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal (see setUserNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user normal (see setUserNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin.</span></span><br><span class="line"><span class="comment">     * This origin take precedence on the handleOrigin and the widgetOrigin.</span></span><br><span class="line"><span class="comment">     * This origin should not be set within the widget internal code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin (see setUserOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the user origin (see setUserOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setUserOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal. </span></span><br><span class="line"><span class="comment">     * This normal is used after the userNormal and before the widgetNormal.</span></span><br><span class="line"><span class="comment">     * This normal is automatically set by any state having a manipulatorMixin,</span></span><br><span class="line"><span class="comment">     * and can be overridden in the widget code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal (see setHandleNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle normal (see setHandleNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin.</span></span><br><span class="line"><span class="comment">     * This origin is used after the userOrigin and before the widgetOrigin.</span></span><br><span class="line"><span class="comment">     * This origin is automatically set by any state having a manipulatorMixin,</span></span><br><span class="line"><span class="comment">     * and can be overridden in the widget code.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin (see setHandleOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the handle origin (see setHandleOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setHandleOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* ------------------------------------------------------------------- */</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal. </span></span><br><span class="line"><span class="comment">     * This normal is used if no other normals are set. </span></span><br><span class="line"><span class="comment">     * It can be used to define a normal global to the whole widget.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormal</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal (see setWidgetNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormal</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget normal (see setWidgetNormal).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; normal The normal coordinate.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetNormalFrom</span>(<span class="attr">normal</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin.</span></span><br><span class="line"><span class="comment">     * This origin is used if no other origins are set.</span></span><br><span class="line"><span class="comment">     * It can be used to define an origin global to the whole widget.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOrigin</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin (see setWidgetOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; x The x coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; y The y coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; z The z coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOrigin</span>(<span class="attr">x</span>: number, <span class="attr">y</span>: number, <span class="attr">z</span>: number): boolean;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * Set the widget origin (see setWidgetOrigin).</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> &#123;<span class="type">Vector3</span>&#125; origin The coordinate of the origin point.</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="title function_">setWidgetOriginFrom</span>(<span class="attr">origin</span>: <span class="title class_">Vector3</span>): boolean;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method use to decorate a given object (publicAPI+model) with vtkAbstractManipulator characteristics.</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> publicAPI object on which methods will be bounds (public)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> model object on which data structure will be bounds (protected)</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">IAbstractManipulatorInitialValues</span>&#125; [initialValues] (default: &#123;&#125;)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">publicAPI: object, model: object, initialValues?: IAbstractManipulatorInitialValues</span>): <span class="keyword">void</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Method use to create a new instance of vtkAbstractManipulator</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">newInstance</span>(<span class="params">initialValues?: IAbstractManipulatorInitialValues</span>): vtkAbstractManipulator;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * vtkAbstractManipulator.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">export</span> declare <span class="keyword">const</span> <span class="attr">vtkAbstractManipulator</span>: &#123;</span><br><span class="line">	<span class="attr">newInstance</span>: <span class="keyword">typeof</span> newInstance,</span><br><span class="line">	<span class="attr">extend</span>: <span class="keyword">typeof</span> extend,</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> vtkAbstractManipulator;</span><br></pre></td></tr></table></figure>
 <figure class="highlight js"><figcaption><span>index.js</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> macro <span class="keyword">from</span> <span class="string">&#x27;vtk.js/Sources/macros&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">// vtkAbstractManipulator methods</span></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">vtkAbstractManipulator</span>(<span class="params">publicAPI, model</span>) &#123;</span><br><span class="line">  <span class="comment">// Set our className</span></span><br><span class="line">  model.<span class="property">classHierarchy</span>.<span class="title function_">push</span>(<span class="string">&#x27;vtkAbstractManipulator&#x27;</span>);</span><br><span class="line"></span><br><span class="line">  publicAPI.<span class="property">getOrigin</span> = <span class="function">(<span class="params">callData</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">userOrigin</span>) <span class="keyword">return</span> model.<span class="property">userOrigin</span>;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">useCameraFocalPoint</span>)</span><br><span class="line">      <span class="keyword">return</span> callData.<span class="property">pokedRenderer</span>.<span class="title function_">getActiveCamera</span>().<span class="title function_">getFocalPoint</span>();</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">handleOrigin</span>) <span class="keyword">return</span> model.<span class="property">handleOrigin</span>;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">widgetOrigin</span>) <span class="keyword">return</span> model.<span class="property">widgetOrigin</span>;</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  publicAPI.<span class="property">getNormal</span> = <span class="function">(<span class="params">callData</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">userNormal</span>) <span class="keyword">return</span> model.<span class="property">userNormal</span>;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">useCameraNormal</span>)</span><br><span class="line">      <span class="keyword">return</span> callData.<span class="property">pokedRenderer</span></span><br><span class="line">        .<span class="title function_">getActiveCamera</span>()</span><br><span class="line">        .<span class="title function_">getDirectionOfProjection</span>();</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">handleNormal</span>) <span class="keyword">return</span> model.<span class="property">handleNormal</span>;</span><br><span class="line">    <span class="keyword">if</span> (model.<span class="property">widgetNormal</span>) <span class="keyword">return</span> model.<span class="property">widgetNormal</span>;</span><br><span class="line">    <span class="keyword">return</span> [<span class="number">0</span>, <span class="number">0</span>, <span class="number">1</span>];</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"><span class="comment">// Object factory</span></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">DEFAULT_VALUES</span> = &#123;</span><br><span class="line">  <span class="comment">// userOrigin: null,</span></span><br><span class="line">  <span class="comment">// handleOrigin: null,</span></span><br><span class="line">  <span class="comment">// widgetOrigin: null,</span></span><br><span class="line">  <span class="comment">// userNormal: null,</span></span><br><span class="line">  <span class="comment">// handleNormal: null,</span></span><br><span class="line">  <span class="comment">// widgetNormal: null</span></span><br><span class="line">  <span class="attr">useCameraFocalPoint</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">useCameraNormal</span>: <span class="literal">false</span>,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">extend</span>(<span class="params">publicAPI, model, initialValues = &#123;&#125;</span>) &#123;</span><br><span class="line">  <span class="title class_">Object</span>.<span class="title function_">assign</span>(model, <span class="variable constant_">DEFAULT_VALUES</span>, initialValues);</span><br><span class="line">  macro.<span class="title function_">obj</span>(publicAPI, model);</span><br><span class="line">  macro.<span class="title function_">setGet</span>(publicAPI, model, [<span class="string">&#x27;useCameraFocalPoint&#x27;</span>, <span class="string">&#x27;useCameraNormal&#x27;</span>]);</span><br><span class="line">  macro.<span class="title function_">setGetArray</span>(</span><br><span class="line">    publicAPI,</span><br><span class="line">    model,</span><br><span class="line">    [</span><br><span class="line">      <span class="string">&#x27;userOrigin&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;handleOrigin&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;widgetOrigin&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;userNormal&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;handleNormal&#x27;</span>,</span><br><span class="line">      <span class="string">&#x27;widgetNormal&#x27;</span>,</span><br><span class="line">    ],</span><br><span class="line">    <span class="number">3</span></span><br><span class="line">  );</span><br><span class="line"></span><br><span class="line">  <span class="title function_">vtkAbstractManipulator</span>(publicAPI, model);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> newInstance = macro.<span class="title function_">newInstance</span>(extend, <span class="string">&#x27;vtkAbstractManipulator&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// ----------------------------------------------------------------------------</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123; extend, newInstance &#125;;</span><br></pre></td></tr></table></figure>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2023-09-13T22:46:14.813Z" itemprop="dateModified">Last updated: 2023-09-13</time>
+                <time class="article-footer-updated" datetime="2023-09-14T14:47:39.525Z" itemprop="dateModified">Last updated: 2023-09-14</time>
                 <a href="Widgets_Core_WidgetState.html" class="article-footer-prev" title="WidgetState"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="Widgets_Manipulators_CPRManipulator.html" class="article-footer-next" title="CPRManipulator"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -127,7 +596,7 @@
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Introduction"><span class="toc-text">Introduction</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Methods"><span class="toc-text">Methods</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#extend"><span class="toc-text">extend</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getNormal"><span class="toc-text">getNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getOrigin"><span class="toc-text">getOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getUseCameraFocalPoint"><span class="toc-text">getUseCameraFocalPoint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#getUseCameraNormal"><span class="toc-text">getUseCameraNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#handleEvent"><span class="toc-text">handleEvent</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#newInstance"><span class="toc-text">newInstance</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleNormal"><span class="toc-text">setHandleNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleNormal-1"><span class="toc-text">setHandleNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleNormalFrom"><span class="toc-text">setHandleNormalFrom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleOrigin"><span class="toc-text">setHandleOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleOrigin-1"><span class="toc-text">setHandleOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setHandleOriginFrom"><span class="toc-text">setHandleOriginFrom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUseCameraFocalPoint"><span class="toc-text">setUseCameraFocalPoint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUseCameraNormal"><span class="toc-text">setUseCameraNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserNormal"><span class="toc-text">setUserNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserNormal-1"><span class="toc-text">setUserNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserNormalFrom"><span class="toc-text">setUserNormalFrom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserOrigin"><span class="toc-text">setUserOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserOrigin-1"><span class="toc-text">setUserOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setUserOriginFrom"><span class="toc-text">setUserOriginFrom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetNormal"><span class="toc-text">setWidgetNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetNormal-1"><span class="toc-text">setWidgetNormal</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetNormalFrom"><span class="toc-text">setWidgetNormalFrom</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetOrigin"><span class="toc-text">setWidgetOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetOrigin-1"><span class="toc-text">setWidgetOrigin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#setWidgetOriginFrom"><span class="toc-text">setWidgetOriginFrom</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Source"><span class="toc-text">Source</span></a>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
