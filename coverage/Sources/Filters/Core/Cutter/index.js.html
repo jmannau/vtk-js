@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.93% </span>
+                <span class="strong">84% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>124/146</span>
+                <span class='fraction'>126/150</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">64.81% </span>
+                <span class="strong">69.23% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>35/54</span>
+                <span class='fraction'>36/52</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.39% </span>
+                <span class="strong">83.8% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>119/141</span>
+                <span class='fraction'>119/142</span>
             </div>
         
             
@@ -373,7 +373,13 @@
 <a name='L308'></a><a href='#L308'>308</a>
 <a name='L309'></a><a href='#L309'>309</a>
 <a name='L310'></a><a href='#L310'>310</a>
-<a name='L311'></a><a href='#L311'>311</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L311'></a><a href='#L311'>311</a>
+<a name='L312'></a><a href='#L312'>312</a>
+<a name='L313'></a><a href='#L313'>313</a>
+<a name='L314'></a><a href='#L314'>314</a>
+<a name='L315'></a><a href='#L315'>315</a>
+<a name='L316'></a><a href='#L316'>316</a>
+<a name='L317'></a><a href='#L317'>317</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -388,13 +394,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">609x</span>
 <span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-yes">522x</span>
-<span class="cline-any cline-yes">522x</span>
+<span class="cline-any cline-yes">2088x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -409,11 +421,14 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">522x</span>
-<span class="cline-any cline-yes">522x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -464,13 +479,13 @@
 <span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">87x</span>
-<span class="cline-any cline-yes">87x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">522x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">522x</span>
@@ -479,9 +494,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">522x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">522x</span>
-<span class="cline-any cline-yes">2088x</span>
 <span class="cline-any cline-yes">2088x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -692,20 +704,26 @@ function initPolyIterator(pd) {
   const polys = pd.getPolys().getData();
   const strips = pd.getStrips().getData();
   const it = {
+    cellSize: 0,
+    cell: [],
     done: false,
     polyIdx: 0,
     stripIdx: 0,
     remainingStripLength: 0,
+&nbsp;
     // returns a single poly cell
     next() {
-      let ret = null;
       if (it.polyIdx &lt; polys.length) {
-        const cellSize = polys[it.polyIdx];
+        it.cellSize = polys[it.polyIdx];
         const start = it.polyIdx + 1;
-        const end = start + cellSize;
+        const end = start + it.cellSize;
         it.polyIdx = end;
-        ret = polys.subarray(start, end);
-      } else <span class="cstat-no" title="statement not covered" ><span class="missing-if-branch" title="else path not taken" >E</span>if (it.stripIdx &lt; strips.length) {</span>
+        let p = 0;
+        for (let i = start; i &lt; end; ++i) {
+          it.cell[p++] = polys[i];
+        }
+      } else <span class="missing-if-branch" title="if path not taken" >I</span>if (it.stripIdx &lt; strips.length) {
+<span class="cstat-no" title="statement not covered" >        it.cellSize = 3;</span>
 <span class="cstat-no" title="statement not covered" >        if (it.remainingStripLength === 0) {</span>
 <span class="cstat-no" title="statement not covered" >          it.remainingStripLength = strips[it.stripIdx] - 2; </span>// sliding window of 3 points
           // stripIdx points to the last point in a triangle 3-tuple
@@ -715,15 +733,18 @@ function initPolyIterator(pd) {
         const end = <span class="cstat-no" title="statement not covered" >it.stripIdx + 1;</span>
 <span class="cstat-no" title="statement not covered" >        it.stripIdx++;</span>
 <span class="cstat-no" title="statement not covered" >        it.remainingStripLength--;</span>
-<span class="cstat-no" title="statement not covered" >        ret = strips.subarray(start, end);</span>
-      } else <span class="cstat-no" title="statement not covered" >if (it.done) {</span>
+        let p = <span class="cstat-no" title="statement not covered" >0;</span>
+<span class="cstat-no" title="statement not covered" >        for (let i = <span class="cstat-no" title="statement not covered" >start;</span> i &lt; end; ++i) {</span>
+<span class="cstat-no" title="statement not covered" >          it.cell[p++] = strips[i];</span>
+        }
+      } else if (!it.done) {
+        it.done = true;
+      } else <span class="missing-if-branch" title="else path not taken" >E</span>{
 <span class="cstat-no" title="statement not covered" >        throw new Error('Iterator is done');</span>
       }
-&nbsp;
-      it.done = it.polyIdx &gt;= polys.length &amp;&amp; it.stripIdx &gt;= strips.length;
-      return ret;
     },
   };
+  it.next();
   return it;
 }
 &nbsp;
@@ -774,32 +795,29 @@ function vtkCutter(publicAPI, model) {
     const crossedEdges = [];
     const x1 = new Array(3);
     const x2 = new Array(3);
+    const cellPointsScalars = [];
+&nbsp;
     // Loop over all cells; get scalar values for all cell points
     // and process each cell.
     /* eslint-disable no-continue */
-    const it = initPolyIterator(input);
-    while (!it.done) {
+    for (const it = initPolyIterator(input); !it.done; it.next()) {
       // cell contains the point IDs/indices
-      const cell = it.next();
 &nbsp;
       // Check that cells have at least 3 points
-      <span class="missing-if-branch" title="if path not taken" >I</span>if (cell.length &lt;= 2) {
+      <span class="missing-if-branch" title="if path not taken" >I</span>if (it.cellSize &lt;= 2) {
 <span class="cstat-no" title="statement not covered" >        continue;</span>
       }
 &nbsp;
       // Get associated scalar of points that constitute the current cell
-      const cellPointsScalars = [];
-      let pointIndex;
-      for (let i = 0; i &lt; cell.length; i++) {
-        pointIndex = cell[i];
-        cellPointsScalars.push(model.cutScalars[pointIndex]);
+      for (let i = 0; i &lt; it.cellSize; ) {
+        cellPointsScalars[i] = model.cutScalars[it.cell[i++]];
       }
 &nbsp;
       // Check if all cell points are on same side (same side == cell not crossed by cut function)
       // TODO: won't work if one point scalar is = 0 ?
       const sideFirstPoint = cellPointsScalars[0] &gt; 0;
       let allPointsSameSide = true;
-      for (let i = 1; i &lt; cellPointsScalars.length; i++) {
+      for (let i = 1; i &lt; it.cell.length; i++) {
         const sideCurrentPoint = cellPointsScalars[i] &gt; 0;
         if (sideCurrentPoint !== sideFirstPoint) {
           allPointsSameSide = false;
@@ -814,8 +832,8 @@ function vtkCutter(publicAPI, model) {
 &nbsp;
       // Find and compute edges which intersect cells
       const intersectedEdgesList = [];
-      for (let i = 0; i &lt; cell.length; i++) {
-        const idNext = i + 1 === cell.length ? 0 : i + 1;
+      for (let i = 0; i &lt; it.cellSize; i++) {
+        const idNext = i + 1 === it.cellSize ? 0 : i + 1;
 &nbsp;
         // Go to next edge if edge is not crossed
         // TODO: in most come cases, (numberOfPointsInCell - 1) or 0 edges of the cell
@@ -844,8 +862,8 @@ function vtkCutter(publicAPI, model) {
         }
 &nbsp;
         // points position
-        const pointID1 = cell[e1];
-        const pointID2 = cell[e2];
+        const pointID1 = it.cell[e1];
+        const pointID2 = it.cell[e2];
         x1[0] = pointsData[pointID1 * 3];
         x1[1] = pointsData[pointID1 * 3 + 1];
         x1[2] = pointsData[pointID1 * 3 + 2];
@@ -1000,7 +1018,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Sep 19 2023 21:53:35 GMT+0000 (Coordinated Universal Time)
+                at Wed Sep 20 2023 15:08:25 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
