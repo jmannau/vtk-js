@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">52.44% </span>
+                <span class="strong">51.93% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>161/307</span>
+                <span class='fraction'>161/310</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">37.5% </span>
+                <span class="strong">36.2% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>42/112</span>
+                <span class='fraction'>42/116</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">53.24% </span>
+                <span class="strong">52.7% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>156/293</span>
+                <span class='fraction'>156/296</span>
             </div>
         
             
@@ -653,7 +653,24 @@
 <a name='L588'></a><a href='#L588'>588</a>
 <a name='L589'></a><a href='#L589'>589</a>
 <a name='L590'></a><a href='#L590'>590</a>
-<a name='L591'></a><a href='#L591'>591</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L591'></a><a href='#L591'>591</a>
+<a name='L592'></a><a href='#L592'>592</a>
+<a name='L593'></a><a href='#L593'>593</a>
+<a name='L594'></a><a href='#L594'>594</a>
+<a name='L595'></a><a href='#L595'>595</a>
+<a name='L596'></a><a href='#L596'>596</a>
+<a name='L597'></a><a href='#L597'>597</a>
+<a name='L598'></a><a href='#L598'>598</a>
+<a name='L599'></a><a href='#L599'>599</a>
+<a name='L600'></a><a href='#L600'>600</a>
+<a name='L601'></a><a href='#L601'>601</a>
+<a name='L602'></a><a href='#L602'>602</a>
+<a name='L603'></a><a href='#L603'>603</a>
+<a name='L604'></a><a href='#L604'>604</a>
+<a name='L605'></a><a href='#L605'>605</a>
+<a name='L606'></a><a href='#L606'>606</a>
+<a name='L607'></a><a href='#L607'>607</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -853,14 +870,25 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -980,7 +1008,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1018,6 +1049,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1254,6 +1286,7 @@ import * as vtkMath from 'vtk.js/Sources/Common/Core/Math';
 import { CellType } from 'vtk.js/Sources/Common/DataModel/CellTypes/Constants';
 import { vec3, vec4 } from 'gl-matrix';
 import vtkMatrixBuilder from 'vtk.js/Sources/Common/Core/MatrixBuilder';
+import vtkBox from 'vtk.js/Sources/Common/DataModel/Box';
 &nbsp;
 // ----------------------------------------------------------------------------
 // Global methods
@@ -1418,8 +1451,8 @@ function vtkCellPicker(publicAPI, model) {
 &nbsp;
   publicAPI.intersectWithLine = (p1, p2, tol, actor, mapper) =&gt; {
     let tMin = Number.MAX_VALUE;
-    const t1 = 0.0;
-    const t2 = 1.0;
+    let t1 = 0.0;
+    let t2 = 1.0;
 &nbsp;
     const vtkCellPickerPlaneTol = 1e-14;
 &nbsp;
@@ -1443,14 +1476,25 @@ function vtkCellPicker(publicAPI, model) {
         model.pCoords = pickData.pCoords;
       }
     } else <span class="missing-if-branch" title="if path not taken" >I</span>if (mapper.isA('vtkVolumeMapper')) {
-<span class="cstat-no" title="statement not covered" >      tMin = publicAPI.intersectVolumeWithLine(</span>
+      // we calculate here the parametric intercept points between the ray and the bounding box, so
+      // if the application defines for some reason a too large ray length (1e6), it restrict the calculation
+      // to the vtkVolume actor bounding box
+      const interceptionObject = <span class="cstat-no" title="statement not covered" >vtkBox.intersectWithLine(</span>
+        mapper.getBounds(),
         p1,
-        p2,
-        clipLine.t1,
-        clipLine.t2,
-        tol,
-        actor
+        p2
       );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      t1 =</span>
+        interceptionObject?.t1 &gt; clipLine.t1
+          ? interceptionObject.t1
+          : clipLine.t1;
+<span class="cstat-no" title="statement not covered" >      t2 =</span>
+        interceptionObject?.t2 &lt; clipLine.t2
+          ? interceptionObject.t2
+          : clipLine.t2;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      tMin = publicAPI.intersectVolumeWithLine(p1, p2, t1, t2, tol, actor);</span>
     } else if (mapper.isA('vtkMapper')) {
       tMin = publicAPI.intersectActorWithLine(p1, p2, t1, t2, tol, mapper);
     }
@@ -1562,17 +1606,20 @@ function vtkCellPicker(publicAPI, model) {
     const x1 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>
     const x2 = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>
 <span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; 3; i++) {</span>
-<span class="cstat-no" title="statement not covered" >      x1[i] = (p1[i] - origin[i]) / spacing[i];</span>
-<span class="cstat-no" title="statement not covered" >      x2[i] = (p2[i] - origin[i]) / spacing[i];</span>
+<span class="cstat-no" title="statement not covered" >      x1[i] = (q1[i] - origin[i]) / spacing[i];</span>
+<span class="cstat-no" title="statement not covered" >      x2[i] = (q2[i] - origin[i]) / spacing[i];</span>
     }
     const x = <span class="cstat-no" title="statement not covered" >[0, 0, 0, 0];</span>
     const xi = <span class="cstat-no" title="statement not covered" >[0, 0, 0];</span>
 &nbsp;
     const sliceSize = <span class="cstat-no" title="statement not covered" >dims[1] * dims[0];</span>
     const rowSize = <span class="cstat-no" title="statement not covered" >dims[0];</span>
-    const nSteps = <span class="cstat-no" title="statement not covered" >100;</span>
+    // here the step is the 1 over the distance between volume index location x1 and x2
+    const step = <span class="cstat-no" title="statement not covered" >1 / Math.sqrt(vtkMath.distance2BetweenPoints(x1, x2));</span>
     let insideVolume;
-<span class="cstat-no" title="statement not covered" >    for (let t = <span class="cstat-no" title="statement not covered" >t1;</span> t &lt; t2; t += 1 / nSteps) {</span>
+    // here we reinterpret the t value as the distance between x1 and x2
+    // When calculating the tMin, we weight t between t1 and t2 values
+<span class="cstat-no" title="statement not covered" >    for (let t = <span class="cstat-no" title="statement not covered" >0;</span> t &lt; 1; t += step) {</span>
       // calculate the location of the point
 <span class="cstat-no" title="statement not covered" >      insideVolume = true;</span>
 <span class="cstat-no" title="statement not covered" >      for (let j = <span class="cstat-no" title="statement not covered" >0;</span> j &lt; 3; j++) {</span>
@@ -1608,7 +1655,8 @@ function vtkCellPicker(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >        value = Math.floor((value - oRange[0]) * scale);</span>
         const opacity = <span class="cstat-no" title="statement not covered" >tmpTable[value];</span>
 <span class="cstat-no" title="statement not covered" >        if (opacity &gt; model.opacityThreshold) {</span>
-<span class="cstat-no" title="statement not covered" >          tMin = t;</span>
+          // returning the tMin to the original scale, if t1 &gt; 0 or t2 &lt; 1
+<span class="cstat-no" title="statement not covered" >          tMin = t1 * (1.0 - t) + t2 * t;</span>
 <span class="cstat-no" title="statement not covered" >          break;</span>
         }
       }
@@ -1840,7 +1888,7 @@ export default { newInstance, extend, ...STATIC };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Nov 14 2023 14:25:58 GMT+0000 (Coordinated Universal Time)
+                at Tue Nov 14 2023 19:10:07 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
