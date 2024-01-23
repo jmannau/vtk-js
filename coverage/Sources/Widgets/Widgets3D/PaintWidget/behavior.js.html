@@ -25,7 +25,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/58</span>
+                <span class='fraction'>0/59</span>
             </div>
         
             
@@ -46,7 +46,7 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/57</span>
+                <span class='fraction'>0/58</span>
             </div>
         
             
@@ -171,10 +171,7 @@
 <a name='L106'></a><a href='#L106'>106</a>
 <a name='L107'></a><a href='#L107'>107</a>
 <a name='L108'></a><a href='#L108'>108</a>
-<a name='L109'></a><a href='#L109'>109</a>
-<a name='L110'></a><a href='#L110'>110</a>
-<a name='L111'></a><a href='#L111'>111</a>
-<a name='L112'></a><a href='#L112'>112</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L109'></a><a href='#L109'>109</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -210,6 +207,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -218,24 +218,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -243,6 +225,18 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -319,42 +313,39 @@ export default function <span class="fstat-no" title="function not covered" >wid
 <span class="cstat-no" title="statement not covered" >  publicAPI.handleEvent = <span class="fstat-no" title="function not covered" >(c</span>allData) =&gt; {</span>
     const manipulator =
 <span class="cstat-no" title="statement not covered" >      model.activeState?.getManipulator?.() ?? model.manipulator;</span>
-<span class="cstat-no" title="statement not covered" >    if (manipulator &amp;&amp; model.activeState &amp;&amp; model.activeState.getActive()) {</span>
-      const normal = <span class="cstat-no" title="statement not covered" >model._camera.getDirectionOfProjection();</span>
-      const up = <span class="cstat-no" title="statement not covered" >model._camera.getViewUp();</span>
-      const right = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >      vec3.cross(right, up, normal);</span>
-<span class="cstat-no" title="statement not covered" >      model.activeState.setUp(...up);</span>
-<span class="cstat-no" title="statement not covered" >      model.activeState.setRight(...right);</span>
-<span class="cstat-no" title="statement not covered" >      model.activeState.setDirection(...normal);</span>
-&nbsp;
-      const { worldCoords } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
-        callData,
-        model._apiSpecificRenderWindow
-      );
-&nbsp;
-<span class="cstat-no" title="statement not covered" >      if (worldCoords.length) {</span>
-<span class="cstat-no" title="statement not covered" >        model.widgetState.setTrueOrigin(...worldCoords);</span>
-<span class="cstat-no" title="statement not covered" >        model.activeState.setOrigin(...worldCoords);</span>
-&nbsp;
-<span class="cstat-no" title="statement not covered" >        if (model.painting) {</span>
-          const trailCircle = <span class="cstat-no" title="statement not covered" >model.widgetState.addTrail();</span>
-<span class="cstat-no" title="statement not covered" >          trailCircle.set(</span>
-            model.activeState.get(
-              'origin',
-              'up',
-              'right',
-              'direction',
-              'scale1'
-            )
-          );
-        }
-      }
-&nbsp;
-<span class="cstat-no" title="statement not covered" >      publicAPI.invokeInteractionEvent();</span>
-<span class="cstat-no" title="statement not covered" >      return macro.EVENT_ABORT;</span>
+<span class="cstat-no" title="statement not covered" >    if (!(manipulator &amp;&amp; model.activeState &amp;&amp; model.activeState.getActive())) {</span>
+<span class="cstat-no" title="statement not covered" >      return macro.VOID;</span>
     }
-<span class="cstat-no" title="statement not covered" >    return macro.VOID;</span>
+&nbsp;
+    const normal = <span class="cstat-no" title="statement not covered" >model._camera.getDirectionOfProjection();</span>
+    const up = <span class="cstat-no" title="statement not covered" >model._camera.getViewUp();</span>
+    const right = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >    vec3.cross(right, up, normal);</span>
+<span class="cstat-no" title="statement not covered" >    model.activeState.setUp(...up);</span>
+<span class="cstat-no" title="statement not covered" >    model.activeState.setRight(...right);</span>
+<span class="cstat-no" title="statement not covered" >    model.activeState.setDirection(...normal);</span>
+&nbsp;
+    const { worldCoords } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
+      callData,
+      model._apiSpecificRenderWindow
+    );
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (!worldCoords.length) {</span>
+<span class="cstat-no" title="statement not covered" >      return macro.VOID;</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    model.widgetState.setTrueOrigin(...worldCoords);</span>
+<span class="cstat-no" title="statement not covered" >    model.activeState.setOrigin(...worldCoords);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if (model.painting) {</span>
+      const trailCircle = <span class="cstat-no" title="statement not covered" >model.widgetState.addTrail();</span>
+<span class="cstat-no" title="statement not covered" >      trailCircle.set(</span>
+        model.activeState.get('origin', 'up', 'right', 'direction', 'scale1')
+      );
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    publicAPI.invokeInteractionEvent();</span>
+<span class="cstat-no" title="statement not covered" >    return macro.EVENT_ABORT;</span>
   };
 &nbsp;
 <span class="cstat-no" title="statement not covered" >  publicAPI.grabFocus = <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
@@ -403,7 +394,7 @@ export default function <span class="fstat-no" title="function not covered" >wid
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 04 2024 21:34:23 GMT+0000 (Coordinated Universal Time)
+                at Tue Jan 23 2024 22:07:06 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
