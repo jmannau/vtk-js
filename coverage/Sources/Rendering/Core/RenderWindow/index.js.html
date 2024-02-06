@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">59.25% </span>
+                <span class="strong">57.83% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>48/81</span>
+                <span class='fraction'>48/83</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.7% </span>
+                <span class="strong">34.28% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/31</span>
+                <span class='fraction'>12/35</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.89% </span>
+                <span class="strong">56.41% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>44/76</span>
+                <span class='fraction'>44/78</span>
             </div>
         
             
@@ -255,7 +255,11 @@
 <a name='L190'></a><a href='#L190'>190</a>
 <a name='L191'></a><a href='#L191'>191</a>
 <a name='L192'></a><a href='#L192'>192</a>
-<a name='L193'></a><a href='#L193'>193</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -355,6 +359,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -367,6 +372,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -546,7 +554,8 @@ function vtkRenderWindow(publicAPI, model) {
   publicAPI.getStatistics = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
     const results = <span class="cstat-no" title="statement not covered" >{ propCount: 0, invisiblePropCount: 0, gpuMemoryMB: 0 };</span>
 <span class="cstat-no" title="statement not covered" >    model._views.forEach(<span class="fstat-no" title="function not covered" >(v</span>) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      results.gpuMemoryMB += v.getGraphicsMemoryInfo() / 1e6;</span>
+<span class="cstat-no" title="statement not covered" >      if (v.getGraphicsMemoryInfo)</span>
+<span class="cstat-no" title="statement not covered" >        results.gpuMemoryMB += v.getGraphicsMemoryInfo() / 1e6;</span>
     });
 <span class="cstat-no" title="statement not covered" >    model.renderers.forEach(<span class="fstat-no" title="function not covered" >(r</span>en) =&gt; {</span>
       const props = <span class="cstat-no" title="statement not covered" >ren.getViewProps();</span>
@@ -558,7 +567,10 @@ function vtkRenderWindow(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >          if (mpr &amp;&amp; mpr.getPrimitiveCount) {</span>
             const gmpr = <span class="cstat-no" title="statement not covered" >gren.getViewNodeFor(mpr);</span>
 <span class="cstat-no" title="statement not covered" >            if (gmpr) {</span>
-<span class="cstat-no" title="statement not covered" >              results.gpuMemoryMB += gmpr.getAllocatedGPUMemoryInBytes() / 1e6;</span>
+<span class="cstat-no" title="statement not covered" >              if (gmpr.getAllocatedGPUMemoryInBytes) {</span>
+<span class="cstat-no" title="statement not covered" >                results.gpuMemoryMB +=</span>
+                  gmpr.getAllocatedGPUMemoryInBytes() / 1e6;
+              }
               const pcount = <span class="cstat-no" title="statement not covered" >mpr.getPrimitiveCount();</span>
 <span class="cstat-no" title="statement not covered" >              Object.keys(pcount).forEach(<span class="fstat-no" title="function not covered" >(k</span>eyName) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >                if (!results[keyName]) {</span>
@@ -646,7 +658,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Feb 06 2024 03:48:35 GMT+0000 (Coordinated Universal Time)
+                at Tue Feb 06 2024 20:58:28 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

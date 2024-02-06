@@ -2968,7 +2968,7 @@ fn mdot(a: vec3&lt;f32&gt;, b: vec3&lt;f32&gt;) -&gt; f32 {
 // zero and one while still maintaining a good amount of accuracy.
 fn cdot(a: vec3&lt;f32&gt;, b: vec3&lt;f32&gt;) -&gt; f32 {
   var d: f32 = max(0.0, dot(a, b));
-  d = pow((d + 1) / 2.0, 2.6);
+  d = pow((d + 1.0) / 2.0, 2.6);
   return d;
 }
 &nbsp;
@@ -2994,7 +2994,7 @@ fn fujiiOrenNayar(p: vec3&lt;f32&gt;, o: f32, N: vec3&lt;f32&gt;, L: vec3&lt;f32
   var LdotV: f32 = mdot(L, V);
 &nbsp;
   var s: f32 = LdotV - NdotL*NdotV;
-  var t: f32 = mix(1, max(NdotL, NdotV), step(0, s)); // Mix with step is the equivalent of an if statement
+  var t: f32 = mix(1.0, max(NdotL, NdotV), step(0.0, s)); // Mix with step is the equivalent of an if statement
   var A: vec3&lt;f32&gt; = 0.5*(o2 / (o2 + 0.33)) + 0.17*p*(o2 / (o2 + 0.13));
   A = invpi*(1 - A);
   var B: f32 = 0.45*(o2 / (o2 + 0.09));
@@ -3006,14 +3006,14 @@ fn fujiiOrenNayar(p: vec3&lt;f32&gt;, o: f32, N: vec3&lt;f32&gt;, L: vec3&lt;f32
 // Fresnel portion of BRDF (IOR only, simplified)
 fn schlickFresnelIOR(V: vec3&lt;f32&gt;, N: vec3&lt;f32&gt;, ior: f32, k: f32) -&gt; f32 {
   var NdotV: f32 = mdot(V, N);
-  var F0: f32 = (pow((ior - 1.0), 2) + k*k) / (pow((ior + 1.0), 2) + k*k); // This takes into account the roughness, which the other one does not
-  return F0 + (1 - F0) * pow((1-NdotV), 5); 
+  var F0: f32 = (pow((ior - 1.0), 2.0) + k*k) / (pow((ior + 1.0), 2.0) + k*k); // This takes into account the roughness, which the other one does not
+  return F0 + (1.0 - F0) * pow((1.0-NdotV), 5.0);
 }
 &nbsp;
 // Fresnel portion of BRDF (Color ior, better)
 fn schlickFresnelRGB(V: vec3&lt;f32&gt;, N: vec3&lt;f32&gt;, F0: vec3&lt;f32&gt;) -&gt; vec3&lt;f32&gt; {
   var NdotV: f32 = mdot(V, N);
-  return F0 + (1 - F0) * pow((1-NdotV), 5); 
+  return F0 + (1.0 - F0) * pow((1-NdotV), 5.0);
 }
 &nbsp;
 // Normal portion of BRDF
@@ -3043,12 +3043,12 @@ fn anisotrophicTrGGX(N: vec3&lt;f32&gt;, H: vec3&lt;f32&gt;, O: vec3&lt;f32&gt;,
 // Geometry portion of BRDF
 fn schlickGGX(N: vec3&lt;f32&gt;, X: vec3&lt;f32&gt;, k: f32) -&gt; f32 {
   var NdotX = cdot(N, X);
-  return NdotX / max(0.000001, (NdotX*(1-k) + k));
+  return NdotX / max(0.000001, (NdotX*(1.0-k) + k));
 }
 &nbsp;
 fn smithSurfaceRoughness(N: vec3&lt;f32&gt;, V: vec3&lt;f32&gt;, L: vec3&lt;f32&gt;, k: f32) -&gt; f32 {
-  var ggx1: f32 = min(1, schlickGGX(N, V, k));
-  var ggx2: f32 = min(1, schlickGGX(N, L, k));
+  var ggx1: f32 = min(1.0, schlickGGX(N, V, k));
+  var ggx2: f32 = min(1.0, schlickGGX(N, L, k));
   return ggx1*ggx2;
 }
 &nbsp;
@@ -3072,7 +3072,7 @@ fn calcDirectionalLight(N: vec3&lt;f32&gt;, V: vec3&lt;f32&gt;, ior: f32, roughn
   // var F: f32 = schlickFresnelIOR(V, N, ior, k); // Fresnel
   var G: f32 = smithSurfaceRoughness(N, V, L, k); // Geometry
 &nbsp;
-  var brdf: f32 = cookTorrance(D, 1, G, N, V, L); // Fresnel term is replaced with 1 because it is added later
+  var brdf: f32 = cookTorrance(D, 1.0, G, N, V, L); // Fresnel term is replaced with 1 because it is added later
   var incoming: vec3&lt;f32&gt; = color;
   var angle: f32 = mdot(L, N);
   angle = pow(angle, 1.5);
@@ -3094,14 +3094,14 @@ fn calcPointLight(N: vec3&lt;f32&gt;, V: vec3&lt;f32&gt;, fragPos: vec3&lt;f32&g
   var dist = distance(position, fragPos);
 &nbsp;
   var alpha = roughness*roughness;
-  var k: f32 = alpha*alpha / 2; // could also be pow(alpha + 1.0, 2) / 8
+  var k: f32 = alpha*alpha / 2.0; // could also be pow(alpha + 1.0, 2) / 8
 &nbsp;
   var D: f32 = trGGX(N, H, alpha); // Distribution
   // var F: f32 = schlickFresnelIOR(V, N, ior, k); // Fresnel
   var G: f32 = smithSurfaceRoughness(N, V, L, k); // Geometry
 &nbsp;
-  var brdf: f32 = cookTorrance(D, 1, G, N, V, L);  
-  var incoming: vec3&lt;f32&gt; = color * (1. / (dist*dist));
+  var brdf: f32 = cookTorrance(D, 1.0, G, N, V, L);
+  var incoming: vec3&lt;f32&gt; = color * (1.0 / (dist*dist));
   var angle: f32 = mdot(L, N);
   angle = pow(angle, 1.5); // Smoothing factor makes it less accurate, but reduces ugly "seams" bewteen light sources
 &nbsp;
@@ -3122,13 +3122,13 @@ fn calcSpotLight(N: vec3&lt;f32&gt;, V: vec3&lt;f32&gt;, fragPos: vec3&lt;f32&gt
   var dist = distance(position, fragPos);
 &nbsp;
   var alpha = roughness*roughness;
-  var k: f32 = alpha*alpha / 2; // could also be pow(alpha + 1.0, 2) / 8
+  var k: f32 = alpha*alpha / 2.0; // could also be pow(alpha + 1.0, 2) / 8
 &nbsp;
   var D: f32 = trGGX(N, H, alpha); // Distribution
   // var F: f32 = schlickFresnelIOR(V, N, ior, k); // Fresnel
   var G: f32 = smithSurfaceRoughness(N, V, L, k); // Geometry
 &nbsp;
-  var brdf: f32 = cookTorrance(D, 1, G, N, V, L);  
+  var brdf: f32 = cookTorrance(D, 1.0, G, N, V, L);
   
   // Cones.x is the inner phi and cones.y is the outer phi
   var theta: f32 = mdot(normalize(direction), L);
@@ -3199,12 +3199,12 @@ fn main(
   var opacity: f32 = mapperUBO.Opacity;
 &nbsp;
   // This should be declared somewhere else
-  var _diffuseMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1);
-  var _roughnessMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1);
-  var _metallicMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1);
-  var _normalMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(0, 0, 1, 0); // normal map was setting off the normal vector detection in fragment
-  var _ambientOcclusionMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1);
-  var _emissionMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(0);
+  var _diffuseMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1.0);
+  var _roughnessMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1.0);
+  var _metallicMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1.0);
+  var _normalMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(0.0, 0.0, 1.0, 0.0); // normal map was setting off the normal vector detection in fragment
+  var _ambientOcclusionMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(1.);
+  var _emissionMap: vec4&lt;f32&gt; = vec4&lt;f32&gt;(0.);
 &nbsp;
   //VTK::Color::Impl
 &nbsp;
@@ -3596,11 +3596,11 @@ function <span class="fstat-no" title="function not covered" >vtkWebGPUCellArray
         '  }',
         // Final variables for combining specular and diffuse
         '  var fresnel: f32 = schlickFresnelIOR(V, normal, ior, k); // Fresnel',
-        '  fresnel = min(1, fresnel);',
+        '  fresnel = min(1.0, fresnel);',
         '  // This could be controlled with its own variable (that isnt base color) for better artistic control',
         '  var fresnelMetallic: vec3&lt;f32&gt; = schlickFresnelRGB(V, normal, baseColor); // Fresnel for metal, takes color into account',
         '  var kS: vec3&lt;f32&gt; = mix(vec3&lt;f32&gt;(fresnel), fresnelMetallic, metallic);',
-        '  kS = min(vec3&lt;f32&gt;(1), kS);',
+        '  kS = min(vec3&lt;f32&gt;(1.0), kS);',
         '  var kD: vec3&lt;f32&gt; = (1.0 - kS) * (1.0 - metallic);',
         '  var PBR: vec3&lt;f32&gt; = mapperUBO.DiffuseIntensity*kD*diffuse + kS*specular;',
         '  PBR += emission;',
@@ -4312,7 +4312,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Feb 06 2024 03:48:35 GMT+0000 (Coordinated Universal Time)
+                at Tue Feb 06 2024 20:58:28 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
