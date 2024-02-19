@@ -1564,7 +1564,11 @@
 <a name='L1499'></a><a href='#L1499'>1499</a>
 <a name='L1500'></a><a href='#L1500'>1500</a>
 <a name='L1501'></a><a href='#L1501'>1501</a>
-<a name='L1502'></a><a href='#L1502'>1502</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L1502'></a><a href='#L1502'>1502</a>
+<a name='L1503'></a><a href='#L1503'>1503</a>
+<a name='L1504'></a><a href='#L1504'>1504</a>
+<a name='L1505'></a><a href='#L1505'>1505</a>
+<a name='L1506'></a><a href='#L1506'>1506</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1609,9 +1613,9 @@
 <span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-yes">29x</span>
-<span class="cline-any cline-yes">1479x</span>
-<span class="cline-any cline-yes">1479x</span>
-<span class="cline-any cline-yes">1392x</span>
+<span class="cline-any cline-yes">1595x</span>
+<span class="cline-any cline-yes">1595x</span>
+<span class="cline-any cline-yes">1450x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">29x</span>
@@ -1895,6 +1899,10 @@
 <span class="cline-any cline-yes">29x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3413,36 +3421,40 @@ function vtkOpenGLImageMapper(publicAPI, model) {
                   float textureValue = texture2D(labelOutlineTexture1, vec2(textureCoordinate, 0.5)).r;
                   int actualThickness = int(textureValue * 255.0);
 &nbsp;
+                  if (segmentIndex == 0){
+                    gl_FragData[0] = vec4(0.0, 1.0, 1.0, 0.0);
+                    return;
+                  }
+&nbsp;
                   if (actualThickness == 0) {
                     gl_FragData[0] = vec4(0.0, 0.0, 1.0, 1.0);
                     return;
                   }
-                  if (opacityToUse &gt; 0.01) {
-                    for (int i = -actualThickness; i &lt;= actualThickness; i++) {
-                      for (int j = -actualThickness; j &lt;= actualThickness; j++) {
-                        if (i == 0 || j == 0) {
-                          continue;
-                        }
-                        vec4 neighborPixelCoord = vec4(gl_FragCoord.x + float(i),
-                          gl_FragCoord.y + float(j),
-                          gl_FragCoord.z, gl_FragCoord.w);
-                        vec3 neighborPosIS = fragCoordToIndexSpace(neighborPixelCoord);
-                        float value = texture2D(texture1, neighborPosIS.xy).r;
-                        if (value != centerValue) {
-                          pixelOnBorder = true;
-                          break;
-                        }
+&nbsp;
+                  for (int i = -actualThickness; i &lt;= actualThickness; i++) {
+                    for (int j = -actualThickness; j &lt;= actualThickness; j++) {
+                      if (i == 0 || j == 0) {
+                        continue;
                       }
-                      if (pixelOnBorder == true) {
+                      vec4 neighborPixelCoord = vec4(gl_FragCoord.x + float(i),
+                        gl_FragCoord.y + float(j),
+                        gl_FragCoord.z, gl_FragCoord.w);
+                      vec3 neighborPosIS = fragCoordToIndexSpace(neighborPixelCoord);
+                      float value = texture2D(texture1, neighborPosIS.xy).r;
+                      if (value != centerValue) {
+                        pixelOnBorder = true;
                         break;
                       }
                     }
                     if (pixelOnBorder == true) {
-                      gl_FragData[0] = vec4(tColor, outlineOpacity);
+                      break;
                     }
-                    else {
-                      gl_FragData[0] = vec4(tColor, opacityToUse);
-                    }
+                  }
+                  if (pixelOnBorder == true) {
+                    gl_FragData[0] = vec4(tColor, outlineOpacity);
+                  }
+                  else {
+                    gl_FragData[0] = vec4(tColor, opacityToUse);
                   }
                 #else
                   float intensity = texture2D(texture1, tcoordVCVSOutput).r;
@@ -4573,7 +4585,7 @@ registerOverride('vtkAbstractImageMapper', newInstance);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Feb 15 2024 10:13:10 GMT+0000 (Coordinated Universal Time)
+                at Mon Feb 19 2024 17:15:09 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
