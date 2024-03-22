@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">62.74% </span>
+                <span class="strong">60.36% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>64/102</span>
+                <span class='fraction'>67/111</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">39.28% </span>
+                <span class="strong">35.48% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>11/28</span>
+                <span class='fraction'>11/31</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">36.36% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>8/20</span>
+                <span class='fraction'>8/22</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">65.95% </span>
+                <span class="strong">63.1% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>62/94</span>
+                <span class='fraction'>65/103</span>
             </div>
         
             
@@ -276,12 +276,32 @@
 <a name='L211'></a><a href='#L211'>211</a>
 <a name='L212'></a><a href='#L212'>212</a>
 <a name='L213'></a><a href='#L213'>213</a>
-<a name='L214'></a><a href='#L214'>214</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -305,6 +325,9 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">864x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">864x</span>
 <span class="cline-any cline-yes">2x</span>
@@ -355,6 +378,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">864x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -496,6 +532,8 @@ import vtkBoundingBox from 'vtk.js/Sources/Common/DataModel/BoundingBox';
 import * as vtkMath from 'vtk.js/Sources/Common/Core/Math';
 import vtkProp from 'vtk.js/Sources/Rendering/Core/Prop';
 &nbsp;
+const VTK_EPSILON = 1e-6;
+&nbsp;
 // ----------------------------------------------------------------------------
 // vtkProp3D methods
 // ----------------------------------------------------------------------------
@@ -518,6 +556,9 @@ function vtkProp3D(publicAPI, model) {
     const w = <span class="cstat-no" title="statement not covered" >quat.getAxisAngle(oaxis, q);</span>
 <span class="cstat-no" title="statement not covered" >    return [vtkMath.degreesFromRadians(w), oaxis[0], oaxis[1], oaxis[2]];</span>
   };
+&nbsp;
+  publicAPI.getOrientationQuaternion = <span class="fstat-no" title="function not covered" >(o</span>ut = <span class="branch-0 cbranch-no" title="branch not covered" >[])</span> =&gt;
+<span class="cstat-no" title="statement not covered" >    mat4.getRotation(out, model.rotation);</span>
 &nbsp;
   publicAPI.rotateX = (val) =&gt; {
     <span class="missing-if-branch" title="if path not taken" >I</span>if (val === 0.0) {
@@ -569,6 +610,19 @@ function vtkProp3D(publicAPI, model) {
     const quatMat = <span class="cstat-no" title="statement not covered" >new Float64Array(16);</span>
 <span class="cstat-no" title="statement not covered" >    mat4.fromQuat(quatMat, q);</span>
 <span class="cstat-no" title="statement not covered" >    mat4.multiply(model.rotation, model.rotation, quatMat);</span>
+<span class="cstat-no" title="statement not covered" >    publicAPI.modified();</span>
+  };
+&nbsp;
+  publicAPI.rotateQuaternion = <span class="fstat-no" title="function not covered" >(o</span>rientationQuaternion) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (Math.abs(orientationQuaternion[3]) &gt;= 1 - VTK_EPSILON) {</span>
+<span class="cstat-no" title="statement not covered" >      return;</span>
+    }
+&nbsp;
+    const oriQuatMat = <span class="cstat-no" title="statement not covered" >mat4.fromQuat(</span>
+      new Float64Array(16),
+      orientationQuaternion
+    );
+<span class="cstat-no" title="statement not covered" >    mat4.multiply(model.rotation, model.rotation, oriQuatMat);</span>
 <span class="cstat-no" title="statement not covered" >    publicAPI.modified();</span>
   };
 &nbsp;
@@ -709,7 +763,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Fri Mar 22 2024 15:00:28 GMT+0000 (Coordinated Universal Time)
+                at Fri Mar 22 2024 15:48:47 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
