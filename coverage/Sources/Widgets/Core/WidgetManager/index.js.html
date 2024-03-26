@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.84% </span>
+                <span class="strong">48.19% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>106/217</span>
+                <span class='fraction'>107/222</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">21.56% </span>
+                <span class="strong">21.49% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>22/102</span>
+                <span class='fraction'>23/107</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">45.71% </span>
+                <span class="strong">47.22% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>16/35</span>
+                <span class='fraction'>17/36</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">48.82% </span>
+                <span class="strong">47.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>104/213</span>
+                <span class='fraction'>104/217</span>
             </div>
         
             
@@ -572,7 +572,21 @@
 <a name='L507'></a><a href='#L507'>507</a>
 <a name='L508'></a><a href='#L508'>508</a>
 <a name='L509'></a><a href='#L509'>509</a>
-<a name='L510'></a><a href='#L510'>510</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L510'></a><a href='#L510'>510</a>
+<a name='L511'></a><a href='#L511'>511</a>
+<a name='L512'></a><a href='#L512'>512</a>
+<a name='L513'></a><a href='#L513'>513</a>
+<a name='L514'></a><a href='#L514'>514</a>
+<a name='L515'></a><a href='#L515'>515</a>
+<a name='L516'></a><a href='#L516'>516</a>
+<a name='L517'></a><a href='#L517'>517</a>
+<a name='L518'></a><a href='#L518'>518</a>
+<a name='L519'></a><a href='#L519'>519</a>
+<a name='L520'></a><a href='#L520'>520</a>
+<a name='L521'></a><a href='#L521'>521</a>
+<a name='L522'></a><a href='#L522'>522</a>
+<a name='L523'></a><a href='#L523'>523</a>
+<a name='L524'></a><a href='#L524'>524</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -726,6 +740,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1035,7 +1054,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1059,6 +1086,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">8x</span>
 <span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1234,7 +1262,12 @@ function vtkWidgetManager(publicAPI, model) {
     }
 &nbsp;
     // Default cursor behavior
-<span class="cstat-no" title="statement not covered" >    model._apiSpecificRenderWindow.setCursor(widget ? 'pointer' : 'default');</span>
+    const cursorStyles = <span class="cstat-no" title="statement not covered" >publicAPI.getCursorStyles();</span>
+    const style = <span class="cstat-no" title="statement not covered" >widget ? 'hover' : 'default';</span>
+    const cursor = <span class="cstat-no" title="statement not covered" >cursorStyles[style];</span>
+<span class="cstat-no" title="statement not covered" >    if (cursor) {</span>
+<span class="cstat-no" title="statement not covered" >      model._apiSpecificRenderWindow.setCursor(cursor);</span>
+    }
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    model.activeWidget = null;</span>
     let wantRender = <span class="cstat-no" title="statement not covered" >false;</span>
@@ -1544,7 +1577,7 @@ function vtkWidgetManager(publicAPI, model) {
 // Object factory
 // ----------------------------------------------------------------------------
 &nbsp;
-const DEFAULT_VALUES = {
+const defaultValues = (initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> =&gt; ({
   // _camera: null,
   // _selector: null,
   // _currentUpdateSelectionCallID: null,
@@ -1559,16 +1592,25 @@ const DEFAULT_VALUES = {
   previousSelectedData: null,
   widgetInFocus: null,
   captureOn: CaptureOn.MOUSE_MOVE,
-};
+  ...initialValues,
+&nbsp;
+  cursorStyles: initialValues.cursorStyles
+    ? <span class="branch-0 cbranch-no" title="branch not covered" >{ ...initialValues.cursorStyles }</span>
+    : {
+        default: 'default',
+        hover: 'pointer',
+      },
+});
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
 export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  Object.assign(model, DEFAULT_VALUES, initialValues);
+  Object.assign(model, defaultValues(initialValues));
 &nbsp;
   macro.obj(publicAPI, model);
   macro.setGet(publicAPI, model, [
     'captureOn',
+    'cursorStyles',
     { type: 'enum', name: 'viewType', enum: ViewTypes },
   ]);
   macro.get(publicAPI, model, [
@@ -1597,7 +1639,7 @@ export default { newInstance, extend, Constants, getPixelWorldHeightAtCoord };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Mar 25 2024 09:47:15 GMT+0000 (Coordinated Universal Time)
+                at Tue Mar 26 2024 14:56:02 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
