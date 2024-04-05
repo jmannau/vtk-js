@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.2% </span>
+                <span class="strong">12% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>56/459</span>
+                <span class='fraction'>55/458</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">15.38% </span>
+                <span class="strong">12% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/26</span>
+                <span class='fraction'>3/25</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.87% </span>
+                <span class="strong">12.67% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>56/435</span>
+                <span class='fraction'>55/434</span>
             </div>
         
             
@@ -979,7 +979,10 @@
 <a name='L914'></a><a href='#L914'>914</a>
 <a name='L915'></a><a href='#L915'>915</a>
 <a name='L916'></a><a href='#L916'>916</a>
-<a name='L917'></a><a href='#L917'>917</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L917'></a><a href='#L917'>917</a>
+<a name='L918'></a><a href='#L918'>918</a>
+<a name='L919'></a><a href='#L919'>919</a>
+<a name='L920'></a><a href='#L920'>920</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1063,7 +1066,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1075,7 +1077,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1891,6 +1892,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1978,20 +1984,18 @@ function <span class="fstat-no" title="function not covered" >applyTextStyle(</s
 <span class="cstat-no" title="statement not covered" >  ctx.font = `${style.fontStyle} ${style.fontSize}px ${style.fontFamily}`;</span>
 }
 &nbsp;
-function defaultGenerateTicks(publicApi, model) {
-  return <span class="fstat-no" title="function not covered" >(d</span>ataBounds) =&gt; {
-    const ticks = <span class="cstat-no" title="statement not covered" >[];</span>
-    const tickStrings = <span class="cstat-no" title="statement not covered" >[];</span>
-<span class="cstat-no" title="statement not covered" >    for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; 3; i++) {</span>
-      const scale = <span class="cstat-no" title="statement not covered" >d3</span>
-        .scaleLinear()
-        .domain([dataBounds[i * 2], dataBounds[i * 2 + 1]]);
-<span class="cstat-no" title="statement not covered" >      ticks[i] = scale.ticks(5);</span>
-      const format = <span class="cstat-no" title="statement not covered" >scale.tickFormat(5);</span>
-<span class="cstat-no" title="statement not covered" >      tickStrings[i] = ticks[i].map(format);</span>
-    }
-<span class="cstat-no" title="statement not covered" >    return { ticks, tickStrings };</span>
-  };
+function <span class="fstat-no" title="function not covered" >defaultGenerateTicks(</span>dataBounds) {
+  const ticks = <span class="cstat-no" title="statement not covered" >[];</span>
+  const tickStrings = <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >  for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; 3; i++) {</span>
+    const scale = <span class="cstat-no" title="statement not covered" >d3</span>
+      .scaleLinear()
+      .domain([dataBounds[i * 2], dataBounds[i * 2 + 1]]);
+<span class="cstat-no" title="statement not covered" >    ticks[i] = scale.ticks(5);</span>
+    const format = <span class="cstat-no" title="statement not covered" >scale.tickFormat(5);</span>
+<span class="cstat-no" title="statement not covered" >    tickStrings[i] = ticks[i].map(format);</span>
+  }
+<span class="cstat-no" title="statement not covered" >  return { ticks, tickStrings };</span>
 }
 &nbsp;
 // many properties of this actor depend on the API specific view The main
@@ -2721,7 +2725,7 @@ function defaultValues(publicAPI, model, initialValues) {
     axisLabels: null,
     axisTitlePixelOffset: 35.0,
     tickLabelPixelOffset: 12.0,
-    generateTicks: defaultGenerateTicks(publicAPI, model),
+    generateTicks: defaultGenerateTicks,
     ...initialValues,
     axisTextStyle: {
       fontColor: 'white',
@@ -2762,7 +2766,7 @@ export function extend(publicAPI, model, initialValues = <span class="branch-0 c
   model._tmAtlas = new Map();
 &nbsp;
   // for texture atlas
-  model.tmTexture = vtkTexture.newInstance();
+  model.tmTexture = vtkTexture.newInstance({ resizable: true });
   model.tmTexture.setInterpolate(false);
 &nbsp;
   publicAPI.getProperty().setDiffuse(0.0);
@@ -2810,7 +2814,12 @@ export const newInstance = macro.newInstance(extend, 'vtkCubeAxesActor');
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export default { newInstance, extend, newCubeAxesActorHelper };
+export default {
+  newInstance,
+  extend,
+  newCubeAxesActorHelper,
+  defaultGenerateTicks,
+};
 &nbsp;</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -2818,7 +2827,7 @@ export default { newInstance, extend, newCubeAxesActorHelper };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Apr 04 2024 09:11:13 GMT+0000 (Coordinated Universal Time)
+                at Fri Apr 05 2024 07:32:21 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
