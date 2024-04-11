@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.83% </span>
+                <span class="strong">55.05% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>48/83</span>
+                <span class='fraction'>49/89</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">34.28% </span>
+                <span class="strong">32.43% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>12/35</span>
+                <span class='fraction'>12/37</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55.55% </span>
+                <span class="strong">53.57% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>15/27</span>
+                <span class='fraction'>15/28</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">56.41% </span>
+                <span class="strong">53.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>44/78</span>
+                <span class='fraction'>45/84</span>
             </div>
         
             
@@ -259,7 +259,17 @@
 <a name='L194'></a><a href='#L194'>194</a>
 <a name='L195'></a><a href='#L195'>195</a>
 <a name='L196'></a><a href='#L196'>196</a>
-<a name='L197'></a><a href='#L197'>197</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -405,12 +415,22 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">204x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -600,6 +620,15 @@ function vtkRenderWindow(publicAPI, model) {
       )
       .filter(<span class="fstat-no" title="function not covered" >(i</span>) =&gt; <span class="cstat-no" title="statement not covered" >!!i)</span>;
   };
+&nbsp;
+  publicAPI.addRenderWindow = <span class="fstat-no" title="function not covered" >(c</span>hild) =&gt; {
+<span class="cstat-no" title="statement not covered" >    if (model.childRenderWindows.includes(child)) {</span>
+<span class="cstat-no" title="statement not covered" >      return false;</span>
+    }
+<span class="cstat-no" title="statement not covered" >    model.childRenderWindows.push(child);</span>
+<span class="cstat-no" title="statement not covered" >    publicAPI.modified();</span>
+<span class="cstat-no" title="statement not covered" >    return true;</span>
+  };
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -613,6 +642,7 @@ const DEFAULT_VALUES = {
   interactor: null,
   neverRendered: true,
   numberOfLayers: 1,
+  childRenderWindows: [],
 };
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -630,7 +660,7 @@ export function extend(publicAPI, model, initialValues = {}) {
     'defaultViewAPI',
   ]);
   macro.get(publicAPI, model, ['neverRendered']);
-  macro.getArray(publicAPI, model, ['renderers']);
+  macro.getArray(publicAPI, model, ['renderers', 'childRenderWindows']);
   macro.moveToProtected(publicAPI, model, ['views']);
   macro.event(publicAPI, model, 'completion');
 &nbsp;
@@ -658,7 +688,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Apr 10 2024 22:34:44 GMT+0000 (Coordinated Universal Time)
+                at Thu Apr 11 2024 19:41:57 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
