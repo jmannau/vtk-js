@@ -1,9 +1,15 @@
-import vtkPiecewiseFunction from '../../../Common/DataModel/PiecewiseFunction';
-import { Bounds, Range } from '../../../types';
-import vtkAbstractMapper3D, {
-  IAbstractMapper3DInitialValues,
-} from '../AbstractMapper3D';
-import { BlendMode, FilterMode } from './Constants';
+import vtkPiecewiseFunction from "../../../Common/DataModel/PiecewiseFunction";
+import { Bounds, Range, Vector3 } from "../../../types";
+import vtkAbstractMapper3D, { IAbstractMapper3DInitialValues } from "../AbstractMapper3D";
+import { BlendMode, FilterMode } from "./Constants";
+
+/**
+ * Represents a 3D region of a volume.
+ */
+export interface VolumeRegion {
+  start: Vector3;
+  size: Vector3;
+}
 
 /**
  *
@@ -281,10 +287,43 @@ export interface vtkVolumeMapper extends vtkAbstractMapper3D {
    */
   setLAOKernelRadius(LAOKernelRadius: number): void;
 
+	/**
+	 * Set kernel size for local ambient occlusion. It specifies the number of rays that are randomly sampled in the hemisphere.
+	 * Value is clipped between 1 and 32.
+	 * @param LAOKernelSize
+	 */
+	setLAOKernelSize(LAOKernelSize: number): void;
+
+	/**
+	 * Set kernel radius for local ambient occlusion. It specifies the number of samples that are considered on each random ray.
+	 * Value must be greater than or equal to 1.
+	 * @param LAOKernelRadius
+	 */
+	setLAOKernelRadius(LAOKernelRadius: number): void;
+
   /**
-   *
+   * Tells the mapper to only update the specified regions.
+   * 
+   * If there are zero regions, the mapper updates the entire volume texture.
+   * Otherwise, the mapper will only update the texture by the specified regions
+   * during the next render call.
+   * 
+   * This array is cleared after a successful render.
+   * @param regions 
    */
-  update(): void;
+  setRegionsToUpdate(regions: VolumeRegion[]): boolean;
+
+  /**
+   * Retrieves the regions to update.
+   * 
+   * This array is cleared after every successful render.
+   */
+  getRegionsToUpdate(): VolumeRegion[];
+
+	/**
+	 *
+	 */
+	update(): void;
 }
 
 /**
