@@ -1,15 +1,7 @@
 import vtkPiecewiseFunction from "../../../Common/DataModel/PiecewiseFunction";
-import { Bounds, Range, Vector3 } from "../../../types";
+import { Bounds, Range, Extent } from "../../../types";
 import vtkAbstractMapper3D, { IAbstractMapper3DInitialValues } from "../AbstractMapper3D";
 import { BlendMode, FilterMode } from "./Constants";
-
-/**
- * Represents a 3D region of a volume.
- */
-export interface VolumeRegion {
-  start: Vector3;
-  size: Vector3;
-}
 
 /**
  *
@@ -302,23 +294,23 @@ export interface vtkVolumeMapper extends vtkAbstractMapper3D {
 	setLAOKernelRadius(LAOKernelRadius: number): void;
 
   /**
-   * Tells the mapper to only update the specified regions.
-   * 
-   * If there are zero regions, the mapper updates the entire volume texture.
-   * Otherwise, the mapper will only update the texture by the specified regions
+   * Tells the mapper to only update the specified extents.
+   *
+   * If there are zero extents, the mapper updates the entire volume texture.
+   * Otherwise, the mapper will only update the texture by the specified extents
    * during the next render call.
-   * 
+   *
    * This array is cleared after a successful render.
-   * @param regions 
+   * @param extents
    */
-  setRegionsToUpdate(regions: VolumeRegion[]): boolean;
+  setUpdatedExtents(extents: Extent[]): boolean;
 
   /**
-   * Retrieves the regions to update.
-   * 
+   * Retrieves the updated extents.
+   *
    * This array is cleared after every successful render.
    */
-  getRegionsToUpdate(): VolumeRegion[];
+  getUpdatedExtents(): Extent[];
 
 	/**
 	 *

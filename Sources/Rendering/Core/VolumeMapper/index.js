@@ -163,7 +163,7 @@ const defaultValues = (initialValues) => ({
   localAmbientOcclusion: false,
   LAOKernelSize: 15,
   LAOKernelRadius: 7,
-  regionsToUpdate: [],
+  updatedExtents: [],
   ...initialValues,
 });
 
@@ -192,7 +192,7 @@ export function extend(publicAPI, model, initialValues = {}) {
     'localAmbientOcclusion',
     'LAOKernelSize',
     'LAOKernelRadius',
-    'regionsToUpdate',
+    'updatedExtents',
   ]);
 
   macro.setGetArray(publicAPI, model, ['ipScalarRange'], 2);

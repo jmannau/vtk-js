@@ -618,30 +618,57 @@ function vtkOpenGLTexture(publicAPI, model) {
   //----------------------------------------------------------------------------
 
   /**
-   * Reads a region from the image data and writes to the given output array.
+   * Gets the extent's size.
+   * @param {Extent} extent
+   */
+  function getExtentSize(extent) {
+    const [xmin, xmax, ymin, ymax, zmin, zmax] = extent;
+    return [xmax - xmin + 1, ymax - ymin + 1, zmax - zmin + 1];
+  }
+
+  //----------------------------------------------------------------------------
+
+  /**
+   * Gets the number of pixels in the extent.
+   * @param {Extent} extent
+   */
+  function getExtentPixelCount(extent) {
+    const [sx, sy, sz] = getExtentSize(extent);
+    return sx * sy * sz;
+  }
+
+  //----------------------------------------------------------------------------
+
+  /**
+   * Reads a flattened extent from the image data and writes to the given output array.
    *
    * Assumes X varies the fastest and Z varies the slowest.
    *
    * @param {*} data
-   * @param {*} start
-   * @param {*} size
-   * @param {*} outArray
-   * @param {*} outOffset
+   * @param {Extent} extent
+   * @param {TypedArray} outArray
+   * @param {number} outOffset
    * @returns
    */
-  function readRegion(data, start, size, outArray, outOffset) {
-    const [sx, sy, sz] = size;
+  function readExtentIntoArray(data, extent, outArray, outOffset) {
+    const [, , ymin, ymax, zmin, zmax] = extent;
+    const [sx, sy] = getExtentSize(extent);
     const sxy = sx * sy;
-    const startOffset = start[2] * sxy + start[1] * sx + start[0];
 
     let writeOffset = outOffset;
-    for (let zi = 0; zi < sz; zi++) {
-      const zOffset = startOffset + zi * sxy;
-      for (let yi = 0; yi < sy; yi++) {
+    for (let zi = zmin; zi <= zmax; zi++) {
+      const zOffset = zi * sxy;
+      for (let yi = ymin; yi <= ymax; yi++) {
         const readOffset = zOffset + yi * sx;
-        const chunk = data.subarray(readOffset, readOffset + sx);
-        outArray.set(chunk, writeOffset);
-        writeOffset += chunk.length;
+        // explicit alternative to data.subarray,
+        // due to potential perf issues on v8
+        for (
+          let xi = readOffset, end = readOffset + sx;
+          xi < end;
+          xi++, writeOffset++
+        ) {
+          outArray[writeOffset] = data[xi];
+        }
       }
     }
   }
@@ -649,37 +676,28 @@ function vtkOpenGLTexture(publicAPI, model) {
   //----------------------------------------------------------------------------
 
   /**
-   * /omputes the region's size.
-   * @param {VolumeRegion} region
-   */
-  function getRegionSize(region) {
-    const { size } = region;
-    return size[0] * size[1] * size[2];
-  }
-
-  //----------------------------------------------------------------------------
-
-  /**
-   * Reads several sub-image regions into a contiguous pixel array.
+   * Reads several image extents into a contiguous pixel array.
    *
    * @param {*} data
-   * @param {VolumeRegion[]} regions
+   * @param {Extent[]} extent
+   * @param {TypedArrayConstructor} typedArrayConstructor optional typed array constructor
    * @returns
    */
-  function readRegions(data, regions) {
-    const numPixels = regions.reduce(
-      (count, region) => count + getRegionSize(region),
+  function readExtents(data, extents, typedArrayConstructor = null) {
+    const constructor = typedArrayConstructor || data.constructor;
+    const numPixels = extents.reduce(
+      (count, extent) => count + getExtentPixelCount(extent),
       0
     );
-    const regionPixels = new data.constructor(numPixels);
+    const extentPixels = new constructor(numPixels);
 
     let writeOffset = 0;
-    regions.forEach((region) => {
-      readRegion(data, region.start, region.size, regionPixels, writeOffset);
-      writeOffset += getRegionSize(region);
+    extents.forEach((extent) => {
+      readExtentIntoArray(data, extent, extentPixels, writeOffset);
+      writeOffset += getExtentPixelCount(extent);
     });
 
-    return regionPixels;
+    return extentPixels;
   }
 
   //----------------------------------------------------------------------------
@@ -687,19 +705,19 @@ function vtkOpenGLTexture(publicAPI, model) {
   /**
    * Modifies the typed array types for webgl based on the given dataType.
    *
-   * When sub-image regions are provided, the regions are all concatenated together into one typed array in the return output.
+   * When sub-image extents are provided, the extents are all concatenated together into one typed array in the return output.
    *
    * @param {VtkDataTypes} dataType the VTK data type
    * @param {TypedArray[]} data An array of typed arrays, one for each texture
    * @param {boolean} depth should depth be used (default: false)
-   * @param {Array<VolumeRegion>} volumeRegions only consider these sub-image regions (default: [])
+   * @param {Array<Extent>} imageExtents only consider these image extents (default: [])
    * @returns an array of newly typed arrays, one for each texture
    */
   function updateArrayDataType(
     dataType,
     data,
     depth = false,
-    volumeRegions = []
+    imageExtents = []
   ) {
     const pixData = [];
 
@@ -708,7 +726,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       pixCount *= model.depth;
     }
 
-    const updateRegions = !!volumeRegions.length;
+    const onlyUpdateExtents = !!imageExtents.length;
 
     // if the opengl data type is float
     // then the data array must be float
@@ -718,10 +736,8 @@ function vtkOpenGLTexture(publicAPI, model) {
     ) {
       for (let idx = 0; idx < data.length; idx++) {
         if (data[idx]) {
-          if (updateRegions) {
-            pixData.push(
-              new Float32Array(readRegions(data[idx], volumeRegions))
-            );
+          if (onlyUpdateExtents) {
+            pixData.push(readExtents(data[idx], imageExtents, Float32Array));
           } else {
             const dataArrayToCopy =
               data[idx].length > pixCount
@@ -743,8 +759,8 @@ function vtkOpenGLTexture(publicAPI, model) {
     ) {
       for (let idx = 0; idx < data.length; idx++) {
         if (data[idx]) {
-          if (updateRegions) {
-            pixData.push(new Uint8Array(readRegions(data[idx], volumeRegions)));
+          if (onlyUpdateExtents) {
+            pixData.push(readExtents(data[idx], imageExtents, Uint8Array));
           } else {
             const dataArrayToCopy =
               data[idx].length > pixCount
@@ -772,11 +788,11 @@ function vtkOpenGLTexture(publicAPI, model) {
     if (halfFloat) {
       for (let idx = 0; idx < data.length; idx++) {
         if (data[idx]) {
-          const src = updateRegions
-            ? readRegions(data[idx], volumeRegions)
+          const src = onlyUpdateExtents
+            ? readExtents(data[idx], imageExtents)
             : data[idx];
           const newArray = new Uint16Array(
-            updateRegions ? src.length : pixCount
+            onlyUpdateExtents ? src.length : pixCount
           );
           const newArrayLen = newArray.length;
           for (let i = 0; i < newArrayLen; i++) {
@@ -793,8 +809,8 @@ function vtkOpenGLTexture(publicAPI, model) {
     if (pixData.length === 0) {
       for (let i = 0; i < data.length; i++) {
         pixData.push(
-          updateRegions && data[i]
-            ? readRegions(data[i], volumeRegions)
+          onlyUpdateExtents && data[i]
+            ? readExtents(data[i], imageExtents)
             : data[i]
         );
       }
@@ -1479,7 +1495,7 @@ function vtkOpenGLTexture(publicAPI, model) {
     numComps,
     dataType,
     data,
-    updatedRegions = []
+    updatedExtents = []
   ) => {
     // Permit OpenGLDataType to be half float, if applicable, for 3D
     publicAPI.getOpenGLDataType(dataType);
@@ -1503,13 +1519,13 @@ function vtkOpenGLTexture(publicAPI, model) {
     publicAPI.createTexture();
     publicAPI.bind();
 
-    const hasUpdatedRegions = updatedRegions.length > 0;
+    const hasUpdatedExtents = updatedExtents.length > 0;
     const paramCache = model._paramCache;
 
     // It's possible for the texture parameters to change while
     // streaming, so check for such a change.
     const rebuildEntireTexture =
-      !hasUpdatedRegions ||
+      !hasUpdatedExtents ||
       !paramCache ||
       !paramCache.tex3dAllocated ||
       paramCache.prevInternalFormat !== model.internalFormat ||
@@ -1526,9 +1542,8 @@ function vtkOpenGLTexture(publicAPI, model) {
       dataArray,
       is3DArray,
       // if we need to reallocate the entire texture, then process the entire volume
-      rebuildEntireTexture ? [] : updatedRegions
+      rebuildEntireTexture ? [] : updatedExtents
     );
-    // TODO(floryst): updatedRegions is currently incompatible with webgl1, since there's no region scaling
     const scaledData = scaleTextureToHighestPowerOfTwo(pixData);
 
     // Source texture data from the PBO.
@@ -1583,28 +1598,29 @@ function vtkOpenGLTexture(publicAPI, model) {
         prevWidth: model.width,
         prevHeight: model.height,
       };
-    } else if (hasUpdatedRegions) {
-      const regionPixels = scaledData[0];
+    } else if (hasUpdatedExtents) {
+      const extentPixels = scaledData[0];
       let readOffset = 0;
-      for (let i = 0; i < updatedRegions.length; i++) {
-        const region = updatedRegions[i];
-        const regionSize = getRegionSize(region);
-        const textureData = new regionPixels.constructor(
-          regionPixels.buffer,
+      for (let i = 0; i < updatedExtents.length; i++) {
+        const extent = updatedExtents[i];
+        const extentSize = getExtentSize(extent);
+        const extentPixelCount = getExtentPixelCount(extent);
+        const textureData = new extentPixels.constructor(
+          extentPixels.buffer,
           readOffset,
-          regionSize
+          extentPixelCount
         );
         readOffset += textureData.byteLength;
 
         model.context.texSubImage3D(
           model.target,
           0,
-          region.start[0],
-          region.start[1],
-          region.start[2],
-          region.size[0],
-          region.size[1],
-          region.size[2],
+          extent[0],
+          extent[2],
+          extent[4],
+          extentSize[0],
+          extentSize[1],
+          extentSize[2],
           model.format,
           model.openGLDataType,
           textureData
@@ -1642,7 +1658,7 @@ function vtkOpenGLTexture(publicAPI, model) {
     dataType,
     values,
     preferSizeOverAccuracy = false,
-    updatedRegions = []
+    updatedExtents = []
   ) =>
     publicAPI.create3DFilterableFromDataArray(
       width,
@@ -1654,7 +1670,7 @@ function vtkOpenGLTexture(publicAPI, model) {
         values,
       }),
       preferSizeOverAccuracy,
-      updatedRegions
+      updatedExtents
     );
 
   //----------------------------------------------------------------------------
@@ -1665,7 +1681,7 @@ function vtkOpenGLTexture(publicAPI, model) {
     depth,
     dataArray,
     preferSizeOverAccuracy = false,
-    updatedRegions = []
+    updatedExtents = []
   ) => {
     const { numComps, dataType, data, scaleOffsets } = processDataArray(
       dataArray,
@@ -1718,7 +1734,7 @@ function vtkOpenGLTexture(publicAPI, model) {
           numComps,
           dataType,
           data,
-          updatedRegions
+          updatedExtents
         );
       }
       if (
@@ -1736,7 +1752,7 @@ function vtkOpenGLTexture(publicAPI, model) {
           numComps,
           dataType,
           data,
-          updatedRegions
+          updatedExtents
         );
       }
       if (
@@ -1752,7 +1768,7 @@ function vtkOpenGLTexture(publicAPI, model) {
           numComps,
           dataType,
           data,
-          updatedRegions
+          updatedExtents
         );
       }
       if (dataType === VtkDataTypes.UNSIGNED_CHAR) {
@@ -1766,12 +1782,12 @@ function vtkOpenGLTexture(publicAPI, model) {
           numComps,
           dataType,
           data,
-          updatedRegions
+          updatedExtents
         );
       }
-      if (updatedRegions.length) {
+      if (updatedExtents.length) {
         vtkWarningMacro(
-          'Cannot perform region updates with the given data type'
+          'Cannot perform extent updates with the given data type'
         );
       }
       // otherwise convert to float

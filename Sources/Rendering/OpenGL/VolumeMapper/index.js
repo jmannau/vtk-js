@@ -1667,10 +1667,10 @@ function vtkOpenGLVolumeMapper(publicAPI, model) {
     // rebuild the scalarTexture if the data has changed
     toString = `${image.getMTime()}A${scalars.getMTime()}`;
     const reBuildTex = !tex?.vtkObj?.getHandle() || tex?.hash !== toString;
-    const hasUpdatedRegions = !!model.renderable.getRegionsToUpdate().length;
+    const hasUpdatedExtents = !!model.renderable.getUpdatedExtents().length;
 
-    // reset the scalars texture if there are no updated regions
-    if (reBuildTex && !hasUpdatedRegions) {
+    // reset the scalars texture if there are no updated extents
+    if (reBuildTex && !hasUpdatedExtents) {
       // Use norm16 for scalar texture if the extension is available
       model.scalarTexture.setOglNorm16Ext(
         model.context.getExtension('EXT_texture_norm16')
@@ -1680,12 +1680,12 @@ function vtkOpenGLVolumeMapper(publicAPI, model) {
       model.scalarTexture.resetFormatAndType();
     }
 
-    if (reBuildTex || hasUpdatedRegions) {
+    if (reBuildTex || hasUpdatedExtents) {
       // Build the textures
-      // If hasUpdatedRegions, then the texture is partially updated
-      const regionsToUpdate = [...model.renderable.getRegionsToUpdate()];
+      // If hasUpdatedExtents, then the texture is partially updated
+      const updatedExtents = [...model.renderable.getUpdatedExtents()];
       // clear, as we've acknowledged the update.
-      model.renderable.setRegionsToUpdate([]);
+      model.renderable.setUpdatedExtents([]);
 
       const dims = image.getDimensions();
       model.scalarTexture.create3DFilterableFromDataArray(
@@ -1694,7 +1694,7 @@ function vtkOpenGLVolumeMapper(publicAPI, model) {
         dims[2],
         scalars,
         model.renderable.getPreferSizeOverAccuracy(),
-        regionsToUpdate
+        updatedExtents
       );
 
       if (scalars) {
