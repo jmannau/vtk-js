@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">1.28% </span>
+                <span class="strong">1.21% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/78</span>
+                <span class='fraction'>1/82</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/61</span>
+                <span class='fraction'>0/64</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">1.28% </span>
+                <span class="strong">1.21% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/78</span>
+                <span class='fraction'>1/82</span>
             </div>
         
             
@@ -248,7 +248,14 @@
 <a name='L183'></a><a href='#L183'>183</a>
 <a name='L184'></a><a href='#L184'>184</a>
 <a name='L185'></a><a href='#L185'>185</a>
-<a name='L186'></a><a href='#L186'>186</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -303,6 +310,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -331,11 +339,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -347,6 +350,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -434,6 +446,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import macro from 'vtk.js/Sources/macros';
+import { add } from 'vtk.js/Sources/Common/Core/Math';
 import vtkPointPicker from 'vtk.js/Sources/Rendering/Core/PointPicker';
 &nbsp;
 const MAX_POINTS = 3;
@@ -478,15 +491,16 @@ export default function <span class="fstat-no" title="function not covered" >wid
 <span class="cstat-no" title="statement not covered" >    picker.setPickList(publicAPI.getNestedProps());</span>
     const manipulator =
 <span class="cstat-no" title="statement not covered" >      model.activeState?.getManipulator?.() ?? model.manipulator;</span>
+    const { worldCoords } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
+      e,
+      model._apiSpecificRenderWindow
+    );
+&nbsp;
 <span class="cstat-no" title="statement not covered" >    if (</span>
       model.activeState === model.widgetState.getMoveHandle() &amp;&amp;
       model.widgetState.getHandleList().length &lt; MAX_POINTS &amp;&amp;
       manipulator
     ) {
-      const { worldCoords } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
-        e,
-        model._apiSpecificRenderWindow
-      );
       // Commit handle to location
       const moveHandle = <span class="cstat-no" title="statement not covered" >model.widgetState.getMoveHandle();</span>
 <span class="cstat-no" title="statement not covered" >      moveHandle.setOrigin(...worldCoords);</span>
@@ -520,18 +534,22 @@ export default function <span class="fstat-no" title="function not covered" >wid
       model.activeState.getActive() &amp;&amp;
       !ignoreKey(callData)
     ) {
-      const { worldCoords } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
+      const { worldCoords, worldDelta } = <span class="cstat-no" title="statement not covered" >manipulator.handleEvent(</span>
         callData,
         model._apiSpecificRenderWindow
       );
 &nbsp;
-<span class="cstat-no" title="statement not covered" >      if (</span>
-        worldCoords.length &amp;&amp;
-        (model.activeState === model.widgetState.getMoveHandle() ||
-          model._isDragging) &amp;&amp;
-        model.activeState.setOrigin // e.g. the line is pickable but not draggable
-      ) {
-<span class="cstat-no" title="statement not covered" >        model.activeState.setOrigin(worldCoords);</span>
+      const isHandleMoving =
+<span class="cstat-no" title="statement not covered" >        model.activeState === model.widgetState.getMoveHandle() ||</span>
+        model._isDragging;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (isHandleMoving &amp;&amp; worldCoords.length &amp;&amp; model.activeState.setOrigin) {</span>
+        const curOrigin = <span class="cstat-no" title="statement not covered" >model.activeState.getOrigin();</span>
+<span class="cstat-no" title="statement not covered" >        if (curOrigin) {</span>
+<span class="cstat-no" title="statement not covered" >          model.activeState.setOrigin(add(curOrigin, worldDelta, []));</span>
+        } else {
+<span class="cstat-no" title="statement not covered" >          model.activeState.setOrigin(worldCoords);</span>
+        }
 <span class="cstat-no" title="statement not covered" >        publicAPI.invokeInteractionEvent();</span>
 <span class="cstat-no" title="statement not covered" >        return macro.EVENT_ABORT;</span>
       }
@@ -625,7 +643,7 @@ export default function <span class="fstat-no" title="function not covered" >wid
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu May 30 2024 17:27:55 GMT+0000 (Coordinated Universal Time)
+                at Wed Jun 05 2024 20:11:37 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
