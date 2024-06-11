@@ -1684,7 +1684,7 @@ function vtkOpenGLVolumeMapper(publicAPI, model) {
       // Build the textures
       // If hasUpdatedExtents, then the texture is partially updated
       const updatedExtents = [...model.renderable.getUpdatedExtents()];
-      // clear, as we've acknowledged the update.
+      // clear the array to acknowledge the update.
       model.renderable.setUpdatedExtents([]);
 
       const dims = image.getDimensions();

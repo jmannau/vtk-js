@@ -645,29 +645,30 @@ function vtkOpenGLTexture(publicAPI, model) {
    * Assumes X varies the fastest and Z varies the slowest.
    *
    * @param {*} data
+   * @param {*} dataDims
    * @param {Extent} extent
    * @param {TypedArray} outArray
    * @param {number} outOffset
    * @returns
    */
-  function readExtentIntoArray(data, extent, outArray, outOffset) {
-    const [, , ymin, ymax, zmin, zmax] = extent;
-    const [sx, sy] = getExtentSize(extent);
-    const sxy = sx * sy;
+  function readExtentIntoArray(data, dataDims, extent, outArray, outOffset) {
+    const [xmin, xmax, ymin, ymax, zmin, zmax] = extent;
+    const [dx, dy] = dataDims;
+    const sxy = dx * dy;
 
     let writeOffset = outOffset;
     for (let zi = zmin; zi <= zmax; zi++) {
       const zOffset = zi * sxy;
       for (let yi = ymin; yi <= ymax; yi++) {
-        const readOffset = zOffset + yi * sx;
+        const zyOffset = zOffset + yi * dx;
         // explicit alternative to data.subarray,
         // due to potential perf issues on v8
         for (
-          let xi = readOffset, end = readOffset + sx;
-          xi < end;
-          xi++, writeOffset++
+          let readOffset = zyOffset + xmin, end = zyOffset + xmax;
+          readOffset <= end;
+          readOffset++, writeOffset++
         ) {
-          outArray[writeOffset] = data[xi];
+          outArray[writeOffset] = data[readOffset];
         }
       }
     }
@@ -690,10 +691,11 @@ function vtkOpenGLTexture(publicAPI, model) {
       0
     );
     const extentPixels = new constructor(numPixels);
+    const dataDims = [model.width, model.height, model.depth];
 
     let writeOffset = 0;
     extents.forEach((extent) => {
-      readExtentIntoArray(data, extent, extentPixels, writeOffset);
+      readExtentIntoArray(data, dataDims, extent, extentPixels, writeOffset);
       writeOffset += getExtentPixelCount(extent);
     });
 
