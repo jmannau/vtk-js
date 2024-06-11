@@ -1,7 +1,7 @@
 import { Wrap, Filter } from './Constants';
 import vtkOpenGLRenderWindow from '../RenderWindow';
 import { Extent, Nullable } from '../../../types';
-import { VtkDataTypes } from "../../../Common/Core/DataArray";
+import { VtkDataTypes } from '../../../Common/Core/DataArray';
 import { vtkViewNode } from '../../../Rendering/SceneGraph/ViewNode';
 import { vtkObject } from '../../../interfaces';
 
@@ -268,7 +268,15 @@ export interface vtkOpenGLTexture extends vtkViewNode {
    * @param updatedExtents Only update the specified extents (default: [])
    * @returns {boolean} True if the texture was successfully created, false otherwise.
    */
-  create3DFromRaw(width: number, height: number, depth: number, numComps: number, dataType: VtkDataTypes, data: any, updatedExtents?: Extent[]): boolean;
+  create3DFromRaw(
+    width: number,
+    height: number,
+    depth: number,
+    numComps: number,
+    dataType: VtkDataTypes,
+    data: any,
+    updatedExtents?: Extent[]
+  ): boolean;
 
   /**
    * Creates a 3D filterable texture from raw data, with a preference for size over accuracy if necessary.
@@ -285,7 +293,16 @@ export interface vtkOpenGLTexture extends vtkViewNode {
    * @param updatedExtents Only update the specified extents (default: [])
    * @returns {boolean} True if the texture was successfully created, false otherwise.
    */
-  create3DFilterableFromRaw(width: number, height: number, depth: number, numComps: number, dataType: VtkDataTypes, values: any, preferSizeOverAccuracy: boolean, updatedExtents?: Extent[]): boolean;
+  create3DFilterableFromRaw(
+    width: number,
+    height: number,
+    depth: number,
+    numComps: number,
+    dataType: VtkDataTypes,
+    values: any,
+    preferSizeOverAccuracy: boolean,
+    updatedExtents?: Extent[]
+  ): boolean;
 
   /**
    * Creates a 3D filterable texture from a data array, with a preference for size over accuracy if necessary.
@@ -300,7 +317,14 @@ export interface vtkOpenGLTexture extends vtkViewNode {
    * @param updatedExtents Only update the specified extents (default: [])
    * @returns {boolean} True if the texture was successfully created, false otherwise.
    */
-  create3DFilterableFromDataArray(width: number, height: number, depth: number, dataArray: any, preferSizeOverAccuracy: boolean, updatedExtents?: Extent[]): boolean;
+  create3DFilterableFromDataArray(
+    width: number,
+    height: number,
+    depth: number,
+    dataArray: any,
+    preferSizeOverAccuracy: boolean,
+    updatedExtents?: Extent[]
+  ): boolean;
 
   /**
    * Sets the OpenGL render window in which the texture will be used.
