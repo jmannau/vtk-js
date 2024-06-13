@@ -23,16 +23,16 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.22% </span>
+                <span class="strong">84.17% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>518/615</span>
+                <span class='fraction'>516/613</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">74.67% </span>
+                <span class="strong">74.89% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>171/229</span>
+                <span class='fraction'>173/231</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.82% </span>
+                <span class="strong">84.77% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>503/593</span>
+                <span class='fraction'>501/591</span>
             </div>
         
             
@@ -1562,10 +1562,7 @@
 <a name='L1497'></a><a href='#L1497'>1497</a>
 <a name='L1498'></a><a href='#L1498'>1498</a>
 <a name='L1499'></a><a href='#L1499'>1499</a>
-<a name='L1500'></a><a href='#L1500'>1500</a>
-<a name='L1501'></a><a href='#L1501'>1501</a>
-<a name='L1502'></a><a href='#L1502'>1502</a>
-<a name='L1503'></a><a href='#L1503'>1503</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L1500'></a><a href='#L1500'>1500</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2450,7 +2447,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">28x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">65x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2458,9 +2454,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">42x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">23x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">28x</span>
@@ -3951,19 +3945,16 @@ function vtkOpenGLImageMapper(publicAPI, model) {
     }
   };
 &nbsp;
-  publicAPI.getNeedToRebuildBufferObjects = (ren, actor) =&gt; {
-    // first do a coarse check
-    if (
-      model.VBOBuildTime.getMTime() &lt; publicAPI.getMTime() ||
-      model.VBOBuildTime.getMTime() &lt; actor.getMTime() ||
-      model.VBOBuildTime.getMTime() &lt; model.renderable.getMTime() ||
-      model.VBOBuildTime.getMTime() &lt; actor.getProperty().getMTime() ||
-      model.VBOBuildTime.getMTime() &lt; model.currentInput.getMTime()
-    ) {
-      return true;
-    }
-    return false;
-  };
+  publicAPI.getNeedToRebuildBufferObjects = (ren, actor) =&gt;
+    model.VBOBuildTime.getMTime() &lt; publicAPI.getMTime() ||
+    model.VBOBuildTime.getMTime() &lt; actor.getMTime() ||
+    model.VBOBuildTime.getMTime() &lt; model.renderable.getMTime() ||
+    model.VBOBuildTime.getMTime() &lt; actor.getProperty().getMTime() ||
+    model.VBOBuildTime.getMTime() &lt; model.currentInput.getMTime() ||
+    !model.openGLTexture?.getHandle() ||
+    !model.colorTexture?.getHandle() ||
+    !model.labelOutlineThicknessTexture?.getHandle() ||
+    !model.pwfTexture?.getHandle();
 &nbsp;
   publicAPI.buildBufferObjects = (ren, actor) =&gt; {
     const image = model.currentInput;
@@ -3999,7 +3990,7 @@ function vtkOpenGLImageMapper(publicAPI, model) {
       model._openGLRenderWindow.getGraphicsResourceForObject(colorTransferFunc);
 &nbsp;
     const reBuildC =
-      !cTex?.vtkObj ||
+      !cTex?.vtkObj?.getHandle() ||
       cTex?.hash !== cfunToString ||
       model.colorTextureString !== cfunToString;
     if (reBuildC) {
@@ -4085,7 +4076,7 @@ function vtkOpenGLImageMapper(publicAPI, model) {
       model._openGLRenderWindow.getGraphicsResourceForObject(pwFunc);
     // rebuild opacity tfun?
     const reBuildPwf =
-      !pwfTex?.vtkObj ||
+      !pwfTex?.vtkObj?.getHandle() ||
 <span class="branch-1 cbranch-no" title="branch not covered" >      pwfTex?.hash !== pwfunToString </span>||
 <span class="branch-2 cbranch-no" title="branch not covered" >      model.pwfTextureString !== pwfunToString;</span>
     if (reBuildPwf) {
@@ -4344,7 +4335,7 @@ function vtkOpenGLImageMapper(publicAPI, model) {
 &nbsp;
       const tex =
         model._openGLRenderWindow.getGraphicsResourceForObject(scalars);
-      if (!tex?.vtkObj) {
+      if (!tex?.vtkObj?.getHandle()) {
         if (model._scalars !== scalars) {
           model._openGLRenderWindow.releaseGraphicsResourcesForObject(
             model._scalars
@@ -4432,7 +4423,7 @@ function vtkOpenGLImageMapper(publicAPI, model) {
     const toString = `${labelOutlineThicknessArray.join('-')}`;
 &nbsp;
     const reBuildL =
-      !lTex?.vtkObj ||
+      !lTex?.vtkObj?.getHandle() ||
 <span class="branch-1 cbranch-no" title="branch not covered" >      lTex?.hash !== toString </span>||
 <span class="branch-2 cbranch-no" title="branch not covered" >      model.labelOutlineThicknessTextureString !== toString;</span>
 &nbsp;
@@ -4576,7 +4567,7 @@ registerOverride('vtkAbstractImageMapper', newInstance);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 11 2024 17:51:46 GMT+0000 (Coordinated Universal Time)
+                at Thu Jun 13 2024 13:47:56 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
