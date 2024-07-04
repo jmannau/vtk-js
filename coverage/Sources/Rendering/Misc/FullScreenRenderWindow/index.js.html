@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.41% </span>
+                <span class="strong">6.25% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>5/78</span>
+                <span class='fraction'>5/80</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/15</span>
+                <span class='fraction'>0/16</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.41% </span>
+                <span class="strong">6.25% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/78</span>
+                <span class='fraction'>5/80</span>
             </div>
         
             
@@ -291,7 +291,13 @@
 <a name='L226'></a><a href='#L226'>226</a>
 <a name='L227'></a><a href='#L227'>227</a>
 <a name='L228'></a><a href='#L228'>228</a>
-<a name='L229'></a><a href='#L229'>229</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -412,6 +418,12 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -424,10 +436,6 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -448,6 +456,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -640,6 +652,12 @@ function <span class="fstat-no" title="function not covered" >vtkFullScreenRende
 <span class="cstat-no" title="statement not covered" >    publicAPI.setControllerVisibility(!model.controllerVisibility);</span>
   };
 &nbsp;
+  function <span class="fstat-no" title="function not covered" >handleKeypress(</span>e) {
+<span class="cstat-no" title="statement not covered" >    if (String.fromCharCode(e.charCode) === 'c') {</span>
+<span class="cstat-no" title="statement not covered" >      publicAPI.toggleControllerVisibility();</span>
+    }
+  }
+&nbsp;
 <span class="cstat-no" title="statement not covered" >  publicAPI.addController = <span class="fstat-no" title="function not covered" >(h</span>tml) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    model.controlContainer = document.createElement('div');</span>
 <span class="cstat-no" title="statement not covered" >    applyStyle(</span>
@@ -651,11 +669,7 @@ function <span class="fstat-no" title="function not covered" >vtkFullScreenRende
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    publicAPI.setControllerVisibility(model.controllerVisibility);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >    model.rootContainer.addEventListener('keypress', <span class="fstat-no" title="function not covered" >(e</span>) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      if (String.fromCharCode(e.charCode) === 'c') {</span>
-<span class="cstat-no" title="statement not covered" >        publicAPI.toggleControllerVisibility();</span>
-      }
-    });
+<span class="cstat-no" title="statement not covered" >    model.rootContainer.addEventListener('keypress', handleKeypress);</span>
   };
 &nbsp;
   // Update BG color
@@ -677,6 +691,10 @@ function <span class="fstat-no" title="function not covered" >vtkFullScreenRende
 <span class="cstat-no" title="statement not covered" >  publicAPI.delete = macro.chain(</span>
     publicAPI.setContainer,
     model.apiSpecificRenderWindow.delete,
+<span class="fstat-no" title="function not covered" >    ()</span> =&gt; {
+<span class="cstat-no" title="statement not covered" >      model.rootContainer?.removeEventListener('keypress', handleKeypress);</span>
+<span class="cstat-no" title="statement not covered" >      window.removeEventListener('resize', publicAPI.resize);</span>
+    },
     publicAPI.delete
   );
 &nbsp;
@@ -754,7 +772,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Tue Jun 25 2024 18:54:11 GMT+0000 (Coordinated Universal Time)
+                at Thu Jul 04 2024 11:37:35 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
