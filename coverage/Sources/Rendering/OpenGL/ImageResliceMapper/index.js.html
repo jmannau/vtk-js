@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.94% </span>
+                <span class="strong">88.01% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>518/589</span>
+                <span class='fraction'>514/584</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">73.93% </span>
+                <span class="strong">74.34% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>173/234</span>
+                <span class='fraction'>171/230</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">91.17% </span>
+                <span class="strong">90.9% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>31/34</span>
+                <span class='fraction'>30/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">87.91% </span>
+                <span class="strong">87.98% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>502/571</span>
+                <span class='fraction'>498/566</span>
             </div>
         
             
@@ -1462,12 +1462,12 @@
 <a name='L1397'></a><a href='#L1397'>1397</a>
 <a name='L1398'></a><a href='#L1398'>1398</a>
 <a name='L1399'></a><a href='#L1399'>1399</a>
-<a name='L1400'></a><a href='#L1400'>1400</a>
-<a name='L1401'></a><a href='#L1401'>1401</a>
-<a name='L1402'></a><a href='#L1402'>1402</a>
-<a name='L1403'></a><a href='#L1403'>1403</a>
-<a name='L1404'></a><a href='#L1404'>1404</a>
-<a name='L1405'></a><a href='#L1405'>1405</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L1400'></a><a href='#L1400'>1400</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1499,14 +1499,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-yes">24x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1721,7 +1713,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1737,7 +1728,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">6x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2889,6 +2879,11 @@ import vtkShaderProgram from 'vtk.js/Sources/Rendering/OpenGL/ShaderProgram';
 import vtkTransform from 'vtk.js/Sources/Common/Transform/Transform';
 import vtkViewNode from 'vtk.js/Sources/Rendering/SceneGraph/ViewNode';
 &nbsp;
+import {
+  getTransferFunctionHash,
+  getImageDataHash,
+} from 'vtk.js/Sources/Rendering/OpenGL/RenderWindow/resourceSharingHelper';
+&nbsp;
 import vtkImageResliceMapperVS from 'vtk.js/Sources/Rendering/OpenGL/glsl/vtkImageResliceMapperVS.glsl';
 import vtkImageResliceMapperFS from 'vtk.js/Sources/Rendering/OpenGL/glsl/vtkImageResliceMapperFS.glsl';
 &nbsp;
@@ -2904,14 +2899,6 @@ const { vtkErrorMacro } = macro;
 // ----------------------------------------------------------------------------
 // helper methods
 // ----------------------------------------------------------------------------
-&nbsp;
-function computeFnToString(property, pwfun, numberOfComponents) {
-  if (pwfun) {
-    const iComps = property.getIndependentComponents();
-    return `${pwfun.getMTime()}-${iComps}-${numberOfComponents}`;
-  }
-<span class="cstat-no" title="statement not covered" >  return '0';</span>
-}
 &nbsp;
 function safeMatrixMultiply(matrixArray, matrixType, tmpMat) {
   matrixType.identity(tmpMat);
@@ -3104,7 +3091,7 @@ function vtkOpenGLImageResliceMapper(publicAPI, model) {
     }
 &nbsp;
     const numComp = scalars.getNumberOfComponents();
-    let toString = `${image.getMTime()}A${scalars.getMTime()}`;
+    let toString = getImageDataHash(image, scalars);
 &nbsp;
     const tex = model._openGLRenderWindow.getGraphicsResourceForObject(scalars);
     const reBuildTex = !tex?.oglObject?.getHandle() || tex?.hash !== toString;
@@ -3124,24 +3111,22 @@ function vtkOpenGLImageResliceMapper(publicAPI, model) {
         dims[2],
         scalars
       );
-      if (scalars) {
-        model._openGLRenderWindow.setGraphicsResourceForObject(
+      model._openGLRenderWindow.setGraphicsResourceForObject(
+        scalars,
+        model.openGLTexture,
+        toString
+      );
+      if (scalars !== model._scalars) {
+        model._openGLRenderWindow.registerGraphicsResourceUser(
           scalars,
-          model.openGLTexture,
-          toString
+          publicAPI
         );
-        if (scalars !== model._scalars) {
-          model._openGLRenderWindow.registerGraphicsResourceUser(
-            scalars,
-            publicAPI
-          );
-          model._openGLRenderWindow.unregisterGraphicsResourceUser(
-            model._scalars,
-            publicAPI
-          );
-        }
-        model._scalars = scalars;
+        model._openGLRenderWindow.unregisterGraphicsResourceUser(
+          model._scalars,
+          publicAPI
+        );
       }
+      model._scalars = scalars;
     } else {
       model.openGLTexture = tex.oglObject;
     }
@@ -3152,7 +3137,7 @@ function vtkOpenGLImageResliceMapper(publicAPI, model) {
     const textureHeight = iComps ? 2 * numIComps : 1;
 &nbsp;
     const colorTransferFunc = ppty.getRGBTransferFunction();
-    toString = computeFnToString(ppty, colorTransferFunc, numIComps);
+    toString = getTransferFunctionHash(colorTransferFunc, iComps, numIComps);
     const cTex =
       model._openGLRenderWindow.getGraphicsResourceForObject(colorTransferFunc);
     const reBuildC = !cTex?.oglObject?.getHandle() || cTex?.hash !== toString;
@@ -3230,7 +3215,7 @@ function vtkOpenGLImageResliceMapper(publicAPI, model) {
     // for component weighting or opacity, depending on whether we're
     // rendering components independently or not.
     const pwFunc = ppty.getPiecewiseFunction();
-    toString = computeFnToString(ppty, pwFunc, numIComps);
+    toString = getTransferFunctionHash(pwFunc, iComps, numIComps);
     const pwfTex =
       model._openGLRenderWindow.getGraphicsResourceForObject(pwFunc);
     // rebuild opacity tfun?
@@ -4282,7 +4267,7 @@ registerOverride('vtkImageResliceMapper', newInstance);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Aug 12 2024 14:24:18 GMT+0000 (Coordinated Universal Time)
+                at Wed Aug 14 2024 09:04:41 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
