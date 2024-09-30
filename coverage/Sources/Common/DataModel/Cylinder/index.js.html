@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.3% </span>
+                <span class="strong">11.53% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>11/26</span>
+                <span class='fraction'>3/26</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">40% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">42.3% </span>
+                <span class="strong">11.53% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>11/26</span>
+                <span class='fraction'>3/26</span>
             </div>
         
             
@@ -200,9 +200,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,7 +217,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -250,14 +250,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -300,11 +300,11 @@ export const STATIC = {
 // vtkCylinder methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function vtkCylinder(publicAPI, model) {
+function <span class="fstat-no" title="function not covered" >vtkCylinder(</span>publicAPI, model) {
   // Set our className
-  model.classHierarchy.push('vtkCylinder');
+<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkCylinder');</span>
 &nbsp;
-  publicAPI.evaluateFunction = <span class="fstat-no" title="function not covered" >(x</span>yz) =&gt; {
+<span class="cstat-no" title="statement not covered" >  publicAPI.evaluateFunction = <span class="fstat-no" title="function not covered" >(x</span>yz) =&gt; {</span>
     const x2C = <span class="cstat-no" title="statement not covered" >[</span>
       xyz[0] - model.center[0],
       xyz[1] - model.center[1],
@@ -319,7 +319,7 @@ function vtkCylinder(publicAPI, model) {
 <span class="cstat-no" title="statement not covered" >    return retVal;</span>
   };
 &nbsp;
-  publicAPI.evaluateGradient = <span class="fstat-no" title="function not covered" >(x</span>yz) =&gt; {
+<span class="cstat-no" title="statement not covered" >  publicAPI.evaluateGradient = <span class="fstat-no" title="function not covered" >(x</span>yz) =&gt; {</span>
     const t =
 <span class="cstat-no" title="statement not covered" >      model.axis[0] * (xyz[0] - model.center[0]) +</span>
       model.axis[1] * (xyz[1] - model.center[1]) +
@@ -351,15 +351,15 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  Object.assign(model, DEFAULT_VALUES, initialValues);
+export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
 &nbsp;
   // Object methods
-  vtkImplicitFunction.extend(publicAPI, model, initialValues);
-  macro.setGet(publicAPI, model, ['radius']);
-  macro.setGetArray(publicAPI, model, ['center', 'axis'], 3);
+<span class="cstat-no" title="statement not covered" >  vtkImplicitFunction.extend(publicAPI, model, initialValues);</span>
+<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['radius']);</span>
+<span class="cstat-no" title="statement not covered" >  macro.setGetArray(publicAPI, model, ['center', 'axis'], 3);</span>
 &nbsp;
-  vtkCylinder(publicAPI, model);
+<span class="cstat-no" title="statement not covered" >  vtkCylinder(publicAPI, model);</span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -376,7 +376,7 @@ export default { newInstance, extend, ...STATIC };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

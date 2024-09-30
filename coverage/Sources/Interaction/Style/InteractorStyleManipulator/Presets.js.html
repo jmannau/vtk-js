@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>15/18</span>
+                <span class='fraction'>2/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">50% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/4</span>
+                <span class='fraction'>0/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">82.35% </span>
+                <span class="strong">11.76% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/17</span>
+                <span class='fraction'>2/17</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line high'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -245,28 +245,28 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">60x</span>
-<span class="cline-any cline-yes">60x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">60x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">54x</span>
-<span class="cline-any cline-yes">6x</span>
-<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">48x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -354,29 +354,29 @@ const STYLES = {
   ],
 };
 &nbsp;
-function applyDefinitions(definitions, manipulatorStyle) {
-  manipulatorStyle.removeAllManipulators();
-  for (let idx = 0; idx &lt; definitions.length; idx++) {
-    const definition = definitions[idx];
-    const instance = MANIPULTOR_TYPES[definition.type].newInstance(
+function <span class="fstat-no" title="function not covered" >applyDefinitions(</span>definitions, manipulatorStyle) {
+<span class="cstat-no" title="statement not covered" >  manipulatorStyle.removeAllManipulators();</span>
+<span class="cstat-no" title="statement not covered" >  for (let idx = <span class="cstat-no" title="statement not covered" >0;</span> idx &lt; definitions.length; idx++) {</span>
+    const definition = <span class="cstat-no" title="statement not covered" >definitions[idx];</span>
+    const instance = <span class="cstat-no" title="statement not covered" >MANIPULTOR_TYPES[definition.type].newInstance(</span>
       definition.options
     );
-    if (instance.isA('vtkCompositeVRManipulator')) {
-      manipulatorStyle.addVRManipulator(instance);
-    } else if (instance.isA('vtkCompositeGestureManipulator')) {
-      manipulatorStyle.addGestureManipulator(instance);
-    } else <span class="missing-if-branch" title="if path not taken" >I</span>if (instance.isA('vtkCompositeKeyboardManipulator')) {
+<span class="cstat-no" title="statement not covered" >    if (instance.isA('vtkCompositeVRManipulator')) {</span>
+<span class="cstat-no" title="statement not covered" >      manipulatorStyle.addVRManipulator(instance);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (instance.isA('vtkCompositeGestureManipulator')) {</span>
+<span class="cstat-no" title="statement not covered" >      manipulatorStyle.addGestureManipulator(instance);</span>
+    } else <span class="cstat-no" title="statement not covered" >if (instance.isA('vtkCompositeKeyboardManipulator')) {</span>
 <span class="cstat-no" title="statement not covered" >      manipulatorStyle.addKeyboardManipulator(instance);</span>
     } else {
-      manipulatorStyle.addMouseManipulator(instance);
+<span class="cstat-no" title="statement not covered" >      manipulatorStyle.addMouseManipulator(instance);</span>
     }
   }
 &nbsp;
-  return true;
+<span class="cstat-no" title="statement not covered" >  return true;</span>
 }
 &nbsp;
-function applyPreset(name, manipulatorStyle) {
-  return applyDefinitions(STYLES[name], manipulatorStyle);
+function <span class="fstat-no" title="function not covered" >applyPreset(</span>name, manipulatorStyle) {
+<span class="cstat-no" title="statement not covered" >  return applyDefinitions(STYLES[name], manipulatorStyle);</span>
 }
 &nbsp;
 function <span class="fstat-no" title="function not covered" >registerManipulatorType(</span>type, classDef) {
@@ -400,7 +400,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

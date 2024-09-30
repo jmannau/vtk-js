@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">8.97% </span>
+                <span class="strong">4.48% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>14/156</span>
+                <span class='fraction'>7/156</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/20</span>
+                <span class='fraction'>0/20</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.15% </span>
+                <span class="strong">4.57% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>14/153</span>
+                <span class='fraction'>7/153</span>
             </div>
         
             
@@ -929,9 +929,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -973,18 +973,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -995,7 +992,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1398,11 +1398,11 @@ export const STATIC = {
 // vtkPLYWriter methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function vtkPLYWriter(publicAPI, model) {
+function <span class="fstat-no" title="function not covered" >vtkPLYWriter(</span>publicAPI, model) {
   // Set our className
-  model.classHierarchy.push('vtkPLYWriter');
+<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkPLYWriter');</span>
 &nbsp;
-  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {
+<span class="cstat-no" title="statement not covered" >  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {</span>
     const input = <span class="cstat-no" title="statement not covered" >inData[0];</span>
 <span class="cstat-no" title="statement not covered" >    if (!input || input.getClassName() !== 'vtkPolyData') {</span>
 <span class="cstat-no" title="statement not covered" >      vtkErrorMacro('Invalid or missing input');</span>
@@ -1443,16 +1443,16 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  Object.assign(model, DEFAULT_VALUES, initialValues);
+export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
 &nbsp;
   // Make this a VTK object
-  macro.obj(publicAPI, model);
+<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
 &nbsp;
   // Also make it an algorithm with one input and one output
-  macro.algo(publicAPI, model, 1, 1);
+<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
 &nbsp;
-  macro.setGet(publicAPI, model, [
+<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, [</span>
     'format',
     'dataByteOrder', // binary_little_endian 0 binary_big_endian 1
     'headerComments',
@@ -1466,7 +1466,7 @@ export function extend(publicAPI, model, initialValues = <span class="branch-0 c
   ]);
 &nbsp;
   // Object specific methods
-  vtkPLYWriter(publicAPI, model);
+<span class="cstat-no" title="statement not covered" >  vtkPLYWriter(publicAPI, model);</span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -1483,7 +1483,7 @@ export default { newInstance, extend, ...STATIC };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

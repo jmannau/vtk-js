@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">10% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/10</span>
+                <span class='fraction'>1/10</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>3/5</span>
+                <span class='fraction'>0/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">60% </span>
+                <span class="strong">10% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/10</span>
+                <span class='fraction'>1/10</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -153,9 +153,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -173,7 +173,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -181,9 +181,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -216,11 +216,11 @@ export function <span class="fstat-no" title="function not covered" >intersectDi
 // vtkPlaneManipulator methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function vtkPlaneManipulator(publicAPI, model) {
+function <span class="fstat-no" title="function not covered" >vtkPlaneManipulator(</span>publicAPI, model) {
   // Set our className
-  model.classHierarchy.push('vtkPlaneManipulator');
+<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkPlaneManipulator');</span>
 &nbsp;
-  publicAPI.handleEvent = <span class="fstat-no" title="function not covered" >(c</span>allData, glRenderWindow) =&gt;
+<span class="cstat-no" title="statement not covered" >  publicAPI.handleEvent = <span class="fstat-no" title="function not covered" >(c</span>allData, glRenderWindow) =&gt;</span>
 <span class="cstat-no" title="statement not covered" >    model._addWorldDeltas({</span>
       worldCoords: intersectDisplayWithPlane(
         callData.position.x,
@@ -237,18 +237,18 @@ function vtkPlaneManipulator(publicAPI, model) {
 // Object factory
 // ----------------------------------------------------------------------------
 &nbsp;
-function defaultValues(initialValues) {
-  return {
+function <span class="fstat-no" title="function not covered" >defaultValues(</span>initialValues) {
+<span class="cstat-no" title="statement not covered" >  return {</span>
     ...initialValues,
   };
 }
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  vtkAbstractManipulator.extend(publicAPI, model, defaultValues(initialValues));
+export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >  vtkAbstractManipulator.extend(publicAPI, model, defaultValues(initialValues));</span>
 &nbsp;
-  vtkPlaneManipulator(publicAPI, model);
+<span class="cstat-no" title="statement not covered" >  vtkPlaneManipulator(publicAPI, model);</span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -265,7 +265,7 @@ export default { intersectDisplayWithPlane, extend, newInstance };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

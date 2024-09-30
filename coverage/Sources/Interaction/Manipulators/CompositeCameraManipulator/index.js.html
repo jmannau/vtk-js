@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.72% </span>
+                <span class="strong">9.09% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/11</span>
+                <span class='fraction'>1/11</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">66.66% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/3</span>
+                <span class='fraction'>0/3</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">72.72% </span>
+                <span class="strong">9.09% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/11</span>
+                <span class='fraction'>1/11</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line medium'></div>
+    <div class='status-line low'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -121,10 +121,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -149,15 +149,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">72x</span>
-<span class="cline-any cline-yes">72x</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -169,12 +169,12 @@
 // vtkCompositeCameraManipulator methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function vtkCompositeCameraManipulator(publicAPI, model) {
+function <span class="fstat-no" title="function not covered" >vtkCompositeCameraManipulator(</span>publicAPI, model) {
   // Set our className
-  model.classHierarchy.push('vtkCompositeCameraManipulator');
+<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkCompositeCameraManipulator');</span>
 &nbsp;
   //-------------------------------------------------------------------------
-  publicAPI.computeDisplayCenter = <span class="fstat-no" title="function not covered" >(i</span>Observer, renderer) =&gt; {
+<span class="cstat-no" title="statement not covered" >  publicAPI.computeDisplayCenter = <span class="fstat-no" title="function not covered" >(i</span>Observer, renderer) =&gt; {</span>
     const pt = <span class="cstat-no" title="statement not covered" >iObserver.computeWorldToDisplay(</span>
       renderer,
       model.center[0],
@@ -198,16 +198,16 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  Object.assign(model, DEFAULT_VALUES, initialValues);
+export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
 &nbsp;
   // Create get-set macros
-  macro.setGet(publicAPI, model, ['rotationFactor']);
-  macro.setGetArray(publicAPI, model, ['displayCenter'], 2);
-  macro.setGetArray(publicAPI, model, ['center'], 3);
+<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['rotationFactor']);</span>
+<span class="cstat-no" title="statement not covered" >  macro.setGetArray(publicAPI, model, ['displayCenter'], 2);</span>
+<span class="cstat-no" title="statement not covered" >  macro.setGetArray(publicAPI, model, ['center'], 3);</span>
 &nbsp;
   // Object specific methods
-  vtkCompositeCameraManipulator(publicAPI, model);
+<span class="cstat-no" title="statement not covered" >  vtkCompositeCameraManipulator(publicAPI, model);</span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -220,7 +220,7 @@ export default { extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

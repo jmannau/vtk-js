@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">31.57% </span>
+                <span class="strong">5.26% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>12/38</span>
+                <span class='fraction'>2/38</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>2/6</span>
+                <span class='fraction'>0/6</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">5.55% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>12/36</span>
+                <span class='fraction'>2/36</span>
             </div>
         
             
@@ -203,9 +203,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -259,7 +259,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -267,16 +267,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -284,11 +279,16 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -321,11 +321,11 @@ import 'vtk.js/Sources/Filters/Sources';
 // vtkGlyphRepresentationProxy methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function vtkGlyphRepresentationProxy(publicAPI, model) {
+function <span class="fstat-no" title="function not covered" >vtkGlyphRepresentationProxy(</span>publicAPI, model) {
   // Set our className
-  model.classHierarchy.push('vtkGlyphRepresentationProxy');
+<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkGlyphRepresentationProxy');</span>
 &nbsp;
-  model.property = vtkProperty.newInstance();
+<span class="cstat-no" title="statement not covered" >  model.property = vtkProperty.newInstance();</span>
 &nbsp;
   function <span class="fstat-no" title="function not covered" >processJSON(</span>description) {
 <span class="cstat-no" title="statement not covered" >    model.actors.length = 0;</span>
@@ -379,7 +379,7 @@ function vtkGlyphRepresentationProxy(publicAPI, model) {
     }
   }
 &nbsp;
-  model.sourceDependencies.push({ setInputData: processJSON });
+<span class="cstat-no" title="statement not covered" >  model.sourceDependencies.push({ setInputData: processJSON });</span>
 &nbsp;
   // Add actors
   // model.actors.push(model.sphereActor);
@@ -387,9 +387,9 @@ function vtkGlyphRepresentationProxy(publicAPI, model) {
 &nbsp;
   // API ----------------------------------------------------------------------
 &nbsp;
-  publicAPI.setColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; {};
-  publicAPI.getColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span>
-  publicAPI.listDataArrays = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span>
+<span class="cstat-no" title="statement not covered" >  publicAPI.setColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; {};</span>
+<span class="cstat-no" title="statement not covered" >  publicAPI.getColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span></span>
+<span class="cstat-no" title="statement not covered" >  publicAPI.listDataArrays = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span></span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -400,15 +400,15 @@ const DEFAULT_VALUES = {};
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-  Object.assign(model, DEFAULT_VALUES, initialValues);
+export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
 &nbsp;
   // Object methods
-  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);
+<span class="cstat-no" title="statement not covered" >  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);</span>
 &nbsp;
   // Object specific methods
-  vtkGlyphRepresentationProxy(publicAPI, model);
-  macro.proxyPropertyMapping(publicAPI, model, {
+<span class="cstat-no" title="statement not covered" >  vtkGlyphRepresentationProxy(publicAPI, model);</span>
+<span class="cstat-no" title="statement not covered" >  macro.proxyPropertyMapping(publicAPI, model, {</span>
     edgeVisibility: { modelKey: 'property', property: 'edgeVisibility' },
   });
 }
@@ -430,7 +430,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Wed Sep 25 2024 19:13:45 GMT+0000 (Coordinated Universal Time)
+                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
