@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0.89% </span>
+                <span class="strong">3.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/335</span>
+                <span class='fraction'>11/335</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0.98% </span>
+                <span class="strong">3.6% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/305</span>
+                <span class='fraction'>11/305</span>
             </div>
         
             
@@ -790,9 +790,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1381,7 +1381,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -1432,22 +1432,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1458,7 +1454,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -1492,11 +1492,11 @@ const VertexType = {
 // vtkWindowedSincPolyDataFilter methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkWindowedSincPolyDataFilter(</span>publicAPI, model) {
+function vtkWindowedSincPolyDataFilter(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkWindowedSincPolyDataFilter');</span>
+  model.classHierarchy.push('vtkWindowedSincPolyDataFilter');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.vtkWindowedSincPolyDataFilterExecute = <span class="fstat-no" title="function not covered" >(</span></span>
+  publicAPI.vtkWindowedSincPolyDataFilterExecute = <span class="fstat-no" title="function not covered" >(</span>
     inPts,
     inputPolyData,
     output
@@ -2085,7 +2085,7 @@ function <span class="fstat-no" title="function not covered" >vtkWindowedSincPol
 <span class="cstat-no" title="statement not covered" >    return newPts[zero];</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {</span>
+  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {
     const numberOfInputs = <span class="cstat-no" title="statement not covered" >publicAPI.getNumberOfInputPorts();</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >    if (!numberOfInputs) {</span>
@@ -2135,19 +2135,19 @@ const DEFAULT_VALUES = {
 };
 &nbsp;
 // ----------------------------------------------------------------------------
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   /* Make this a VTK object */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
+  macro.obj(publicAPI, model);
 &nbsp;
   /* Also make it an algorithm with one input and one output */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
+  macro.algo(publicAPI, model, 1, 1);
 &nbsp;
   /* Setters */
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, [</span>
+  macro.setGet(publicAPI, model, [
     'numberOfIterations',
     'passBand',
     'featureAngle',
@@ -2162,7 +2162,7 @@ export function <span class="fstat-no" title="function not covered" >extend(</sp
 &nbsp;
   /* Object specific methods */
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  vtkWindowedSincPolyDataFilter(publicAPI, model);</span>
+  vtkWindowedSincPolyDataFilter(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -2182,7 +2182,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

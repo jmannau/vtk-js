@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">14.28% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/7</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -117,10 +117,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,13 +135,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">7x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -157,12 +157,12 @@ import {
 // vtkCompositeVRManipulator methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkCompositeVRManipulator(</span>publicAPI, model) {
+function vtkCompositeVRManipulator(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkCompositeVRManipulator');</span>
+  model.classHierarchy.push('vtkCompositeVRManipulator');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.onButton3D = <span class="fstat-no" title="function not covered" >(i</span>nteractorStyle, renderer, state, eventData) =&gt; {};</span>
-<span class="cstat-no" title="statement not covered" >  publicAPI.onMove3D = <span class="fstat-no" title="function not covered" >(i</span>nteractorStyle, renderer, state, eventData) =&gt; {};</span>
+  publicAPI.onButton3D = <span class="fstat-no" title="function not covered" >(i</span>nteractorStyle, renderer, state, eventData) =&gt; {};
+  publicAPI.onMove3D = <span class="fstat-no" title="function not covered" >(i</span>nteractorStyle, renderer, state, eventData) =&gt; {};
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -176,14 +176,14 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Create get-set macros
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['device', 'input']);</span>
+  macro.setGet(publicAPI, model, ['device', 'input']);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  vtkCompositeVRManipulator(publicAPI, model);</span>
+  vtkCompositeVRManipulator(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -196,7 +196,7 @@ export default { extend, Device, Input };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

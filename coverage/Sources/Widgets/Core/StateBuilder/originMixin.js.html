@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.55% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/18</span>
+                <span class='fraction'>16/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.55% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/18</span>
+                <span class='fraction'>16/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -125,26 +125,26 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">139x</span>
+<span class="cline-any cline-yes">139x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">139x</span>
+<span class="cline-any cline-yes">761x</span>
+<span class="cline-any cline-yes">761x</span>
+<span class="cline-any cline-yes">449x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">312x</span>
+<span class="cline-any cline-yes">216x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">96x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">96x</span>
+<span class="cline-any cline-yes">96x</span>
+<span class="cline-any cline-yes">96x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,9 +165,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">139x</span>
+<span class="cline-any cline-yes">139x</span>
+<span class="cline-any cline-yes">139x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -179,27 +179,27 @@ import { getPixelWorldHeightAtCoord } from 'vtk.js/Sources/Widgets/Core/WidgetMa
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkOriginMixin(</span>publicAPI, model) {
-  const superClass = <span class="cstat-no" title="statement not covered" >{ ...publicAPI };</span>
-<span class="cstat-no" title="statement not covered" >  publicAPI.translate = <span class="fstat-no" title="function not covered" >(d</span>x, dy, dz) =&gt; {</span>
+function vtkOriginMixin(publicAPI, model) {
+  const superClass = { ...publicAPI };
+  publicAPI.translate = <span class="fstat-no" title="function not covered" >(d</span>x, dy, dz) =&gt; {
     const [x, y, z] = <span class="cstat-no" title="statement not covered" >publicAPI.getOriginByReference();</span>
 <span class="cstat-no" title="statement not covered" >    publicAPI.setOrigin(x + dx, y + dy, z + dz);</span>
   };
-<span class="cstat-no" title="statement not covered" >  publicAPI.getOrigin = <span class="fstat-no" title="function not covered" >(d</span>isplayScaleParams) =&gt; {</span>
-    const origin = <span class="cstat-no" title="statement not covered" >superClass.getOrigin();</span>
-<span class="cstat-no" title="statement not covered" >    if (!model.offset) {</span>
-<span class="cstat-no" title="statement not covered" >      return origin;</span>
+  publicAPI.getOrigin = (displayScaleParams) =&gt; {
+    const origin = superClass.getOrigin();
+    if (!model.offset) {
+      return origin;
     }
-<span class="cstat-no" title="statement not covered" >    if (!displayScaleParams) {</span>
-<span class="cstat-no" title="statement not covered" >      return vtkMath.add(origin, model.offset, origin);</span>
+    if (!displayScaleParams) {
+      return vtkMath.add(origin, model.offset, origin);
     }
-    const pixelWorldHeight = <span class="cstat-no" title="statement not covered" >getPixelWorldHeightAtCoord(</span>
+    const pixelWorldHeight = getPixelWorldHeightAtCoord(
       origin,
       displayScaleParams
     );
-    const { rendererPixelDims } = <span class="cstat-no" title="statement not covered" >displayScaleParams;</span>
-    const totalSize = <span class="cstat-no" title="statement not covered" >Math.min(rendererPixelDims[0], rendererPixelDims[1]);</span>
-<span class="cstat-no" title="statement not covered" >    return vtkMath.multiplyAccumulate(</span>
+    const { rendererPixelDims } = displayScaleParams;
+    const totalSize = Math.min(rendererPixelDims[0], rendererPixelDims[1]);
+    return vtkMath.multiplyAccumulate(
       origin,
       model.offset,
       totalSize * pixelWorldHeight,
@@ -219,10 +219,10 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
-<span class="cstat-no" title="statement not covered" >  macro.setGetArray(publicAPI, model, ['origin', 'offset'], 3);</span>
-<span class="cstat-no" title="statement not covered" >  vtkOriginMixin(publicAPI, model);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
+  macro.setGetArray(publicAPI, model, ['origin', 'offset'], 3);
+  vtkOriginMixin(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -235,7 +235,7 @@ export default { extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

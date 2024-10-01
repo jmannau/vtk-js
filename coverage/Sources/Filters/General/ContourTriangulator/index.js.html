@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.59% </span>
+                <span class="strong">14.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/91</span>
+                <span class='fraction'>13/91</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">6.81% </span>
+                <span class="strong">14.77% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/88</span>
+                <span class='fraction'>13/88</span>
             </div>
         
             
@@ -557,9 +557,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -616,18 +616,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -842,11 +842,11 @@ function <span class="fstat-no" title="function not covered" >triangulatePolygon
 &nbsp;
 export const STATIC = { triangulateContours, triangulatePolygon };
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkContourTriangulator(</span>publicAPI, model) {
+function vtkContourTriangulator(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkContourTriangulator');</span>
+  model.classHierarchy.push('vtkContourTriangulator');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {</span>
+  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {
     // implement requestData
     const input = <span class="cstat-no" title="statement not covered" >inData[0];</span>
     // FIXME: do not instantiate a new polydata each time the filter is executed.
@@ -902,19 +902,19 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Make this a VTK object
-<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
+  macro.obj(publicAPI, model);
 &nbsp;
   // Also make it an algorithm with one input and one output
-<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
+  macro.algo(publicAPI, model, 1, 1);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['triangulatePolys']);</span>
+  macro.setGet(publicAPI, model, ['triangulatePolys']);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  vtkContourTriangulator(publicAPI, model);</span>
+  vtkContourTriangulator(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -931,7 +931,7 @@ export default { newInstance, extend, ...STATIC };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3% </span>
+                <span class="strong">16% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/100</span>
+                <span class='fraction'>16/100</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">22.22% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/9</span>
+                <span class='fraction'>2/9</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">3.09% </span>
+                <span class="strong">16.49% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/97</span>
+                <span class='fraction'>16/97</span>
             </div>
         
             
@@ -380,17 +380,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -547,7 +547,7 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -589,7 +589,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -644,22 +644,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -681,17 +681,17 @@ import { Representation } from 'vtk.js/Sources/Rendering/Core/Property/Constants
 const { vtkErrorMacro } = macro;
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkConvolution2DPass(</span>publicAPI, model) {
+function vtkConvolution2DPass(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkConvolution2DPass');</span>
+  model.classHierarchy.push('vtkConvolution2DPass');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.computeKernelWeight = function <span class="fstat-no" title="function not covered" >computeKernelWeight(</span>kernel) {</span>
+  publicAPI.computeKernelWeight = function <span class="fstat-no" title="function not covered" >computeKernelWeight(</span>kernel) {
     const weight = <span class="cstat-no" title="statement not covered" >kernel.reduce(<span class="fstat-no" title="function not covered" >(p</span>rev, curr) =&gt; <span class="cstat-no" title="statement not covered" >prev + curr)</span>;</span>
 <span class="cstat-no" title="statement not covered" >    return weight &lt;= 0 ? 1 : weight;</span>
   };
 &nbsp;
   // handles post-processing via convolution kernel and call delegate
-<span class="cstat-no" title="statement not covered" >  publicAPI.traverse = <span class="fstat-no" title="function not covered" >(v</span>iewNode, parent = <span class="branch-0 cbranch-no" title="branch not covered" >null)</span> =&gt; {</span>
+  publicAPI.traverse = <span class="fstat-no" title="function not covered" >(v</span>iewNode, parent = <span class="branch-0 cbranch-no" title="branch not covered" >null)</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    if (model.deleted) {</span>
 <span class="cstat-no" title="statement not covered" >      return;</span>
     }
@@ -850,7 +850,7 @@ function <span class="fstat-no" title="function not covered" >vtkConvolution2DPa
 <span class="cstat-no" title="statement not covered" >    tex.deactivate();</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.getFragmentShaderCode = <span class="fstat-no" title="function not covered" >(k</span>ernelDimension) =&gt; {</span>
+  publicAPI.getFragmentShaderCode = <span class="fstat-no" title="function not covered" >(k</span>ernelDimension) =&gt; {
     // generate new shader code
     const kernelLength = <span class="cstat-no" title="statement not covered" >kernelDimension * kernelDimension;</span>
     let shaderCode = <span class="cstat-no" title="statement not covered" >[</span>
@@ -892,7 +892,7 @@ function <span class="fstat-no" title="function not covered" >vtkConvolution2DPa
   };
 &nbsp;
   // build vertices etc
-<span class="cstat-no" title="statement not covered" >  publicAPI.buildVertexBuffer = <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+  publicAPI.buildVertexBuffer = <span class="fstat-no" title="function not covered" >()</span> =&gt; {
     // 4 corner points in clipping space in order (x, y, z) where z is always set to -1
     // prettier-ignore
     const ptsArray = <span class="cstat-no" title="statement not covered" >new Float32Array([</span>
@@ -946,23 +946,23 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Build VTK API
-<span class="cstat-no" title="statement not covered" >  vtkRenderPass.extend(publicAPI, model, initialValues);</span>
+  vtkRenderPass.extend(publicAPI, model, initialValues);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model.VBOBuildTime = {};</span>
-<span class="cstat-no" title="statement not covered" >  macro.obj(model.VBOBuildTime, { mtime: 0 });</span>
+  model.VBOBuildTime = {};
+  macro.obj(model.VBOBuildTime, { mtime: 0 });
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model.tris = vtkHelper.newInstance();</span>
+  model.tris = vtkHelper.newInstance();
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['kernel', 'kernelDimension']);</span>
+  macro.setGet(publicAPI, model, ['kernel', 'kernelDimension']);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.get(publicAPI, model, ['framebuffer']);</span>
+  macro.get(publicAPI, model, ['framebuffer']);
 &nbsp;
   // Object methods
-<span class="cstat-no" title="statement not covered" >  vtkConvolution2DPass(publicAPI, model);</span>
+  vtkConvolution2DPass(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -979,7 +979,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.69% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>1/13</span>
+                <span class='fraction'>13/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -131,24 +131,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -165,17 +163,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -190,23 +190,23 @@ import {
   ShapeBehavior,
 } from 'vtk.js/Sources/Widgets/Widgets3D/ShapeWidget/Constants';
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkShapeWidget(</span>publicAPI, model) {
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkShapeWidget');</span>
+function vtkShapeWidget(publicAPI, model) {
+  model.classHierarchy.push('vtkShapeWidget');
 &nbsp;
-  const superClass = <span class="cstat-no" title="statement not covered" >{ ...publicAPI };</span>
+  const superClass = { ...publicAPI };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model.methodsToLink = ['scaleInPixels'];</span>
+  model.methodsToLink = ['scaleInPixels'];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.setManipulator = <span class="fstat-no" title="function not covered" >(m</span>anipulator) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >    superClass.setManipulator(manipulator);</span>
-<span class="cstat-no" title="statement not covered" >    model.widgetState</span>
+  publicAPI.setManipulator = (manipulator) =&gt; {
+    superClass.setManipulator(manipulator);
+    model.widgetState
       .getStatesWithLabel('moveHandle')
-      .forEach(<span class="fstat-no" title="function not covered" >(h</span>andle) =&gt; <span class="cstat-no" title="statement not covered" >handle.setManipulator(manipulator))</span>;
+      .forEach((handle) =&gt; handle.setManipulator(manipulator));
   };
 }
 &nbsp;
-function <span class="fstat-no" title="function not covered" >defaultValues(</span>initialValues) {
-<span class="cstat-no" title="statement not covered" >  return {</span>
+function defaultValues(initialValues) {
+  return {
     // manipulator: null,
     modifierBehavior: {
       None: {
@@ -224,18 +224,18 @@ function <span class="fstat-no" title="function not covered" >defaultValues(</sp
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, defaultValues(initialValues));</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, defaultValues(initialValues));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  vtkAbstractWidgetFactory.extend(publicAPI, model, initialValues);</span>
+  vtkAbstractWidgetFactory.extend(publicAPI, model, initialValues);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, [</span>
+  macro.setGet(publicAPI, model, [
     'manipulator',
     'modifierBehavior',
     'resetAfterPointPlacement',
   ]);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  vtkShapeWidget(publicAPI, model);</span>
+  vtkShapeWidget(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -250,7 +250,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

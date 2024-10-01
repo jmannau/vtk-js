@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.31% </span>
+                <span class="strong">15.85% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/82</span>
+                <span class='fraction'>13/82</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">11.11% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>2/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">7.4% </span>
+                <span class="strong">16.04% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>6/81</span>
+                <span class='fraction'>13/81</span>
             </div>
         
             
@@ -436,9 +436,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -460,18 +460,18 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -643,11 +643,11 @@ export const STATIC = {
 // vtkSTLWriter methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkSTLWriter(</span>publicAPI, model) {
+function vtkSTLWriter(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkSTLWriter');</span>
+  model.classHierarchy.push('vtkSTLWriter');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {</span>
+  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {
     const input = <span class="cstat-no" title="statement not covered" >inData[0];</span>
 <span class="cstat-no" title="statement not covered" >    if (!input || input.getClassName() !== 'vtkPolyData') {</span>
 <span class="cstat-no" title="statement not covered" >      vtkErrorMacro('Invalid or missing input');</span>
@@ -668,19 +668,19 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Make this a VTK object
-<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
+  macro.obj(publicAPI, model);
 &nbsp;
   // Also make it an algorithm with one input and one output
-<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
+  macro.algo(publicAPI, model, 1, 1);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['format', 'transform']);</span>
+  macro.setGet(publicAPI, model, ['format', 'transform']);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  vtkSTLWriter(publicAPI, model);</span>
+  vtkSTLWriter(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -697,7 +697,7 @@ export default { newInstance, extend, ...STATIC };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

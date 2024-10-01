@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.71% </span>
+                <span class="strong">39.28% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/28</span>
+                <span class='fraction'>11/28</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/4</span>
+                <span class='fraction'>2/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.71% </span>
+                <span class="strong">39.28% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/28</span>
+                <span class='fraction'>11/28</span>
             </div>
         
             
@@ -201,9 +201,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -280,19 +280,19 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -320,11 +320,11 @@ const { vtkErrorMacro } = macro;
 // vtkImageDataToCornerstoneImage methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkImageDataToCornerstoneImage(</span>publicAPI, model) {
+function vtkImageDataToCornerstoneImage(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkImageDataToCornerstoneImage');</span>
+  model.classHierarchy.push('vtkImageDataToCornerstoneImage');
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {</span>
+  publicAPI.requestData = <span class="fstat-no" title="function not covered" >(i</span>nData, outData) =&gt; {
     // implement requestData
     const input = <span class="cstat-no" title="statement not covered" >inData[0];</span>
 &nbsp;
@@ -400,20 +400,20 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Make this a VTK object
-<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
+  macro.obj(publicAPI, model);
 &nbsp;
   // Also make it an algorithm with one input and one output
-<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
+  macro.algo(publicAPI, model, 1, 1);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  macro.setGet(publicAPI, model, ['imageId', 'sliceIndex']);</span>
+  macro.setGet(publicAPI, model, ['imageId', 'sliceIndex']);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  macro.algo(publicAPI, model, 1, 1);</span>
-<span class="cstat-no" title="statement not covered" >  vtkImageDataToCornerstoneImage(publicAPI, model);</span>
+  macro.algo(publicAPI, model, 1, 1);
+  vtkImageDataToCornerstoneImage(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -433,7 +433,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

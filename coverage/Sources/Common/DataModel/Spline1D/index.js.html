@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.07% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>3/13</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">40% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>2/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">23.07% </span>
+                <span class="strong">76.92% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>3/13</span>
+                <span class='fraction'>10/13</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -137,21 +137,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -161,7 +151,17 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -177,11 +177,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -199,13 +199,13 @@ const { vtkErrorMacro } = macro;
 // vtkSpline1D methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkSpline1D(</span>publicAPI, model) {
+function vtkSpline1D(publicAPI, model) {
   // Set our classname
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkSpline1D');</span>
+  model.classHierarchy.push('vtkSpline1D');
 &nbsp;
   // --------------------------------------------------------------------------
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.computeCloseCoefficients = <span class="fstat-no" title="function not covered" >(s</span>ize, work, x, y) =&gt; {</span>
+  publicAPI.computeCloseCoefficients = <span class="fstat-no" title="function not covered" >(s</span>ize, work, x, y) =&gt; {
 <span class="cstat-no" title="statement not covered" >    vtkErrorMacro(</span>
       `${
         model.classHierarchy.slice(-1)[0]
@@ -215,7 +215,7 @@ function <span class="fstat-no" title="function not covered" >vtkSpline1D(</span
 &nbsp;
   // --------------------------------------------------------------------------
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.computeOpenCoefficients = <span class="fstat-no" title="function not covered" >(s</span>ize, work, x, y, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> =&gt; {</span>
+  publicAPI.computeOpenCoefficients = <span class="fstat-no" title="function not covered" >(s</span>ize, work, x, y, options = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> =&gt; {
 <span class="cstat-no" title="statement not covered" >    vtkErrorMacro(</span>
       `${
         model.classHierarchy.slice(-1)[0]
@@ -225,7 +225,7 @@ function <span class="fstat-no" title="function not covered" >vtkSpline1D(</span
 &nbsp;
   // --------------------------------------------------------------------------
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.getValue = <span class="fstat-no" title="function not covered" >(i</span>ntervalIndex, t) =&gt; {</span>
+  publicAPI.getValue = <span class="fstat-no" title="function not covered" >(i</span>ntervalIndex, t) =&gt; {
 <span class="cstat-no" title="statement not covered" >    vtkErrorMacro(</span>
       `${model.classHierarchy.slice(-1)[0]} should implement getValue`
     );
@@ -240,12 +240,12 @@ const DEFAULT_VALUES = {};
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Build VTK API
-<span class="cstat-no" title="statement not covered" >  macro.obj(publicAPI, model);</span>
-<span class="cstat-no" title="statement not covered" >  vtkSpline1D(publicAPI, model);</span>
+  macro.obj(publicAPI, model);
+  vtkSpline1D(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -262,7 +262,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

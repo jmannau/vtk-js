@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.22% </span>
+                <span class="strong">10% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/90</span>
+                <span class='fraction'>9/90</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">21.42% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/14</span>
+                <span class='fraction'>3/14</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">2.24% </span>
+                <span class="strong">8.98% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/89</span>
+                <span class='fraction'>8/89</span>
             </div>
         
             
@@ -485,22 +485,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -523,11 +523,11 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -721,12 +721,12 @@ function <span class="fstat-no" title="function not covered" >widgetBehavior(</s
 // Factory
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkImplicitPlaneWidget(</span>publicAPI, model) {
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkPlaneWidget');</span>
+function vtkImplicitPlaneWidget(publicAPI, model) {
+  model.classHierarchy.push('vtkPlaneWidget');
 &nbsp;
   // --- Widget Requirement ---------------------------------------------------
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model.methodsToLink = [</span>
+  model.methodsToLink = [
     'representationStyle',
     'sphereResolution',
     'handleSizeRatio',
@@ -737,7 +737,7 @@ function <span class="fstat-no" title="function not covered" >vtkImplicitPlaneWi
     'outlineVisible',
   ];
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.getRepresentationsForViewType = <span class="fstat-no" title="function not covered" >(v</span>iewType) =&gt; {</span>
+  publicAPI.getRepresentationsForViewType = <span class="fstat-no" title="function not covered" >(v</span>iewType) =&gt; {
 <span class="cstat-no" title="statement not covered" >    switch (viewType) {</span>
       case ViewTypes.DEFAULT:
       case ViewTypes.GEOMETRY:
@@ -751,7 +751,7 @@ function <span class="fstat-no" title="function not covered" >vtkImplicitPlaneWi
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-const defaultValues = <span class="fstat-no" title="function not covered" >(i</span>nitialValues) =&gt; (<span class="cstat-no" title="statement not covered" >{</span>
+const defaultValues = (initialValues) =&gt; ({
   behavior: widgetBehavior,
   widgetState: vtkImplicitPlaneRepresentation.generateState(),
   ...initialValues,
@@ -759,12 +759,12 @@ const defaultValues = <span class="fstat-no" title="function not covered" >(i</s
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, defaultValues(initialValues));</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, defaultValues(initialValues));
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  vtkAbstractWidgetFactory.extend(publicAPI, model, initialValues);</span>
+  vtkAbstractWidgetFactory.extend(publicAPI, model, initialValues);
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  vtkImplicitPlaneWidget(publicAPI, model);</span>
+  vtkImplicitPlaneWidget(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -781,7 +781,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

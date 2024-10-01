@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>4/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>4/16</span>
+                <span class='fraction'>16/16</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -186,22 +186,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -215,22 +215,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -280,24 +280,24 @@ const PROPERTIES_DEFAULT = {
 // vtkGeometryRepresentationProxy methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkGeometryRepresentationProxy(</span>publicAPI, model) {
+function vtkGeometryRepresentationProxy(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkGeometryRepresentationProxy');</span>
+  model.classHierarchy.push('vtkGeometryRepresentationProxy');
 &nbsp;
   // Internals
-<span class="cstat-no" title="statement not covered" >  model.mapper = vtkMapper.newInstance({</span>
+  model.mapper = vtkMapper.newInstance({
     interpolateScalarsBeforeMapping: true,
     useLookupTableScalarRange: true,
     scalarVisibility: false,
   });
-<span class="cstat-no" title="statement not covered" >  model.actor = vtkActor.newInstance();</span>
-<span class="cstat-no" title="statement not covered" >  model.property = model.actor.getProperty();</span>
+  model.actor = vtkActor.newInstance();
+  model.property = model.actor.getProperty();
 &nbsp;
   // Auto connect mappers
-<span class="cstat-no" title="statement not covered" >  model.sourceDependencies.push(model.mapper);</span>
+  model.sourceDependencies.push(model.mapper);
   // connect rendering pipeline
-<span class="cstat-no" title="statement not covered" >  model.actor.setMapper(model.mapper);</span>
-<span class="cstat-no" title="statement not covered" >  model.actors.push(model.actor);</span>
+  model.actor.setMapper(model.mapper);
+  model.actors.push(model.actor);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -310,23 +310,23 @@ const DEFAULT_VALUES = {
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Object methods
-<span class="cstat-no" title="statement not covered" >  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);</span>
+  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  vtkGeometryRepresentationProxy(publicAPI, model);</span>
+  vtkGeometryRepresentationProxy(publicAPI, model);
 &nbsp;
   // Map proxy properties
-<span class="cstat-no" title="statement not covered" >  macro.proxyPropertyState(</span>
+  macro.proxyPropertyState(
     publicAPI,
     model,
     PROPERTIES_STATE,
     PROPERTIES_DEFAULT
   );
-<span class="cstat-no" title="statement not covered" >  macro.proxyPropertyMapping(publicAPI, model, {</span>
+  macro.proxyPropertyMapping(publicAPI, model, {
     opacity: { modelKey: 'property', property: 'opacity' },
     visibility: { modelKey: 'actor', property: 'visibility' },
     color: { modelKey: 'property', property: 'diffuseColor' },
@@ -358,7 +358,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>

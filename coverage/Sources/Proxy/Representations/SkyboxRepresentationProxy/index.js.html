@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">9.09% </span>
+                <span class="strong">63.63% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>2/22</span>
+                <span class='fraction'>14/22</span>
             </div>
         
             
@@ -37,16 +37,16 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">25% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/8</span>
+                <span class='fraction'>2/8</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">10.52% </span>
+                <span class="strong">73.68% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>2/19</span>
+                <span class='fraction'>14/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line medium'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -141,9 +141,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,19 +154,19 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -178,13 +178,13 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -206,11 +206,11 @@ import vtkAbstractRepresentationProxy from 'vtk.js/Sources/Proxy/Core/AbstractRe
 // vtkSkyboxRepresentationProxy methods
 // ----------------------------------------------------------------------------
 &nbsp;
-function <span class="fstat-no" title="function not covered" >vtkSkyboxRepresentationProxy(</span>publicAPI, model) {
+function vtkSkyboxRepresentationProxy(publicAPI, model) {
   // Set our className
-<span class="cstat-no" title="statement not covered" >  model.classHierarchy.push('vtkSkyboxRepresentationProxy');</span>
-<span class="cstat-no" title="statement not covered" >  model.actor = vtkSkybox.newInstance();</span>
-<span class="cstat-no" title="statement not covered" >  model.actors.push(model.actor);</span>
+  model.classHierarchy.push('vtkSkyboxRepresentationProxy');
+  model.actor = vtkSkybox.newInstance();
+  model.actors.push(model.actor);
 &nbsp;
   function <span class="fstat-no" title="function not covered" >updateTexture(</span>texture) {
 <span class="cstat-no" title="statement not covered" >    model.actor.removeAllTextures();</span>
@@ -221,19 +221,19 @@ function <span class="fstat-no" title="function not covered" >vtkSkyboxRepresent
 <span class="cstat-no" title="statement not covered" >    publicAPI.updateProxyProperty('position', { values });</span>
   }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  model.sourceDependencies.push({ setInputData: updateTexture });</span>
+  model.sourceDependencies.push({ setInputData: updateTexture });
 &nbsp;
   // API ----------------------------------------------------------------------
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.setColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; {};</span>
-<span class="cstat-no" title="statement not covered" >  publicAPI.getColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span></span>
-<span class="cstat-no" title="statement not covered" >  publicAPI.listDataArrays = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span></span>
+  publicAPI.setColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; {};
+  publicAPI.getColorBy = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span>
+  publicAPI.listDataArrays = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >[];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.setPosition = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {</span>
+  publicAPI.setPosition = <span class="fstat-no" title="function not covered" >(v</span>alue) =&gt; {
 <span class="cstat-no" title="statement not covered" >    model.input.getAlgo().setPosition(value);</span>
   };
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  publicAPI.getPosition = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >model.input.getAlgo().getPosition();</span></span>
+  publicAPI.getPosition = <span class="fstat-no" title="function not covered" >()</span> =&gt; <span class="cstat-no" title="statement not covered" >model.input.getAlgo().getPosition();</span>
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -244,14 +244,14 @@ const DEFAULT_VALUES = {};
 &nbsp;
 // ----------------------------------------------------------------------------
 &nbsp;
-export function <span class="fstat-no" title="function not covered" >extend(</span>publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
-<span class="cstat-no" title="statement not covered" >  Object.assign(model, DEFAULT_VALUES, initialValues);</span>
+export function extend(publicAPI, model, initialValues = <span class="branch-0 cbranch-no" title="branch not covered" >{})</span> {
+  Object.assign(model, DEFAULT_VALUES, initialValues);
 &nbsp;
   // Object methods
-<span class="cstat-no" title="statement not covered" >  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);</span>
+  vtkAbstractRepresentationProxy.extend(publicAPI, model, initialValues);
 &nbsp;
   // Object specific methods
-<span class="cstat-no" title="statement not covered" >  vtkSkyboxRepresentationProxy(publicAPI, model);</span>
+  vtkSkyboxRepresentationProxy(publicAPI, model);
 }
 &nbsp;
 // ----------------------------------------------------------------------------
@@ -271,7 +271,7 @@ export default { newInstance, extend };
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Mon Sep 30 2024 14:56:51 GMT+0000 (Coordinated Universal Time)
+                at Tue Oct 01 2024 14:53:43 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
