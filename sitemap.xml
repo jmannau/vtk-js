@@ -11,6 +11,24 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/examples/LabelWidget.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/LineWidget.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/examples/PaintWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -83,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/InteractiveOrientationWidget.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/ImplicitPlaneRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -101,43 +119,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/LabelWidget.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/LineWidget.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/WidgetRepresentation.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ActorSerialization.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ImplicitPlaneRepresentation.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/InteractiveOrientationWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -164,6 +146,51 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/WidgetRepresentation.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/WidgetManager.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ActorSerialization.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/RemoteView.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/examples/RenderWindowWithControlBar.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -173,7 +200,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/StandaloneSceneLoader.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/SphereMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/StickMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -200,7 +236,34 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/WidgetManager.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/CellPicker.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Glyph3DMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/HardwareSelector.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -245,7 +308,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/RemoteView.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/ResliceRepresentationProxy.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -263,96 +326,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/SphereMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/StickMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/AnimationProxyManager.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/CellPicker.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Glyph3DMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/HardwareSelector.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PDBReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ProxyManager.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ResliceRepresentationProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/View2DProxy.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -362,16 +335,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/XMLPolyDataWriter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/XMLImageDataWriter.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/AnimationProxyManager.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -398,15 +362,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/HDRReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/JSONNucleoReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -425,7 +380,97 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/examples/PDBReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/examples/PolyDataReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ProxyManager.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/XMLImageDataWriter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/XMLPolyDataWriter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/GLTFImporter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/HDRReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/IFCImporter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/PLYReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/PLYWriter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/STLReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -470,69 +515,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/GLTFImporter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/HttpSceneLoader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/IFCImporter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ImageStream.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PLYReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PLYWriter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/STLReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/HttpDataSetReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -551,7 +533,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleHMDXR.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/HttpSceneLoader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -560,25 +542,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleTrackballCamera.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleMPRSlice.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleManipulator.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/ImageStream.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -623,6 +587,42 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleMPRSlice.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleHMDXR.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleManipulator.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/InteractorStyleTrackballCamera.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/examples/KeyboardCameraManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -659,61 +659,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PlaneSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PointSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/SLICSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/SphereSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/TimeStepBasedAnimationHandler.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ArrowSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/CircleSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -776,7 +722,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/WindowedSincPolyDataFilter.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/PlaneSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -785,7 +731,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ImageMarchingCubes.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/PointSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -794,7 +740,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ImageMarchingSquares.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/SLICSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -803,7 +749,25 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ImageOutlineFilter.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/SphereSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ArrowSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/CircleSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -875,6 +839,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/examples/WindowedSincPolyDataFilter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/examples/Calculator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -893,15 +866,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ContourLoopExtraction.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/ContourTriangulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -911,7 +875,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Cutter.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/ContourLoopExtraction.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -921,6 +885,51 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/examples/ImageCropFilter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ImageMarchingCubes.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ImageMarchingSquares.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ImageOutlineFilter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Box.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Cutter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -956,7 +965,52 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Box.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/WebXRHeadGradientCVR.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/WebXRVolume.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ZipHttpReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperLightAndShadow.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperParallelProjection.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeOutline.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1001,96 +1055,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/WebXRHeadGradientCVR.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/WebXRVolume.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ZipHttpReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/TestVolumeTypes.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeClipPlane.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeContour.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperLightAndShadow.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperBlendModes.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeOutline.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperParallelProjection.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/ItkWasmVolume.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1100,34 +1064,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ManyRenderWindows.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/examples/MultiSliceImageMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/PBR.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/examples/QuadView.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1154,7 +1091,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Actor2D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/TestVolumeTypes.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1163,7 +1100,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Convolution2DPass.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeContour.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1172,7 +1109,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/CustomWebGPUCone.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeClipPlane.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeMapperBlendModes.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1208,7 +1154,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/Picking.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/ManyRenderWindows.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1217,7 +1163,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/SimpleCone.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/PBR.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1226,7 +1172,34 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/SpheresAndLabels.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/QuadView.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Actor2D.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Convolution2DPass.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/CustomWebGPUCone.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1254,6 +1227,51 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/examples/VR.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/ItkWasmGeometry.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/LookingGlass.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/Picking.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/SimpleCone.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/examples/SpheresAndLabels.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1316,7 +1334,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/ItkWasmGeometry.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/VolumeViewer.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1325,7 +1343,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/LookingGlass.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/GeometryViewer.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1352,7 +1370,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/OfflineLocalView.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/OctreeViewer.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1361,7 +1379,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/OctreeViewer.html</loc>
+    <loc>https://kitware.github.io/vtk-js/examples/OfflineLocalView.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1397,7 +1415,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/VolumeViewer.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_SphereWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1406,7 +1424,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/examples/GeometryViewer.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_SplineWidget.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_ResliceCursorWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1433,7 +1460,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_SphereWidget.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_LineWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1442,7 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_SplineWidget.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_PaintWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1469,15 +1496,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_ResliceCursorWidget.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_InteractiveOrientationWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1496,16 +1514,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_LineWidget.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_PaintWidget.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_AngleWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1523,15 +1532,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_ImageCroppingWidget.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_ImplicitPlaneWidget.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1541,7 +1541,25 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_SphereHandleRepresentation.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_ImageCroppingWidget.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_PolyLineRepresentation.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_RectangleContextRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1551,6 +1569,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_SphereContextRepresentation.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_SphereHandleRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1577,7 +1604,25 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Widgets3D_AngleWidget.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_ConvexFaceContextRepresentation.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_CroppingOutlineRepresentation.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_CubeHandleRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1613,15 +1658,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_LineHandleRepresentation.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_OutlineContextRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1631,7 +1667,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_PolyLineRepresentation.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_LineHandleRepresentation.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1640,7 +1676,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_RectangleContextRepresentation.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Manipulators_PickerManipulator.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Manipulators_PlaneManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1685,25 +1730,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_ConvexFaceContextRepresentation.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_CroppingOutlineRepresentation.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Representations_CubeHandleRepresentation.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Core_WidgetManager.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1713,6 +1740,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Manipulators_AbstractManipulator.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Widgets_Core_WidgetState.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1739,61 +1775,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Manipulators_PickerManipulator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Manipulators_PlaneManipulator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Widgets_Core_StateBuilder.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Core_WidgetManager.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Widgets_Core_WidgetState.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Testing_Examples_PipelineExecution.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Testing_Examples_PolyDataSerialization.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1838,24 +1820,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ViewNodeFactory.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_VertexInput.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Volume.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1883,15 +1847,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebXR_RenderWindowHelper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Testing_Examples_ActorSerialization.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -1901,7 +1856,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_SphereMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebXR_RenderWindowHelper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1910,7 +1865,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_StickMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Testing_Examples_PolyDataSerialization.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Testing_Examples_PipelineExecution.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1937,7 +1901,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_TextureView.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_TextureManager.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1946,7 +1910,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_TextureManager.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_TextureView.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1973,7 +1937,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_RenderWindow.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_VertexInput.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -1982,7 +1946,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Renderer.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ViewNodeFactory.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2018,7 +1982,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ShaderModule.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ShaderDescription.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2027,7 +1991,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ShaderDescription.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_ShaderModule.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2045,7 +2009,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_PixelSpaceCallbackMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_SphereMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2054,7 +2018,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_PolyDataMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_StickMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2090,7 +2054,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_HardwareSelectionPass.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_RenderWindow.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2099,7 +2063,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_HardwareSelector.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Renderer.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2162,7 +2126,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_BufferManager.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_PixelSpaceCallbackMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2171,7 +2135,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Camera.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_PolyDataMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2189,25 +2153,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_CellArrayMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Device.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_FullScreenQuad.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2225,6 +2171,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_FullScreenQuad.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Glyph3DMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2234,7 +2189,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_SceneGraph_ViewNodeFactory.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_HardwareSelectionPass.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_HardwareSelector.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2279,7 +2243,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_SceneGraph_RenderPass.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_Camera.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2288,7 +2252,25 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_glsl.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_BufferManager.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_WebGPU_CellArrayMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_SceneGraph_RenderPass.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2315,16 +2297,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_VertexArrayObject.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ViewNodeFactory.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_SceneGraph_ViewNodeFactory.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2351,7 +2324,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_SphereMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_glsl.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2369,7 +2342,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_StickMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_TextureUnitManager.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2378,7 +2351,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_TextureUnitManager.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_VertexArrayObject.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ViewNodeFactory.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2396,34 +2378,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ReplacementShaderMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ScalarBarActor.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Shader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ShaderProgram.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2441,6 +2396,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ShaderProgram.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Skybox.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2450,7 +2414,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Profiles.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_SphereMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2459,16 +2423,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_RadialDistortionPass.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_RenderWindow.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_StickMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2486,7 +2441,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ImageSlice.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ReplacementShaderMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2495,7 +2450,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_OrderIndependentTranslucentPass.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_RenderWindow.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ScalarBarActor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2513,7 +2477,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_PolyDataMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Profiles.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2531,6 +2495,24 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_PolyDataMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_RadialDistortionPass.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Helper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2540,7 +2522,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_HardwareSelector.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ImageCPRMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2549,7 +2531,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ImageCPRMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_ImageSlice.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2576,16 +2558,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Convolution2DPass.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_CubeAxesActor.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_OrderIndependentTranslucentPass.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2621,7 +2594,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Actor2D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_HardwareSelector.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2657,6 +2630,60 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Convolution2DPass.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_CubeAxesActor.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_TextureLODsDownloader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Actor.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Actor2D.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_RemoteView.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_RenderingAPIs.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2684,16 +2711,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_TextureLODsDownloader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_OpenGL_Actor.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_CanvasView.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2711,43 +2729,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_CanvasView.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_GenericRenderWindow.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Misc_RemoteView.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Volume.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_VolumeProperty.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2765,7 +2747,34 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_SurfaceLICInterface.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_VolumeProperty.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Viewport.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Volume.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_SphereMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2775,6 +2784,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_StickMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_SurfaceLICInterface.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2801,16 +2819,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Viewport.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ScalarBarActor.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Renderer.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2828,24 +2837,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_SphereMapper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_RenderWindow.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_RenderWindowInteractor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2855,16 +2846,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Renderer.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Prop3D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ScalarBarActor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2891,16 +2873,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Picker.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_PixelSpaceCallbackMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_RenderWindow.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2927,16 +2900,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Light.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Mapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Prop3D.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2954,7 +2918,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageResliceMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Mapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2963,7 +2927,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageSlice.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_PixelSpaceCallbackMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Picker.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -2990,6 +2963,24 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Light.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageResliceMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageProperty.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -2999,7 +2990,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageMapper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageSlice.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3017,6 +3008,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageMapper.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ImageCPRMapper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3026,25 +3026,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Coordinate.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Follower.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_CubeAxesActor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3071,6 +3053,24 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Coordinate.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_CubeAxesActor.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_ColorTransferFunction.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3080,43 +3080,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_AxesActor.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Camera.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_CellPicker.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_AbstractPicker.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Actor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3143,7 +3107,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_VolumeRepresentationProxy.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_AxesActor.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Camera.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3170,6 +3143,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_AbstractPicker.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_AbstractMapper3D.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3179,25 +3161,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_MoleculeRepresentationProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_SkyboxRepresentationProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_ResliceRepresentationProxy.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Rendering_Core_Actor.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3215,7 +3179,52 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_VolumeRepresentationProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_SlicedGeometryRepresentationProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_GlyphRepresentationProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_MoleculeRepresentationProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_ResliceRepresentationProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_SkyboxRepresentationProxy.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3251,16 +3260,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Representations_GlyphRepresentationProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_ProxyManager.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_PiecewiseFunctionProxy.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3270,6 +3270,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_SourceProxy.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_ProxyManager.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3288,24 +3297,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_AbstractRepresentationProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Proxy_Core_PiecewiseFunctionProxy.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3350,6 +3341,33 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLPolyDataReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLPolyDataWriter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/IO_Misc_PDBReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3378,33 +3396,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLImageDataWriter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLPolyDataWriter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_XML_XMLPolyDataReader.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_JSONReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3458,6 +3449,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_JSONReader.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/IO_Legacy_PolyDataReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3476,7 +3476,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_HttpDataSetLODsLoader.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_GCodeReader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3485,7 +3485,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_GCodeReader.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/IO_Misc_HttpDataSetLODsLoader.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3791,7 +3791,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Interaction_Style_InteractorStyleHMDXR.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Interaction_Misc_DeviceOrientationToCamera.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3800,7 +3800,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Interaction_Misc_DeviceOrientationToCamera.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Interaction_Style_InteractorStyleHMDXR.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3926,7 +3926,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_GestureCameraManipulator.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_MouseBoxSelectorManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3936,15 +3936,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_KeyboardCameraManipulator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_MouseBoxSelectorManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -3971,15 +3962,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_CompositeKeyboardManipulator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_CompositeMouseManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -3990,6 +3972,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_CompositeVRManipulator.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_GestureCameraManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4025,7 +4016,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Imaging_Core_ImageReslice.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Interaction_Manipulators_CompositeKeyboardManipulator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4044,6 +4035,24 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Interaction_Animations_TimeStepBasedAnimationHandler.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Imaging_Core_ImageReslice.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Texture_TextureMapToSphere.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4079,24 +4088,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Texture_TextureMapToPlane.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Texture_TextureMapToSphere.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_SLICSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4124,16 +4115,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_LineSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_PointSource.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Texture_TextureMapToPlane.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4160,6 +4142,51 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_PointSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_CylinderSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ImageGridSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_LineSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ConeSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_CubeSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4178,16 +4205,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ImageGridSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_CylinderSource.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ArrowSource.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4206,42 +4224,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ConcentricCylinderSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ConeSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_Arrow2DSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_ArrowSource.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_TriangleFilter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4277,6 +4259,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Sources_Arrow2DSource.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_General_OutlineFilter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4295,7 +4286,25 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_TriangleFilter.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_General_ScalarToRGBA.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageStreamline.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4331,6 +4340,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageMarchingSquares.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageOutlineFilter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4349,7 +4367,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageStreamline.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageCropFilter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4376,34 +4394,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageMarchingSquares.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ImageCropFilter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Filters_General_ContourTriangulator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ClipClosedSurface.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4430,43 +4421,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_AppendPolyData.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_General_Calculator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_Transform_Transform.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Core_Cutter.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Filters_Core_PolyDataNormals.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_ClipClosedSurface.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4493,7 +4448,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_System_TimerLog.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_AppendPolyData.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4502,7 +4457,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_System_MobileVR.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_General_Calculator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4520,7 +4475,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Spline1D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Core_Cutter.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4529,7 +4484,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Spline3D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_Transform_Transform.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Filters_Core_PolyDataNormals.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4556,6 +4520,60 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_System_TimerLog.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_System_MobileVR.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Sphere.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Spline1D.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Spline3D.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Polygon.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Quad.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4574,7 +4592,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Sphere.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_PointSet.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4593,42 +4611,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_PolyLine.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Polygon.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Plane.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_PointSet.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Line.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4664,16 +4646,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_ImplicitFunction.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_IncrementalOctreeNode.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Plane.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4700,16 +4673,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_EdgeLocator.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_ITKHelper.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Line.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4736,7 +4700,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_DataSet.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_ImplicitFunction.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_IncrementalOctreeNode.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4754,7 +4727,16 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Collection.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_EdgeLocator.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_ITKHelper.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4781,7 +4763,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_CardinalSpline1D.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_DataSet.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4817,7 +4799,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_AbstractPointLocator.html</loc>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_Collection.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4844,7 +4826,25 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_CardinalSpline1D.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_Core_URLExtract.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_DataModel_AbstractPointLocator.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4934,15 +4934,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_Core_Endian.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_Core_HalfFloat.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4953,15 +4944,6 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_Core_ImageHelper.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/api/Common_Core_CellArray.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -4988,6 +4970,15 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_Core_Endian.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/api/Common_Core_Base64.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -4997,142 +4988,16 @@
   </url>
   
   <url>
+    <loc>https://kitware.github.io/vtk-js/api/Common_Core_CellArray.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://kitware.github.io/vtk-js/index.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/misc_contributing.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/misc_troubleshooting.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/misc_tools.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/old_intro_vtk_es6.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_DataArray.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_MultiBlock.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_ParametricDataset.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_StringArray.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_PolyData.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_Table.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/structures_UnstructuredGrid.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/tutorial.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/vtk-js-demo.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://kitware.github.io/vtk-js/docs/vtk_react.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -5177,15 +5042,6 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/docs/intro_vtk_as_es6_dependency.html</loc>
-    
-    <lastmod>2025-01-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://kitware.github.io/vtk-js/docs/intro_vtk_as_external_script.html</loc>
     
     <lastmod>2025-01-02</lastmod>
@@ -5195,7 +5051,142 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/coverage/home.html</loc>
+    <loc>https://kitware.github.io/vtk-js/docs/misc_contributing.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/intro_vtk_as_es6_dependency.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/misc_tools.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/misc_troubleshooting.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/old_intro_vtk_es6.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_DataArray.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_ParametricDataset.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_MultiBlock.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_StringArray.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_PolyData.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_UnstructuredGrid.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/structures_Table.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/tutorial.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/vtk-js-demo.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/docs/vtk_react.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -5205,6 +5196,15 @@
   
   <url>
     <loc>https://kitware.github.io/vtk-js/docs/concepts_widgets.html</loc>
+    
+    <lastmod>2025-01-02</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://kitware.github.io/vtk-js/coverage/home.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -5231,7 +5231,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/docs/develop_example.html</loc>
+    <loc>https://kitware.github.io/vtk-js/docs/develop_requirement.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
@@ -5240,7 +5240,7 @@
   </url>
   
   <url>
-    <loc>https://kitware.github.io/vtk-js/docs/develop_requirement.html</loc>
+    <loc>https://kitware.github.io/vtk-js/docs/develop_example.html</loc>
     
     <lastmod>2025-01-02</lastmod>
     
