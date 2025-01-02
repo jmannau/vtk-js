@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.25% </span>
+                <span class="strong">12.1% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>19/155</span>
+                <span class='fraction'>19/157</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">12.92% </span>
+                <span class="strong">12.75% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>19/147</span>
+                <span class='fraction'>19/149</span>
             </div>
         
             
@@ -384,7 +384,13 @@
 <a name='L319'></a><a href='#L319'>319</a>
 <a name='L320'></a><a href='#L320'>320</a>
 <a name='L321'></a><a href='#L321'>321</a>
-<a name='L322'></a><a href='#L322'>322</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L322'></a><a href='#L322'>322</a>
+<a name='L323'></a><a href='#L323'>323</a>
+<a name='L324'></a><a href='#L324'>324</a>
+<a name='L325'></a><a href='#L325'>325</a>
+<a name='L326'></a><a href='#L326'>326</a>
+<a name='L327'></a><a href='#L327'>327</a>
+<a name='L328'></a><a href='#L328'>328</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -401,6 +407,21 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -409,20 +430,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -481,9 +488,14 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -721,6 +733,7 @@ import vtkPolyData from 'vtk.js/Sources/Common/DataModel/PolyData';
 import vtkCellArray from 'vtk.js/Sources/Common/Core/CellArray';
 import vtkAppendPolyData from 'vtk.js/Sources/Filters/General/AppendPolyData';
 import vtkMatrixBuilder from 'vtk.js/Sources/Common/Core/MatrixBuilder';
+import { mat3 } from 'gl-matrix';
 &nbsp;
 const { vtkErrorMacro } = macro;
 &nbsp;
@@ -801,11 +814,16 @@ function vtkIFCImporter(publicAPI, model) {
         .buildFromRadian()
         .setMatrix(userMatrix);
 &nbsp;
+      const normalMatrix = <span class="cstat-no" title="statement not covered" >vtkMatrixBuilder</span>
+        .buildFromRadian()
+        .multiply3x3(mat3.fromMat4(mat3.create(), userMatrix));
+&nbsp;
 <span class="cstat-no" title="statement not covered" >      for (let i = <span class="cstat-no" title="statement not covered" >0;</span> i &lt; vertices.length; i += 6) {</span>
         const point = <span class="cstat-no" title="statement not covered" >[vertices[i], vertices[i + 1], vertices[i + 2]];</span>
         const normal = <span class="cstat-no" title="statement not covered" >[vertices[i + 3], vertices[i + 4], vertices[i + 5]];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered" >        transformMatrix.apply(point).apply(normal);</span>
+<span class="cstat-no" title="statement not covered" >        transformMatrix.apply(point);</span>
+<span class="cstat-no" title="statement not covered" >        normalMatrix.apply(normal);</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >        pointValues[i / 2] = point[0];</span>
 <span class="cstat-no" title="statement not covered" >        pointValues[i / 2 + 1] = point[1];</span>
@@ -951,32 +969,32 @@ function vtkIFCImporter(publicAPI, model) {
   publicAPI.importActors = <span class="fstat-no" title="function not covered" >(r</span>enderer) =&gt; {
 <span class="cstat-no" title="statement not covered" >    if (model.mergeGeometries) {</span>
       const opaqueMeshes = <span class="cstat-no" title="statement not covered" >meshes.filter(<span class="fstat-no" title="function not covered" >(m</span>esh) =&gt; <span class="cstat-no" title="statement not covered" >mesh.color.w === 1)</span>;</span>
-      let apd = <span class="cstat-no" title="statement not covered" >vtkAppendPolyData.newInstance();</span>
+      const oapd = <span class="cstat-no" title="statement not covered" >vtkAppendPolyData.newInstance();</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      opaqueMeshes.forEach(<span class="fstat-no" title="function not covered" >(m</span>esh) =&gt; {</span>
         const pd = <span class="cstat-no" title="statement not covered" >createColoredPolyDataFromIFCMesh(mesh);</span>
-<span class="cstat-no" title="statement not covered" >        apd.addInputData(pd);</span>
+<span class="cstat-no" title="statement not covered" >        oapd.addInputData(pd);</span>
       });
 &nbsp;
       let mapper = <span class="cstat-no" title="statement not covered" >vtkMapper.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >      mapper.setColorModeToDirectScalars();</span>
-<span class="cstat-no" title="statement not covered" >      mapper.setInputConnection(apd.getOutputPort());</span>
+<span class="cstat-no" title="statement not covered" >      mapper.setInputConnection(oapd.getOutputPort());</span>
 &nbsp;
       let actor = <span class="cstat-no" title="statement not covered" >vtkActor.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >      actor.setMapper(mapper);</span>
 <span class="cstat-no" title="statement not covered" >      renderer.addActor(actor);</span>
 &nbsp;
       const transparentMeshes = <span class="cstat-no" title="statement not covered" >meshes.filter(<span class="fstat-no" title="function not covered" >(m</span>esh) =&gt; <span class="cstat-no" title="statement not covered" >mesh.color.w &lt; 1)</span>;</span>
-<span class="cstat-no" title="statement not covered" >      apd = vtkAppendPolyData.newInstance();</span>
+      const tapd = <span class="cstat-no" title="statement not covered" >vtkAppendPolyData.newInstance();</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      transparentMeshes.forEach(<span class="fstat-no" title="function not covered" >(m</span>esh) =&gt; {</span>
         const pd = <span class="cstat-no" title="statement not covered" >createColoredPolyDataFromIFCMesh(mesh);</span>
-<span class="cstat-no" title="statement not covered" >        apd.addInputData(pd);</span>
+<span class="cstat-no" title="statement not covered" >        tapd.addInputData(pd);</span>
       });
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      mapper = vtkMapper.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >      mapper.setColorModeToDirectScalars();</span>
-<span class="cstat-no" title="statement not covered" >      mapper.setInputConnection(apd.getOutputPort());</span>
+<span class="cstat-no" title="statement not covered" >      mapper.setInputConnection(tapd.getOutputPort());</span>
 &nbsp;
 <span class="cstat-no" title="statement not covered" >      actor = vtkActor.newInstance();</span>
 <span class="cstat-no" title="statement not covered" >      actor.setMapper(mapper);</span>
@@ -1033,7 +1051,7 @@ export default {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 02 2025 21:34:01 GMT+0000 (Coordinated Universal Time)
+                at Thu Jan 02 2025 21:35:53 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
