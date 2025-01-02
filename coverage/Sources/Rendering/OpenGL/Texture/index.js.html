@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">57.92% </span>
+                <span class="strong">58.13% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>446/770</span>
+                <span class='fraction'>450/774</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">49.37% </span>
+                <span class="strong">50% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>196/397</span>
+                <span class='fraction'>201/402</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">81.25% </span>
+                <span class="strong">81.63% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>39/48</span>
+                <span class='fraction'>40/49</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">58.32% </span>
+                <span class="strong">58.54% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>431/739</span>
+                <span class='fraction'>435/743</span>
             </div>
         
             
@@ -2019,7 +2019,18 @@
 <a name='L1954'></a><a href='#L1954'>1954</a>
 <a name='L1955'></a><a href='#L1955'>1955</a>
 <a name='L1956'></a><a href='#L1956'>1956</a>
-<a name='L1957'></a><a href='#L1957'>1957</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L1957'></a><a href='#L1957'>1957</a>
+<a name='L1958'></a><a href='#L1958'>1958</a>
+<a name='L1959'></a><a href='#L1959'>1959</a>
+<a name='L1960'></a><a href='#L1960'>1960</a>
+<a name='L1961'></a><a href='#L1961'>1961</a>
+<a name='L1962'></a><a href='#L1962'>1962</a>
+<a name='L1963'></a><a href='#L1963'>1963</a>
+<a name='L1964'></a><a href='#L1964'>1964</a>
+<a name='L1965'></a><a href='#L1965'>1965</a>
+<a name='L1966'></a><a href='#L1966'>1966</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -2179,6 +2190,17 @@
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">426x</span>
+<span class="cline-any cline-yes">1074x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">392x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">682x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3423,10 +3445,6 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">20x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -3984,6 +4002,8 @@ import vtkViewNode from 'vtk.js/Sources/Rendering/SceneGraph/ViewNode';
 &nbsp;
 import { registerOverride } from 'vtk.js/Sources/Rendering/OpenGL/ViewNodeFactory';
 &nbsp;
+import supportsNorm16Linear from './supportsNorm16Linear';
+&nbsp;
 const { Wrap, Filter } = Constants;
 const { VtkDataTypes } = vtkDataArray;
 const { vtkDebugMacro, vtkErrorMacro, vtkWarningMacro } = macro;
@@ -4135,6 +4155,17 @@ function vtkOpenGLTexture(publicAPI, model) {
     if (model.handle) {
       publicAPI.activate();
     }
+  };
+&nbsp;
+  const getNorm16Ext = () =&gt; {
+    if (
+      (model.minificationFilter === Filter.LINEAR ||
+        model.magnificationFilter === Filter.LINEAR) &amp;&amp;
+      !supportsNorm16Linear()
+    ) {
+      return undefined;
+    }
+    return model.oglNorm16Ext;
   };
 &nbsp;
   //----------------------------------------------------------------------------
@@ -4368,7 +4399,7 @@ function vtkOpenGLTexture(publicAPI, model) {
     result = model._openGLRenderWindow.getDefaultTextureInternalFormat(
       vtktype,
       numComps,
-      model.oglNorm16Ext,
+      getNorm16Ext(),
       publicAPI.useHalfFloat()
     );
     if (result) {
@@ -4455,9 +4486,9 @@ function vtkOpenGLTexture(publicAPI, model) {
           return model.context.UNSIGNED_BYTE;
         // prefer norm16 since that is accurate compared to
         // half float which is not
-<span class="branch-1 cbranch-no" title="branch not covered" >        case model.oglNorm16Ext &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.SHORT:</span></span>
+<span class="branch-1 cbranch-no" title="branch not covered" >        case getNorm16Ext() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.SHORT:</span></span>
 <span class="cstat-no" title="statement not covered" >          return model.context.SHORT;</span>
-<span class="branch-2 cbranch-no" title="branch not covered" >        case model.oglNorm16Ext &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.UNSIGNED_SHORT:</span></span>
+<span class="branch-2 cbranch-no" title="branch not covered" >        case getNorm16Ext() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >VtkDataTypes.UNSIGNED_SHORT:</span></span>
 <span class="cstat-no" title="statement not covered" >          return model.context.UNSIGNED_SHORT;</span>
         // use half float type
 <span class="branch-3 cbranch-no" title="branch not covered" >        case useHalfFloat &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >VtkDataTypes.SHORT:</span></span>
@@ -4797,7 +4828,7 @@ function vtkOpenGLTexture(publicAPI, model) {
         <span class="missing-if-branch" title="if path not taken" >I</span>if (
           webGLInfo.RENDERER.value.match(/WebKit/gi) &amp;&amp;
 <span class="branch-1 cbranch-no" title="branch not covered" >          navigator.platform.match(/Mac/gi) </span>&amp;&amp;
-<span class="branch-2 cbranch-no" title="branch not covered" >          model.oglNorm16Ext </span>&amp;&amp;
+<span class="branch-2 cbranch-no" title="branch not covered" >          getNorm16Ext() </span>&amp;&amp;
           (<span class="branch-3 cbranch-no" title="branch not covered" >dataType === VtkDataTypes.UNSIGNED_SHORT </span>||
 <span class="branch-4 cbranch-no" title="branch not covered" >            dataType === VtkDataTypes.SHORT)</span>
         ) {
@@ -4902,7 +4933,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       numComps *
       model._openGLRenderWindow.getDefaultTextureByteSize(
         dataType,
-        model.oglNorm16Ext,
+        getNorm16Ext(),
         publicAPI.useHalfFloat()
       );
     publicAPI.deactivate();
@@ -5026,7 +5057,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       numComps *
       model._openGLRenderWindow.getDefaultTextureByteSize(
         dataType,
-        model.oglNorm16Ext,
+        getNorm16Ext(),
         publicAPI.useHalfFloat()
       );
     // generateMipmap must not be called here because we manually upload all levels
@@ -5115,7 +5146,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       model.components *
       model._openGLRenderWindow.getDefaultTextureByteSize(
         dataType,
-        model.oglNorm16Ext,
+        getNorm16Ext(),
         publicAPI.useHalfFloat()
       );
 &nbsp;
@@ -5225,7 +5256,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       model.components *
       model._openGLRenderWindow.getDefaultTextureByteSize(
         VtkDataTypes.UNSIGNED_CHAR,
-        model.oglNorm16Ext,
+        getNorm16Ext(),
         publicAPI.useHalfFloat()
       );
 &nbsp;
@@ -5378,11 +5409,7 @@ function vtkOpenGLTexture(publicAPI, model) {
     }
 &nbsp;
     // Handle SHORT data type with EXT_texture_norm16 extension
-    <span class="missing-if-branch" title="if path not taken" >I</span>if (
-      model.oglNorm16Ext &amp;&amp;
-<span class="branch-1 cbranch-no" title="branch not covered" >      !useHalfFloat </span>&amp;&amp;
-<span class="branch-2 cbranch-no" title="branch not covered" >      dataType === VtkDataTypes.SHORT</span>
-    ) {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (getNorm16Ext() &amp;&amp; <span class="branch-1 cbranch-no" title="branch not covered" >!useHalfFloat </span>&amp;&amp; <span class="branch-2 cbranch-no" title="branch not covered" >dataType === VtkDataTypes.SHORT)</span> {
 <span class="cstat-no" title="statement not covered" >      for (let c = <span class="cstat-no" title="statement not covered" >0;</span> c &lt; numComps; ++c) {</span>
 <span class="cstat-no" title="statement not covered" >        model.volumeInfo.scale[c] = 32767.0; </span>// Scale to [-1, 1] range
       }
@@ -5391,7 +5418,7 @@ function vtkOpenGLTexture(publicAPI, model) {
 &nbsp;
     // Handle UNSIGNED_SHORT data type with EXT_texture_norm16 extension
     <span class="missing-if-branch" title="if path not taken" >I</span>if (
-      model.oglNorm16Ext &amp;&amp;
+      getNorm16Ext() &amp;&amp;
 <span class="branch-1 cbranch-no" title="branch not covered" >      !useHalfFloat </span>&amp;&amp;
 <span class="branch-2 cbranch-no" title="branch not covered" >      dataType === VtkDataTypes.UNSIGNED_SHORT</span>
     ) {
@@ -5546,7 +5573,7 @@ function vtkOpenGLTexture(publicAPI, model) {
       model.components *
       model._openGLRenderWindow.getDefaultTextureByteSize(
         dataTypeToUse,
-        model.oglNorm16Ext,
+        getNorm16Ext(),
         publicAPI.useHalfFloat()
       );
 &nbsp;
@@ -5938,7 +5965,7 @@ registerOverride('vtkTexture', newInstance);
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at Thu Jan 02 2025 21:36:47 GMT+0000 (Coordinated Universal Time)
+                at Thu Jan 02 2025 21:38:48 GMT+0000 (Coordinated Universal Time)
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
